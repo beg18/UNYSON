@@ -1,0 +1,23 @@
+{
+	"wp-add-meta": {
+		"prefix": "wp-add-meta",
+		"body": [
+			"<!--Сначала в записи добавляем произвольные поля: например place, date, ticket-->",
+			"<!--Потом добавляем в разметку мета-данные в нужные записи-->",
+			"<!--в переменную custom_fields присваиваем ID -->",
+			"<?php $1custom_fields = get_post_custom( get_the_ID() ); ?>",
+			"<!-- place, date, ticket -->",
+			"<?php if($1custom_fields['place'][0]): ?>",
+			"<p class=\"ex-place\"><?php echo $1custom_fields['place'][0] ?></p>",
+			"<?php endif; ?>",
+			"<?php if($1custom_fields['date'][0]): ?>",
+			"<p class=\"ex-date\"><?php echo $1custom_fields['date'][0] ?></p>",
+			"<?php endif; ?>",
+			"<?php if($1custom_fields['ticket'][0]): ?>",
+			"<p class=\"ex-ticket\"><?php echo $1custom_fields['ticket'][0] ?></p>",
+			"<?php endif; ?>",
+			"<!-- place, date, ticket -->",
+		],
+		"description": "добавляем в разметку мета-данные в нужные записи"
+	}
+}

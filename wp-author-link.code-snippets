@@ -1,0 +1,9 @@
+{
+	"wp-author-link": {
+		"prefix": "wp-author-link",
+		"body": [
+			"<p>Автор:  <?php the_author_posts_link(); ?></p> "
+		],
+		"description": "Автор:  "
+	}
+}

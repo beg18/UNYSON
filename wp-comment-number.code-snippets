@@ -1,0 +1,19 @@
+{
+	"wp-comment-number": {
+		"prefix": "wp-comment-number",
+		"body": [
+			"<!--<span class=\"comment\">",
+			"<a href=\"\">",
+			"<?php echo get_comments_number() ?><i class=\"icon-speech-bubble\"></i>",
+			"</a>",
+			"</span>",
+			"<?php echo get_comments_number($1zero, $1one, $1more) ?>",
+			"$1zero-строка текст для показа, когда нет комментариев.По умолчанию: 'Нет комментариев'",
+			"$1one-строка текст для показа, если 1 комментарий.По умолчанию:'1 комментарий'",
+			"$1more-строка текст для показа, если более одного комментария.По умолчанию:'%1s комментариев'",
+			"<?php echo get_comments_number('Комментариев пока нет', '1 комментарий', '% комментариев') ?>-->",
+			"<?php echo get_comments_number($1zero, $1one, $1more) ?>",
+		],
+		"description": "Выводит общее количество комментариев записи(поста)"
+	}
+}

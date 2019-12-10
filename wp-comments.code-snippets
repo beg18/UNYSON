@@ -1,0 +1,9 @@
+{
+	"wp-comments": {
+		"prefix": "wp-comments",
+		"body": [
+			"<?php comments_template($1file, $1separate_comments); ?>"
+		],
+		"description": "реализация функции комментариев"
+	}
+}

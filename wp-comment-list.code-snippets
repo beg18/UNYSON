@@ -1,0 +1,12 @@
+{
+	"wp-comment-list": {
+		"prefix": "wp-comment-list",
+		"body": [
+			"<!--https://wp-kama.ru/function/wp_list_comments-->",
+			"<ul class=\"commentlist\">",
+			"<?php wp_list_comments('type=comment&callback=$1_comment'); ?>// имя функции из  wp-func-comments ",
+			"</ul>",
+		],
+		"description": "Вывод комментариев с использованием пользовательской функции"
+	}
+}

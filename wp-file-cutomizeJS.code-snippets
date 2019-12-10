@@ -1,0 +1,29 @@
+{
+	"wp-file-cutomizeJS": {
+		"prefix": "wp-file-cutomizeJS",
+		"body": [
+			"используется со сниппетоми wp-func-customizes wp-func-linkcolor wp-func-customizeJS wp-func-customizes",
+			"(function($2){",
+
+				"wp.customize( '$1_link_color', function( value ) {",
+					"value.bind( function( newval ) {",
+						"$2('a').css('color', newval);",
+					"} );",
+				"} );",
+			
+			"})(jQuery);",
+			"wp.customize( '$1_phone', function( value ) {",
+				"value.bind( function( newval ) {",
+					"$2('.$1-phone span').text(newval);",
+				"} );",
+			"} );",
+		
+			"wp.customize( '$1_show_phone', function( value ) {",
+				"value.bind( function( newval ) {",
+					"false === newval ? $2('.$1-phone').fadeOut() : $2('.$1-phone').fadeIn();",
+				"} );",
+			"} );",
+		],
+		"description": "Создаём отдельный файл "
+	}
+}

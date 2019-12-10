@@ -1,0 +1,35 @@
+{
+	"woo-file-add-to-cart": {
+		"prefix": "woo-file-add-to-cart",
+		"body": [
+			"// связан со сниппетом woo-link-close woo-add-defined",
+			"// с данным ХУКом связан функциями: ",
+			"// woocommerce_template_loop_product_link_close ",
+			"// woocommerce_template_loop_add_to_cart создаёт кнопку связанный с корзиной ",
+			"// также она подключает файл add_to_cart.php из папку loop",
+			"// создаём файл add_to_cart.php в папке loop->woocmmerce",
+			"// вывод цены мы комментирум woo-price",
+			"// т.к. цена в разметку используется как кнопка добвить в корзину",
+			"// вместо этой кнопки отобразим цену и иконочку в виде ссылки",
+			"<?php",
+			"if ( ! defined( 'ABSPATH' ) ) {",
+			"exit;",
+			"}",
+			"global $1product;// ТАБ доллар",
+			"// print_r($1product);",
+			"if($1price_html = $1product->get_price_html()) {",
+			"echo apply_filters('woocommerce_loop_add_to_cart_link',",
+			"sprintf('<p><a  href=\"%s\" data-quantity=\"%s\" data-product_id=\"%s\" data-product_sku=\"%s\" class=\"item_add %s\"><i></i> <span class=\"item_price\">%s</span></a></p>',",
+			"esc_url($1product->add_to_cart_url()),",
+			"esc_attr(isset($1quantity) ? $1quantity : 1),",
+			"esc_attr($1product->id),",
+			"esc_attr($1product->get_sku()),",
+			"esc_attr(isset($1class) ? $1class : 'button'),",
+			"$1price_html",
+			"));",
+			"}",
+			"?>",
+		],
+		"description": "отобразим цену и иконочку в виде ссылки согласно разметки "
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"woo-item-start": {
+		"prefix": "woo-item-start",
+		"body": [
+			"// данная функция подключает часть шаблона открывающего тега wp-add-query до поль-ского цикла",
+			"// создаём в папке woocommerce-> папку loop-> в нём файл loop-start.php",
+			"// файле loop-start.php вставим woo-add-defined и открывающий тег до поль-ского цикла",
+			"<?php woocommerce_product_loop_start(); ?>",
+		],
+		"description": "данная функция подключает часть шаблона открывающего тега до поль-ского цикла"
+	}
+}

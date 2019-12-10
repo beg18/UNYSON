@@ -1,0 +1,9 @@
+{
+	"wp-description": {
+		"prefix": "wp-description",
+		"body": [
+			"<?php bloginfo('description'); ?>"
+		],
+		"description": "Короткое описание сайта"
+	}
+}

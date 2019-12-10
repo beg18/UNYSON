@@ -1,0 +1,13 @@
+{
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"<!--связан со сниппетами WP-REG-MENU WP-MENU  WP-REG-ACTIONS-->",
+			" // в wp-menu: 'walker' => new $1_Menu ",
+			" // в создаём файл $1_Menu.php ",
+			" // подключаем в functions.php файл $1_Menu.php",
+			"require_once get_template_directory() . '/$1_Menu.php'; "
+		],
+		"description": " в functions.php файл $1_Menu.php"
+	}
+}

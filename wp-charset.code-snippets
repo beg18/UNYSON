@@ -1,0 +1,9 @@
+{
+	"wp-charset": {
+		"prefix": "wp-charset",
+		"body": [
+			"<meta charset=\"<?php bloginfo('charset'); ?>\"> ",
+		],
+		"description": "meta charset="
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"wp-email": {
+		"prefix": "wp-email",
+		"body": [
+			"<?php bloginfo('admin_email'); ?>",
+		],
+		"description": "Вывод динамически эл.почты"
+	}
+}

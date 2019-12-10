@@ -1,0 +1,10 @@
+{
+	"wp-prev": {
+		"prefix": "wp-prev",
+		"body": [
+			"<?php previous_post_link($1format, $1link, $1in_same_cat=false, $1excluded_categories)?>",
+			"//'<span>&laquo</span> %link' ставим в скобки"
+		],
+		"description": " Предыдущая запись"
+	}
+}

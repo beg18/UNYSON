@@ -1,0 +1,12 @@
+{
+	"wp-add-customize": {
+		"prefix": "wp-add-customize",
+		"body": [
+			"//используется со сниппетоми wp-func-customizes wp-file-customizeJS",
+			"<p class=\"$1-phone\"<?php if(false === get_theme_mod('$1_show_phone')) echo ' style=\"display: none;\"' ?>>",
+            "Телефон: <span><?php echo get_theme_mod('$1_phone'); ?></span>",
+       " </p>",
+		],
+		"description": " Вызов кастомных настроек например телефона"
+	}
+}

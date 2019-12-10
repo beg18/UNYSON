@@ -1,0 +1,13 @@
+{
+	"wp-setting-option": {
+		"prefix": "wp-setting-option",
+		"body": [
+			"// связан со сниппетом wp-func-setting-option",
+			"// параметр header_color берется из файла framework-customizations/theme/options/setting.php",
+			"//<nav class=\"fh5co-nav\" style=\"background-color: <?php echo $1_theme_option('header_color') ?>;\">",
+			"// параметр footer_text берется из файла framework-customizations/theme/options/setting.php",
+			"<?php echo $1_theme_option('footer_text') ?>", 
+		],
+		"description": " Вызов настроек из unyson "
+	}
+}

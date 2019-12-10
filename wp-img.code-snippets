@@ -1,0 +1,13 @@
+{
+
+	"wp-img": {
+		"prefix": "wp-img",
+		"body": [
+			"<?php the_post_thumbnail('full', array('class' => 'img-lefter')); ?>",
+			"//<?php the_post_thumbnail($1size, $1attr);?>",
+			" // первый параметр $1size- размер картинки full полный размер large, medium, или числами ",
+			"// второй параметр $1attr- строка или массив для атрибутов - array('class' => 'img-lefter'))"
+		],
+		"description": "Добавляем картинки"
+	}
+}

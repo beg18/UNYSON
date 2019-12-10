@@ -1,0 +1,11 @@
+{
+	"wp-fields": {
+		"prefix": "wp-fields",
+		"body": [
+			"<?php",
+			"the_field('area'); // сюда пишем ID имя произвольной поля",
+			"?>"
+		],
+		"description": "Log output to console"
+	}
+}

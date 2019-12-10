@@ -1,0 +1,58 @@
+{
+	"wp-func-comments-constructor": {
+		"prefix": "wp-func-comments-constructor",
+		"body": [
+			// если класс уже есть в дочерней теме - нам не надо его определять
+			"if (!class_exists('$1_comments_constructor')) {",
+			// класс, который собирает всю структуру комментов
+			"class $1__comments_constructor extends Walker_Comment {",
+			// что выводим перед дочерними комментариями
+			"public function start_lvl( &$2output, $2depth = 0, $2args = array()) {",
+			"$2output .= '<ul class=\"children\">' . \"\n\";",
+			"}",
+			// что выводим после дочерних комментариев
+			"public function end_lvl( &$2output, $2depth = 0, $2args = array()) {",
+			"$2output .= \"</ul><!-- .children -->\n\";",
+			"}",
+			// разметка каждого комментария, без закрывающего </li>!
+			"protected function comment( $2comment, $2depth, $2args ) {",
+			// берем стандартные классы комментария и если коммент пренадлежит автору поста добавляем класс author-comment
+			"$2classes = implode(' ', get_comment_class()).($2comment->comment_author_email == get_the_author_meta('email') ? ' author-comment' : '');",
+			// родительский тэг комментария с классами выше и уникальным якорным id
+			"echo '<li id=\"comment-'.get_comment_ID().'\" class=\"'.$2classes.' media\">'.\"\n\";",
+			"echo '<div class=\"media-left\">'.get_avatar($2comment, 64, '', get_comment_author(), array('class' => 'media-object')).\"</div>\n\";", // покажем аватар с размером 64х64
+			"echo '<div class=\"media-body\">';",
+			"echo '<span class=\"meta media-heading\">Автор: '.get_comment_author().\"\n\";", // имя автора коммента
+			//echo ' '.get_comment_author_email(); // email автора коммента, плохой тон выводить почту
+			// url автора коммента
+			"echo ' '.get_comment_author_url();",
+			// дата и время комментирования
+			"echo ' Добавлено '.get_comment_date('F j, Y в H:i').\"\n\";",
+			// если комментарий должен пройти проверку
+			"if ( '0' == $2comment->comment_approved ) echo '<br><em class=\"comment-awaiting-moderation\">Ваш комментарий будет опубликован после проверки модератором.</em>'.\"\n\";",
+			"echo \"</span>\";",
+			// текст коммента
+			"comment_text().\"\n\";",
+			// опции ссылки "ответить"
+			"$2reply_link_args = array(",
+			// текущая вложенность
+			"'depth' => $2depth,",
+			// текст
+			"'reply_text' => 'Ответить',",
+			// текст если юзер должен залогинеться
+			"'login_text' => 'Вы должны быть залогинены'",
+			");",
+			// выводим ссылку ответить
+			"echo get_comment_reply_link(array_merge($2args, $2reply_link_args));",
+			"echo '</div>'.\"\n\";", // закрываем див
+			"}",
+			// конец каждого коммента
+			"public function end_el( &$2output, $2comment, $2depth = 0, $2args = array() ){",
+			"$2output .= \"</li><!-- #comment-## -->\n\";",
+			"}",
+			"}",
+			"}",
+		],
+		"description": "Конструктор комментарий..."
+	}
+}

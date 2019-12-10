@@ -1,0 +1,9 @@
+{
+	"wp-style-dir": {
+		"prefix": "wp-style-dir",
+		"body": [
+			"<?php bloginfo('stylesheet_directory'); ?>"
+		],
+		"description": "URL Темы: get_stylesheet_directory_uri()"
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"wp-func-bootstrap-navwalker": {
+		"prefix": "wp-func-bootstrap-navwalker",
+		"body": [
+			"// связан со сниппетом wp-bootstrap-navwalker",
+			"//скачиваем файл wp-bootstrap-navwalker.zip (3kb) с сайта:",
+			"https://allwordpress.ru/code/vnedryaem-v-wordpress-bootstrap-menyu.html",
+			"//распаковываем его в корень своей темы",
+			"//в файле functions.php регистрируем walker  (добавляем код ниже)",
+			"// Register Custom Navigation Walker",
+			"require_once('wp-bootstrap-navwalker.php');",
+		],
+		"description": " в файле functions.php регистрируем walker "
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"wp-reg-logo": {
+		"prefix": "wp-reg-logo",
+		"body": [
+			"// связан со сниппетом WP-CUSTOM-LOGO",
+			"function $1_custom_logo_support(){",
+				"add_theme_support( 'custom-logo', array(",
+				"'width'=>'150',",
+				"'height'=> '50'",
+				") );",
+			"}",
+			 
+			"add_action('after_setup_theme', '$1_custom_logo_support');"
+		],
+		"description": "Подключение логотипа через настроить"
+	}
+}

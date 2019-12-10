@@ -1,0 +1,11 @@
+{
+	"wp-objquery-cat": {
+		"prefix": "wp-objquery-cat",
+		"body": [
+			"<?php $2query = new WP_Query( array(",
+            "'category_name' => get_theme_mod('$1_home_category'),",
+        	") ); ?>"
+		],
+		"description": "Получения рубрик из костомайзер файла"
+	}
+}

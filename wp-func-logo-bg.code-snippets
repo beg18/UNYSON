@@ -1,0 +1,25 @@
+{
+	"wp-func-logo-bg": {
+		"prefix": "wp-func-logo-bg",
+		"body": [
+			"function $1_setup(){",
+			"add_theme_support('custom-logo', array(",
+			"'width' => '150',",
+			"'height' => '40',",
+			"));",
+			" //чтобы применился фоновый цвет к body добавляем класс сниппетом wp-body-class",
+			"add_theme_support('custom-background', array(",
+			"'default-color' => 'ffffff',",
+			"'default-image' => get_template_directory_uri() . '/assets/image/background.png',",
+			"));",
+			"add_theme_support('custom-header', array(",
+			"'default-image' => get_template_directory_uri() . '/assets/image/coffee.jpg',",
+			"'width' => '2000',",
+			"'height' => '1300',",
+			"));",
+			"}",
+			"add_action( 'after_setup_theme', '$1_setup' );",
+		],
+		"description": "Регистрация логотипа и фона страницы"
+	}
+}

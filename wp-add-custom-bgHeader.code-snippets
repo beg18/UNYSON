@@ -1,0 +1,17 @@
+{
+	"wp-add-custom-bgHeader": {
+		"prefix": "wp-add-custom-bgHeader",
+		"body": [
+			"<?php if(is_front_page()): ?>",
+			"//<div class=\"header-image\" style=\"background: url(<?php echo get_custom_header()->url; ?>) center no-repeat; background-size: cover; height: 50vh;\"></div>",
+			"// в style.css",
+			".header-image {",
+			"background: url(<?php echo get_custom_header()->url; ?>) center no-repeat;",
+			"background-size: cover;",
+			"height: 50vh;",
+			"}",
+			"<?php endif; ?>",
+		],
+		"description": " Добавляем из настроек к шапке главной страницы, то есть если главная страница"
+	}
+}

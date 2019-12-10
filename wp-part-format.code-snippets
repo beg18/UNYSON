@@ -1,0 +1,11 @@
+{
+	"wp-part-format": {
+		"prefix": "wp-part-format",
+		"body": [
+			"<?php get_template_part( 'path/first-part', get_post_format());?>",
+			" // где первый параметр путь к папке и первая часть шаблона first-part-",
+			" // где get_post_format() вторая часть шаблона указывается формат -vadeo получится first-part-vadeo.php",
+		],
+		"description": "Ставим во внутри блока разметки"
+	}
+}

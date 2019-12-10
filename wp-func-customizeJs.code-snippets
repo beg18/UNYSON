@@ -1,0 +1,12 @@
+{
+	"wp-func-customizeJs": {
+		"prefix": "wp-func-customizeJs",
+		"body": [
+			"function $1_customize_js(){",
+			"wp_enqueue_script('$1-customizer', get_template_directory_uri() . '/assets/js/$1-customize.js', array('jquery','customize-preview'),	'', true);",
+			"}",
+			"add_action('customize_preview_init', '$1_customize_js');",
+		],
+		"description": "Подключение к странице customizeJs"
+	}
+}

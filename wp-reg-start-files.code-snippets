@@ -1,0 +1,23 @@
+{
+	
+	"wp-reg-start-files": {
+		"prefix": "wp-reg-start-files",
+		"body": [
+			"<?php",
+			"function $1_scripts(){",
+				"wp_enqueue_style('$1-style', get_stylesheet_uri());",
+				"wp_enqueue_style('$1-main-style', get_template_directory_uri() . '/assets/css/style.css');",
+			
+				"wp_deregister_script( 'jquery' );",
+				"wp_register_script( 'jquery', '//code.jquery.com/jquery-1.12.0.min.js', array(), false, true);",
+				"wp_enqueue_script('jquery');",
+			
+				"wp_enqueue_script('$1-fontawesome', '//use.fontawesome.com/f038ff93b4.js', array('jquery'), false, true);",
+				"wp_enqueue_script('$1-main-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), null, true);",
+			"}",
+			"add_action('wp_enqueue_scripts', '$1_scripts');"
+			
+		],
+		"description": "Подключение файлов из моих проектов"
+	}
+}

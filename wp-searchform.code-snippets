@@ -1,0 +1,10 @@
+{
+	"wp-searchform": {
+		"prefix": "wp-searchform",
+		"body": [
+			"// связан со сниппетом wp-file-searchform",
+			"<?php get_search_form() ?>",   
+		],
+		"description": "Подключаем в header.php файл searchform.php"
+	}
+}

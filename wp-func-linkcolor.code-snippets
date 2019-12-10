@@ -1,0 +1,29 @@
+{
+	"wp-func-linkcolor": {
+		"prefix": "wp-func-linkcolor",
+		"body": [
+			"// Customizer данная функция обязательно связана со сниппетом wp-func-customizeCSS",
+			"function $1_customize_register($2wp_customize){",
+			"$2wp_customize->add_setting('$1_link_color', array(",
+			"'default' => '#007bff',",
+			"'sanitize_callback' => 'sanitize_hex_color',",
+			"// 'transport'=>'postMessage' даёт возможность изменить св-ва без перезагрузки ",
+			"//данный  параметр используется со сниппетоми wp-func-customizeJS wp-file-customizeJS",
+			"//'transport'=>'postMessage',",
+			"));",
+			"$2wp_customize->add_control(",
+			"new WP_Customize_Color_Control(",
+			"$2wp_customize,",
+			"'$1_link_color',",
+			"array(",
+			"'label' => __('Цвет ссылок', '$1'),",
+			"'section' => 'colors',",
+			"'setting' => '$1_link_color',",
+			")",
+			")",
+			");}",
+
+		],
+		"description": "Добавляем в настройки цвета эл-ты управления цветов ссылок сайта"
+	}
+}

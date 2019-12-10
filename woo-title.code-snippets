@@ -1,0 +1,12 @@
+{
+	"woo-title": {
+		"prefix": "woo-title",
+		"body": [
+			"// аналогичен сниппету wp-title",
+			"// с данным ХУКом связан функцией: ",
+			"// woocommerce_show_loop_product_title для подключения заголовка продукта ",
+			"<?php do_action('woocommerce_shop_loop_item_title'); ?>",
+		],
+		"description": "подключения заголовка продукта"
+	}
+}

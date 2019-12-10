@@ -1,0 +1,10 @@
+{
+	"wp-cat-name": {
+		"prefix": "wp-cat-name",
+		"body": [
+			"<?php $1cat = get_the_category(); ?>// создаём переменную",
+			"<h1><?php echo $1cat[0]->name; ?></h1>",
+		],
+		"description": "Получение название рубрики, категории"
+	}
+}

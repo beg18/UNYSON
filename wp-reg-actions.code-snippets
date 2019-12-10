@@ -1,0 +1,85 @@
+{
+	
+	"wp-reg-actions": {
+		"prefix": "wp-reg-actions",
+		"body": [
+			"// связан со СНИППЕТАМ WP-MENU WP-FILE-MENU WP-REG-MENU WP-REG-FILE-MENU",
+			"function $1_setup(){",
+			"add_theme_support('title-tag');// из header.php убираем title ",
+			"add_theme_support('post-thumbnails');",
+			"add_image_size( '$1_my-thumb', 100, 100, true );// высоту показать равным или больше например: 9999",
+			"register_nav_menus( array(",
+			"'header_menu' => 'Menu in header',",
+			"'footer_menu' => 'Menu in footer',",
+			" ));",
+			"}",
+			"add_action( 'after_setup_theme', '$1_setup' );",
+		],
+		"description": "в functions подключаем минифтюры, меню,title"
+	}
+}
+
+
+
+
+
+<?php the_post_thumbnail('my-thumb', $1attr);?>
+// первый параметр из functions.php сниппет wp-reg-actions  add_image_size( 'my-thumb', 100, 100 ); 
+//size- full полный размер large, medium, или числами 
+//$1attr- атрибуты class alt 
+<?php $1_query = new WP_Query( array( //название переменной через доллар 
+'showposts' => 1,// показать самую первую/свежую запись 
+//'category_name' => get_theme_mod('_category'), 
+//'cat'=> -1,//показать  рубрику по tag_ID знак минус означает не показать рубрику за tag_ID=1 если указать просто 1 то вывести эту рубрику
+//'category__in' => array(4,5), // показать несколько рубрик по tag_ID=4 и 5
+//'tag' => '', // показать  рубрику по ярлыку метки
+) ); ?>
+<?php if ($1_query-> have_posts() ) : ?> 
+<?php $1_tag_id = $1_post->ID;?> //поменять название переменной на post->ID   для ID статьи через доллар 
+<!-- здесь НАЧАЛА разметки открывающе тэги --> 
+<?php while ($1_query-> have_posts() ) :$1_query-> the_post(); ?>
+<!-- post здесь САМА разметка--> 
+<h4><?php the_title(); ?></h4>
+<!--если в разметке есть картинки, то вставляем эти условия иначе удаляем  -->
+<?php
+if(has_post_thumbnail()){
+the_post_thumbnail();
+}  else {
+'<img src="https://picsum.photos/180/180" alt="">';
+}
+ ?>
+<?php endwhile; ?>
+<!-- здесь КОНЕЦ разметки закрывающе тэги --> 
+<!-- post navigation -->
+<?php else: ?>
+<!-- no posts found даём разяснение для администратора какие размеры картинок что и как-->
+<?php endif; ?>
+<?php wp_reset_query(); ?>
+<!-- сброс -->
+
+
+<?php endif; ?>
+<?php if(!get_query_var('paged')){
+query_posts('posts_per_page=5'); ?>// вывести количество записей
+}?>// если в параметре paged нет номера страницы
+<?php if ( have_posts() ): ?>
+<!-- здесь НАЧАЛА разметки открывающе тэги --> 
+<?php while ( have_posts() ) : the_post(); ?>
+<?php if ( $1_post->ID == $1_tag_id) continue; ?>//поменять название переменной для ID статьи через доллар 
+<!-- post здесь САМА разметка--> 
+<h4><?php the_title(); ?></h4>
+<!--если в разметке есть картинки, то вставляем эти условия иначе удаляем  -->
+<?php
+if(has_post_thumbnail()){
+the_post_thumbnail();
+}  else {
+'<img src="https://picsum.photos/180/180" alt="">';
+}
+ ?>
+<?php endwhile; ?>
+<!-- здесь КОНЕЦ разметки закрывающе тэги --> 
+<!-- post navigation -->
+<?php else: ?>
+<!-- no posts found -->
+<p>Постов нет...</p>
+<?php endif; ?> 

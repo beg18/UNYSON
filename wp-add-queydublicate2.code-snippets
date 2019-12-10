@@ -1,0 +1,32 @@
+{
+	"wp-add-queydublicate2": {
+		"prefix": "wp-add-queydublicate2",
+		"body": [
+			"<!-- здесь НАЧАЛА разметки открывающий тэг-->",
+			"<?php if(!get_query_var('paged')) : //если первая страница ?>",
+			"<?php query_posts('posts_per_page=5'); ?>",
+			"<?php $1_SESSION['dont_duplicate'] = $1wp_query->posts[0]->ID; //ID первого поста ?>",
+			"<?php while(have_posts()) : the_post(); ?>",
+			"<?php if(!$1wp_query->current_post) : //если первый пост ?>",
+			"<!-- Start post разметка первого поста-->",
+			"<?php else : //если не первый пост первой страницы ?>",
+			"<!-- Start post разметка ДРУГИХ постов-->",
+			"<?php endif; //конец проверки условия текущего поста ?>",
+			"<?php endwhile; ?>",
+			"<!-- ************************************************** -->",
+			"<?php else : //иначе, если не первая страница ?>",
+			"<?php",
+			"<!-- в header в самом начале ставит <?php session_start(); ?>-->",
+			"$1args = array('post__not_in' => array($1_SESSION['dont_duplicate']), 'paged' => get_query_var('paged'));",
+			"query_posts($1args) ;",
+			"?>",
+			"<?php while(have_posts()) : the_post(); ?>",
+			"<!-- Start post разметка ДРУГИХ постов-->",
+			"<?php endwhile; ?>",
+			"<?php posts_nav_link(); ?>",
+			"<?php endif; //конец условия проверки параметра номера страницы ?>",
+			"<!-- здесь КОНЕЦ разметки закрывающий тэг-->",
+		],
+		"description": "Вывод на страницу постов с разной разметкой"
+	}
+}

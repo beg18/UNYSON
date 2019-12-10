@@ -1,0 +1,9 @@
+{
+	"wp-read-more": {
+		"prefix": "wp-read-more",
+		"body": [
+			"<p><a href=\"<?php the_permalink(); ?>\" class=\"btn btn-primary\"><?php _e('Read more', 'clean'); ?></a></p>",	
+		],
+		"description": "Добаление \"читать далее\" для перевода"
+	}
+}

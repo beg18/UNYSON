@@ -1,0 +1,9 @@
+{
+	"wp-reg-img-size": {
+		"prefix": "wp-reg-img-size",
+		"body": [
+			"set_post_thumbnail_size($1width,$1height, $1crop);//$1crop->true||false",
+		],
+		"description": "устанавливает размер миниатюры поста по умолчанию"
+	}
+}

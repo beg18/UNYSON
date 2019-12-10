@@ -1,0 +1,13 @@
+{
+	"wp-menu-has": {
+		"prefix": "wp-menu-has",
+		"body": [
+			"if ( has_nav_menu( 'top_menu' ) ){",
+				"wp_nav_menu( array( 'theme_location' => 'top_menu' );",
+			"} else {",
+				"wp_list_categories('title_li=');",
+			"}"
+		],
+		"description": "проверяет, добавлено ли меню в указанную область темы"
+	}
+}

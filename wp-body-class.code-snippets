@@ -1,0 +1,11 @@
+{
+	
+	"wp-body-class": {
+		"prefix": "wp-body-class",
+		"body": [
+			" <?php body_class(); ?>"
+			
+		],
+		"description": "Добавляет классы к боди, которые потом можно использовать для стилизации"
+	}
+}

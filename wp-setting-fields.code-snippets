@@ -1,0 +1,12 @@
+{
+	"wp-setting-fields": {
+		"prefix": "wp-setting-fields",
+		"body": [
+			" // ставим ID('$1_phone' через ДОЛЛАР) из сниппета wp-func-setting-fields",
+			" // в функцию get_option",
+			" // <a href=\"<?php echo get_option('$1_url_slide')?>\"><?php echo get_option('$1_button_slide')?></a>"
+			"<h3>Tel:<?php echo get_option('$1_phone')?></h3>",
+		],
+		"description": "Вызов пользовательских настроек"
+	}
+}

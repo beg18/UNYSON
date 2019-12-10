@@ -1,0 +1,9 @@
+{
+	"wp-ru": {
+		"prefix": "wp-ru",
+		"body": [
+			"<html <?php language_attributes(); ?>> "
+		],
+		"description": "атрибут html='ru'"
+	}
+}

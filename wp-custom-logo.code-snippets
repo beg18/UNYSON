@@ -1,0 +1,12 @@
+{
+	"wp-custom-logo": {
+		"prefix": "wp-custom-logo",
+		"body": [
+			"// связан со сниппетом WP-REG-LOGO",
+			"<?php ",
+				"the_custom_logo($1blog_id);",
+			"?>"
+		],
+		"description": "возвращает логотип, обернутый в ссылку"
+	}
+}

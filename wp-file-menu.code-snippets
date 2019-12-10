@@ -1,0 +1,104 @@
+{
+	"wp-file-menu": {
+		"prefix": "wp-file-menu",
+		"body": [
+			"<!--связан со сниппетами WP-REG-MENU WP-REG-FILE-MENU WP MENU  WP-REG-ACTIONS-->",
+			"<?php",
+			"class $1_Menu extends Walker_Nav_Menu {",
+			"//==================================function start_el==================================", 
+			"public function start_el( &$2output, $2item, $2depth = 0, $2args = array(), $2id = 0 ) {",
+			"if ( isset( $2args->item_spacing ) && 'discard' === $2args->item_spacing ) {",
+			"$2t = '';",
+			"$2n = '';",
+			"} else {",
+			"$2t = '/t';//слэш экранирование и в двойных кавычках",
+			"$2n = '/n';//слэш экранирование и в двойных кавычках",
+			"}",
+			"$2indent = ( $2depth ) ? str_repeat( $2t, $2depth ) : '';",
+			"$2classes = empty( $2item->classes ) ? array() : (array) $2item->classes;",
+			"$2classes[] = 'menu-item-' . $2item->ID;",
+			"//============================ добавляем свой класс к <li>========================================",
+			"// $2classes[] = 'nav-item';!!!!!!данный класс к <li> добавлен нами",
+			"//===добавляем  класс active класс и из разметки для выпадающей меню .has-dropdown к <li>=========",
+			"// внизу пишем условия если current равна единице, то мы добавляем к <li> класс active",
+			"//if($2item->current) $2classes[] = 'active';!!!!!!!!!!",
+			"//===добавляем  класс  из разметки для выпадающей меню .has-dropdown к родиельскому эл-ту <li>=========",
+			"// ДАННЫЙ УЧАСТОК КОДА до $2args для меню с выпадающим пунктами меню: разкомментировать при если нужен ...",
+			"// меняем класс из WP ul.menu-item-has-children на наш класс из разметки для выпадающей меню li.has-dropdown>ul",
+			"// для этого мы пишем условия если has_chidren возвращает true , ",
+			"// тогда в массив классы добавляем  наш класс из разметки для выпадающей меню .has-dropdown",
+			"//if($2args->walker->has_children) $2classes[] = 'has-dropdown';!!!!!!!!!!", 
+			"//====================================//================================", 
+			"$2args = apply_filters( 'nav_menu_item_args', $2args, $2item, $2depth );",
+
+			
+
+			"$2class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $2classes ), $2item, $2args, $2depth ) );",
+			"$2class_names = $2class_names ? ' class=\"' . esc_attr( $2class_names ) . '\"' : '';",
+
+			
+		 	"$2id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $2item->ID, $2item, $2args, $2depth );",
+			"$2id = $2id ? ' id=\"' . esc_attr( $2id ) . '\"' : ''; ",
+			"$2output .= $2indent . '<li' . $2id . $2class_names .'>'; ",
+			"$2atts = array();",
+			"$2atts['title']  = ! empty( $2item->attr_title ) ? $2item->attr_title : '';",
+			"$2atts['target'] = ! empty( $2item->target )     ? $2item->target     : '';",
+			"$2atts['rel']    = ! empty( $2item->xfn )        ? $2item->xfn        : '';",
+			"$2atts['href']   = ! empty( $2item->url )        ? $2item->url        : ''; ",
+
+			"$2atts = apply_filters( 'nav_menu_link_attributes', $2atts, $2item, $2args, $2depth );",
+			"$2attributes = '';",
+			"foreach ( $2atts as $2attr => $2value ) {",
+			" if ( ! empty( $2value ) ) { ",
+			"$2value = ( 'href' === $2attr ) ? esc_url( $2value ) : esc_attr( $2value );",
+			"$2attributes .= ' ' . $2attr . '=\"' . $2value . '\"'; ",
+			"}",
+			"}",
+			"$2title = apply_filters( 'the_title', $2item->title, $2item->ID );",
+			"$2title = apply_filters( 'nav_menu_item_title', $2title, $2item, $2args, $2depth );",
+			"$2item_output = $2args->before;",
+			"/*=========работа с ССЫЛКАМИ  здесь, где $2attributes мы можем добавить свои класс, href и другие атрибуты к ссылкам===*/",
+			"$2item_output .= '<a' . $2attributes .'>';// если у ссылок нет классы оставляем этот код ",
+			"//!!!!! если есть, то добавляем класс к ссылке <a> $2item_output .= '<a'. $2attributes .' class=\"nav-link\">';",
+			"$2item_output .= $2args->link_before . $2title . $2args->link_after;",
+			"$2item_output .= '</a>';",
+			"$2item_output .= $2args->after;",
+
+			"$2output .= apply_filters( 'walker_nav_menu_start_el', $2item_output, $2item, $2depth, $2args );",
+			"}",
+			"/*==================================function start_lvl==================================",
+			"// ДАННЫЙ УЧАСТОК КОДА для меню с выпадающим пунктами меню: разкомментировать при если нужен ...",
+			"public function start_lvl( &$2output, $2depth = 0, $2args = array() ) {",
+				"if ( isset( $2args->item_spacing ) && 'discard' === $2args->item_spacing ) {",
+					"$2t = '';",
+					"$2n = '';",
+				"} else {",
+					"$2t = '/t';//слэш экранирование и в двойных кавычках",
+					"$2n = '/n';//слэш экранирование и в двойных кавычках",
+				"}",
+				"$2indent = str_repeat( $2t, $2depth );",
+		
+				"// Default class. $2classes = array( 'sub-menu' );",
+				"//================ заменить ul.sub-menu на наш класс из разметки  внутри li.has-dropdown>ul.dropdown=================",
+				"//$2classes = array( 'dropdown' ); !!!!!!!!!данный класс добавлен нами разкомментировать если нужен",
+		
+				/**
+				 * Filters the CSS class(es) applied to a menu list element.
+				 *
+				 * @since 4.8.0
+				 *
+				 * @param array    $classes The CSS classes that are applied to the menu `<ul>` element.
+				 * @param stdClass $args    An object of `wp_nav_menu()` arguments.
+				 * @param int      $depth   Depth of menu item. Used for padding.
+				 */
+				"$2class_names = join( ' ', apply_filters( 'nav_menu_submenu_css_class', $2classes, $2args, $2depth ) );",
+				"$2class_names = $2class_names ? ' class=\"' . esc_attr( $2class_names ) . '\"' : '';",
+		
+				"$2output .= \"{$2n}{$2indent}<ul$2class_names>{$2n}\";",
+			"}*/",
+			"}",
+		],
+		"description": "новый отдельный файл для своих классов  в меню"
+	}
+}
+

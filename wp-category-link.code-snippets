@@ -1,0 +1,9 @@
+{
+	"wp-category-link": {
+		"prefix": "wp-category-link",
+		"body": [
+			"<p>Категории: <?php the_category(',') ?></p>"
+		],
+		"description": "Категории: "
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"wp-unycon-icon": {
+		"prefix": "wp-unycon-icon",
+		"body": [
+			"//создаём в папке themes папки по директорию: ",
+			"//themes/clean/framework-customizations/extensions/ shortcodes/shortcodes/",
+			"// копируем сюда папку  icons",
+			"// в файле options.php мы добавляем ссылку",
+			"// СВЯЗАН co сниппетом WP-UNYCON-VIEWS-ICONS",
+			"'url' => array(",
+			"'label' => __('Url', '$1'),",
+			"'type'  => 'text',",
+			"),"
+		],
+		"description": "Добавляем к иконкам ссылки"
+	}
+}

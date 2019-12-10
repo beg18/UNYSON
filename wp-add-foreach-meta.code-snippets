@@ -1,0 +1,24 @@
+{
+	"wp-add-foreach-meta": {
+		"prefix": "wp-add-foreach-meta",
+		"body": [
+			"<!--Внутри цикла LOOP выводим мета данные-->",
+			"<!---Создаём переменную для получения ID -->",
+			"<?php $1custom_fields = get_post_custom( get_the_ID() ); ?>",
+			"<?php",
+			"foreach ($1custom_fields as $1key => $1value) { ",
+			"// если класс начинается с префикса contact-",
+			"if( preg_match('#^contact-#', $1key) ){",
+			"//то выводим следующую разметку с классом и значенииями произвольных полей",
+			" echo \"<p class='{$1key}'>{$1value[0]}</p>\";",
+			"}",
+			"}",
+			"// параграф без класса выводим так:",
+			"if($1custom_fields['business-number'][0]){",
+			"echo \"<p>{$1custom_fields['business-number'][0]}</p>\"; "	,
+			"}",
+			"?>"
+		],
+		"description": " Вывод значений произвольных полей  из html кода определенным классом"
+	}
+}

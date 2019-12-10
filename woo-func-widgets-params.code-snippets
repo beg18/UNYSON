@@ -1,0 +1,35 @@
+{
+	"woo-func-widgets-params": {
+		"prefix": "woo-func-widgets-params",
+		"body": [
+			"<?php",
+			"// в functions.php регистрируем сайдбар сниппет wp-reg-sidebar->например: name='Left bar'",
+			"// в панеле админитратора внешний вид-> Меню-> создаём меню: например our products",
+			"// в панеле админитратора внешний вид-> Виджеты-> добавляем виджет Произвольное меню в сайдбар Left bar",
+			"// выбираем Произвольное меню our products ",
+			"// создаём файл sidebar.php туда переносим разметку(код) сайдбара",
+			"// на место разметки(кода) сайдбара подключаем (вызываем) в нужной позиции виджет сниппет wp-add-widget ",
+			"// чтобы подгонять под вёрстку меню внесём изменения в параметрах в сниппете woo-func-class-widget-menu",
+			"// переходим wp-includes-> widgets.php здесь нам нужен фильтр dynamic_sidebar_params строка 706",
+			"// при помощи этого фильтра мы можем управлять параметрами виджетов в functions.php:",
+			"add_filter('dynamic_sidebar_params','check_sidebar_params');",
+			"function check_sidebar_params($1params) {// ТАБ доллар",
+			"global $1wp_registered_widgets;",
+			"//можно узнать какие виджеты регистрированы: print_r($1wp_registered_widgets); ",
+			"//можно узнать параметры: print_r($1params); ",
+			"if($1params[0]['id'] == 'left_sidebar' && $1params[0]['widget_id'] == 'nav_menu-'.$1params[1]['number']) {",
+			"$1params[0]['before_widget'] = '<div class=\"product-listy\">';",
+			"$1params[0]['after_widget'] = '</div>';",
+			"$1params[0]['before_title'] = '<h2>';",
+			"$1params[0]['after_title'] = '</h2>';",
+			"}",
+			"elseif($1params[0]['id'] == 'left_sidebar' && $1params[0]['widget_id'] == 'text-'.$1params[1]['number']) {",
+			"$1params[0]['before_widget'] = '<div class=\"latest-bis\">';",
+			"$1params[0]['after_widget'] = '</div>';",
+			"}",
+			"return $1params;",
+			"}",
+		],
+		"description": "при помощи этого фильтра мы можем управлять параметрами виджетов"
+	}
+}

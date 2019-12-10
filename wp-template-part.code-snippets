@@ -1,0 +1,11 @@
+{
+	"wp-template-part": {
+		"prefix": "wp-template-part",
+		"body": [
+			"<?php get_template_part( $1slug, $1name = null );?>",
+			" // где $1slug путь к папке и первая часть шаблона content-",
+			" // где $1name вторая часть шаблона -page получится content-page.php",
+		],
+		"description": "подключает файлы темы"
+	}
+}

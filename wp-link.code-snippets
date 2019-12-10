@@ -1,0 +1,11 @@
+{
+	
+	"wp-link": {
+		"prefix": "wp-link",
+		"body": [
+			"<?php the_permalink(); ?>",
+		],
+		"description": "Ccылка на внутренние страницы"
+	}
+	
+}

@@ -1,0 +1,11 @@
+{
+	"wp-func-thumbnail_size": {
+        "prefix": "wp-func-thumbnail_size",
+        "body": [
+            "<?php",
+            "set_post_thumbnail_size(250, 150);",// задаем размер миниатюрам 250x150
+            "?>",
+        ],
+        "description": "задаем размер миниатюрам 250x150"
+    }
+}

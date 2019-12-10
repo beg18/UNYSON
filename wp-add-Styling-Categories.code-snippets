@@ -1,0 +1,14 @@
+{
+	"wp-add-Styling-Categories": {
+		"prefix": "wp-add-Styling-Categories",
+		"body": [
+			"//https://neolot.com/wp-content/uploads/2009/08/WordPress-Snippets.pdf",
+			"<?php if ( is_category('15') ) { ", 
+			"<link rel=\"stylesheet\" href=\"<?php bloginfo('template_url'); ?>/cat-15.css\" type=\"text/css\" media=\"screen\" />;",
+			"<?php } else { ?> ",  
+			"<link rel=\"stylesheet\" href=\"<?php bloginfo('stylesheet_url'); ?>\" type=\"text/css\" media=\"screen\" />",
+			"<?php } ?>",
+		],
+		"description": "Этот фрагмент назначает конкретную таблицу стилей (category-15.css) категории 15 и назначает остальной части сайта таблицу стилей по умолчанию (style.css). Поместите этот код в область <head>"
+	}
+}

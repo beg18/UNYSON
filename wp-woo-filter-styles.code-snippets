@@ -1,0 +1,10 @@
+{
+	
+	"woo-filter-styles": {
+		"prefix": "woo-filter-styles",
+		"body": [
+			"add_filter('woocommerce_enqueue_styles','__return_empty_array');",
+		],
+		"description": " отключаем подключения файлов плагина woocommerce из head "
+	}
+}

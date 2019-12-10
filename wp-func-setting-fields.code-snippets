@@ -1,0 +1,34 @@
+{
+	"wp-func-setting-fields": {
+		"prefix": "wp-func-setting-fields",
+		"body": [
+			" // связан со сниппетом wp-setting-fields",
+			"function $1_options() {",
+			" // добавляем в панель натроек общие(general) пункт Ссылка слайдера",
+			"add_settings_field('$1_url_slide','Ссылка слайдера','$1_display_url','general');",
+			" // регитрируем пункт Ссылка слайдера",
+			"register_setting('general','$1_url_slide');",
+			" // добавляем в панель натроек общие(general) пункт Заголовок кнопки слайдера",
+			"add_settings_field('$1_button_slide','Заголовок кнопки слайдера','$1_display_button','general');",
+			" // регитрируем пункт Заголовок кнопки слайдера",
+			"register_setting('general','$1_button_slide');",
+			" // добавляем в панель натроек обсуждение(discussion) пункт Телефон",
+			"add_settings_field('$1_phone','Телефон','$1_display_phone','discussion');",
+			" // регитрируем пункт Телефон",
+			"register_setting('discussion','$1_phone');",
+			"}",
+			" // callback функция третий параметр add_settings_field",
+			"function $1_display_url() {",
+			"echo '<input type=\"text\" class=\"regular-text\" name=\"$1_url_slide\" value=\"'.esc_attr(get_option('$1_url_slide')).'\">';",
+			"}",
+			"function $1_display_button() {",
+			"echo '<input type=\"text\" class=\"regular-text\" name=\"$1_button_slide\" value=\"'.esc_attr(get_option('$1_button_slide')).'\">';",
+			"}",
+			"function $1_display_phone() {",
+			"echo '<input type=\"text\" class=\"regular-text\" name=\"$1_phone\" value=\"'.esc_attr(get_option('$1_phone')).'\">';",
+			"}",
+			"add_action('admin_menu','$1_options');",
+		],
+		"description": "Добавляем пользовательские настройки в настройки:общие и обсуждение"
+	}
+}

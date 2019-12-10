@@ -1,0 +1,9 @@
+{
+	"wp-tags-link": {
+		"prefix": "wp-tags-link",
+		"body": [
+			"<?php the_tags('<p>Тэги: ', ',', '</p>'); ?>"
+		],
+		"description": "<p>Тэги: ', ',', '</p>"
+	}
+}

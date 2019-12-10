@@ -1,0 +1,23 @@
+{
+	// Example:https://misha.blog/wordpress/nav-menu-walkers.html
+	"wp-func-menu": {
+		"prefix": "wp-func-menu",
+		"body": [
+			"if(function_exists('register_nav_menus')){",
+				//Регистрируем любое количество menu
+			"register_nav_menus(",
+			"array(",
+			// создаём любое количество областей
+			"'top' => 'Верхнее',", // Верхнее
+			"'bottom' => 'Внизу'", // Внизу
+			"'main_menu' => 'Главное меню',", // 'имя' => 'описание'
+			"'header_menu1' => 'Меню в шапке 1',",
+			"'right_menu2' => 'Правый сайдбар2',",
+			"'left_menu3' => 'Левый сайдбар3',",
+        	"'footer_menu4' => 'Меню в футере4',",
+			"));",
+			"}",
+		],
+		"description": "Сначала мы регистрируем область темы."
+	}
+}

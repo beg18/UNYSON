@@ -1,0 +1,10 @@
+{
+	"wp-get-tags": {
+		"prefix": "wp-get-tags",
+		"body": [
+			"// название фунции из сниппета wp-func-get-tags ставим в разметку для вывода меток <?php my_list_tags() ?> ",
+			"<?php my_list_tags(); ?>"
+		],
+		"description": "Вывод списка меток"
+	}
+}

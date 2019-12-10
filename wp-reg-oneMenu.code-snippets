@@ -1,0 +1,10 @@
+{
+	"wp-reg-oneMenu": {
+		"prefix": "wp-reg-oneMenu",
+		"body": [
+			"register_nav_menu( $1location, $1description );  ",
+			"//пример: register_nav_menu( 'menu', 'Primary Menu' );"
+		],
+		"description": "регистрирует только одно навигационное меню"
+	}
+}

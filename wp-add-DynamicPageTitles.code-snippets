@@ -1,0 +1,18 @@
+{
+	"wp-add-DynamicPageTitles": {
+		"prefix": "wp-add-DynamicPageTitles",
+		"body": [
+			"//https://neolot.com/wp-content/uploads/2009/08/WordPress-Snippets.pdf",
+			"<?php if (is_home()) {", 
+				"echo bloginfo('name');", 
+			"} elseif (is_404()) { ",
+				"echo '$1 » 404'; // название сайта или темы",
+			"} elseif (is_search()) {", 
+				"echo '$1 » Search Results';", 
+			"} else {", 
+				"echo '$1 » '; wp_title('');", 
+			"}?>",
+		],
+		"description": " Поместите этот код в область <head>.Если домашняя страница активна, в заголовке будет отображаться название сайта. Если страница 404 активна, заголовок будет отображаться как «WPCandy» 404 ’. Если страница результатов поиска активна, заголовок будет отображаться как «WPCandy» Результаты поиска ». Если активна любая другая страница на сайте, в заголовке будет отображаться «WPCandy» [имя страницы] ’."
+	}
+}

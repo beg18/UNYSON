@@ -1,0 +1,11 @@
+{
+	"wp-add-widget": {
+		"prefix": "wp-add-widget",
+		"body": [
+			"<?php if(!dynamic_sidebar('$1')):?>// здесь ID из functions.php wp-reg-sidebar",
+			"<span> это область для меню добавляемое из виджета </span>// сюда ставим затычку или разметку одного виджета",
+			"<?php endif;?>"
+		],
+		"description": "Вызов виджета под условиям"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"wp-func-excerpt-length": {
+		"prefix": "wp-func-excerpt-length",
+		"body": [
+			"//https://wp-kama.ru/function/the_excerpt",
+			"function $1_excerpt_length($2length){// имя темы и доллар, т.е. переменная length",
+			"return 20; // количество слов в отрывке",
+			"}",
+			"add_filter('excerpt_length' , '$1_excerpt_length');",
+			"//Удаление конструкции [...] на конце",
+			"add_filter('excerpt_more', function($2more) {//  доллар, т.е. переменная",
+				"return ' ';",
+			"});",
+			
+		],
+		"description": "Количестов слов в отрывке при использование функции the_excerpt"
+	}
+}

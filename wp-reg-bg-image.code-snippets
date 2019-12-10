@@ -1,0 +1,33 @@
+{
+	"wp-reg-bg-image": {
+		"prefix": "wp-reg-bg-image",
+		"body": [
+			"$1defaults = array(",
+			"'default-repeat'         => 'repeat', // повторять",
+			"//no-repeat — не повторять,",
+			"//repeat-x — повторять по горизонтали,",
+			"//repeat-y — повторять по вертикали,",
+			"//repeat — повторять во всех направлениях.",
+		
+			"'default-position-x'     => 'left', // выровнять по левому краю",
+			
+			"//left — слева,",
+			"//right — справа,",
+			"//center — по центру",
+		
+			"'default-attachment'     => 'scroll', // фон прокручивается со страницей",
+			
+			"//scroll — изображение скроллится вместе со страницей,",
+			"//fixed — изображение зафиксировано и не смещается при прокрутке.",
+		
+			"'default-color'          => '', // без цвета",
+			"'default-image'          => get_stylesheet_directory_uri() . '/assets/i/grand_canyon.jpg', //путь до картинки",
+			"'wp-head-callback'       => '_custom_background_cb',",
+			"'admin-head-callback'    => '',",
+			"'admin-preview-callback' => '',",
+		");",
+		"add_theme_support( 'custom-background', $1defaults );"
+		],
+		"description": "Произвольный фон"
+	}
+}

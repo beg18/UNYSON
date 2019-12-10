@@ -1,0 +1,20 @@
+{
+	"wp-paginate-links": {
+		"prefix": "wp-paginate-links",
+		"body": [
+			"<?php",
+			"//global $1the_query",
+			"// пагинация для произвольного запроса",
+			"$1big = 999999999; // уникальное число",
+
+			"echo paginate_links( array(",
+				"'base'    => str_replace( $1big, '%#%', esc_url( get_pagenum_link( $1big ) ) ),",
+				"'format'  => '?paged=%#%',",
+				"'current' => max( 1, get_query_var('paged') ),",
+				"'total'   => $1the_query->max_num_pages",
+			") );",
+			"?>",
+		],
+		"description": "пагинация для произвольного запроса"
+	}
+}

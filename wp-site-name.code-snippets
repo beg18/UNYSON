@@ -1,0 +1,9 @@
+{
+	"wp-site-name": {
+		"prefix": "wp-site-name",
+		"body": [
+			"<?php bloginfo('name'); the_title(); ?>",
+		],
+		"description": "название сайта и заголовок страниц, постов "
+	}
+}

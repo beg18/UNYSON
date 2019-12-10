@@ -1,0 +1,16 @@
+{
+	"wp-ADD-script": {
+		"prefix": "wp-ADD-script",
+		"body": [
+			"// используется в functions.php",
+			"// связан со сниппетами: wp-func-files; wp-reg-files;wp-reg-start-files",
+			"// подключаем скрипт respond.min.js по условным комментариям",
+			"//<!--[if lt IE 9]> ",
+			"//<script src=\"js/respond.min.js\"></script> ",
+			"//<![endif]-->",
+			"wp_enqueue_script( '$1-respond-js', get_template_directory_uri() . '/assets/js/respond.min.js' ); ",
+			"wp_script_add_data('$1-respond-js', 'conditional', 'lt IE 9');",
+		],
+		"description": "подключаем скрипт по условным комментариям"
+	}
+}

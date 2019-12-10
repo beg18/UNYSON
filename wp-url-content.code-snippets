@@ -1,0 +1,18 @@
+{
+	"wp-url-content": {
+		"prefix": "wp-url-content",
+		"body": [
+			"// в качестве примера возьму свой сайт https://misha.blog",
+			"echo content_url(); // https://misha.blog/wp-content/",
+
+			"$1additional_path = '/themes/'; // переменная путь к папке с темами",
+			"$1url = content_url( $1additional_path );// переменная",
+			"echo $1url; // https://misha.blog/wp-content/themes/ вызов  переменной",
+
+			"$1additional_path = 'themes/'; // переменная тоже путь к папке с темами, но только без слэша в начале",
+			"$1url = content_url( $1additional_path );",
+			"echo $1url; // https://misha.blog/wp-content/themes/ - результат тот же вызов  переменной"
+		],
+		"description": "возвращает абсолютный URL папки wp-content на сайте"
+	}
+}

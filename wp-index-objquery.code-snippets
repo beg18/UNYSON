@@ -1,0 +1,13 @@
+{
+	
+	"wp-index-objquery": {
+		"prefix": "wp-index-objquery",
+		"body": [
+			"<?php $1query = new WP_Query( array(//query переменная через доллар ",
+			"'category_name' => get_theme_mod('$2_home_category'),",
+			" 'posts_per_page' => 4,",
+        	") ); ?>"
+		],
+		"description": "Создание объекта для создании рубрики, запроса"
+	}
+}

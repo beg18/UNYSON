@@ -1,0 +1,9 @@
+{
+	"wp-btn-link": {
+		"prefix": "wp-btn-link",
+		"body": [
+			"<p><a href=\"<?php the_permalink(); ?>\" class=\"btn btn-primary\"><?php _e('Read more', '$1'); ?></a></p>//название темы"
+		],
+		"description": "Кнопка ссылка читать далее"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"img-x": {
+		"prefix": "img-x",
+		"body": [
+			"<img width=\"400\"",
+			"src=\"i/img-800.jpg 2x,",
+			"srcset=\" i=\"\"/>/img-full.jpg 3x\">",
+		],
+		"description": "img для адаптивной вёрстки"
+	}
+}

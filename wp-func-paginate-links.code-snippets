@@ -1,0 +1,29 @@
+{
+	"wp-func-paginate-links": {
+		"prefix": "wp-func-paginate-links",
+		"body": [
+			"// вывод пагинации производится поставив имя данной функции <?php wp_corenavi(); ?>  в разметке пагинации",
+			"function wp_corenavi(){",
+				"global $1wp_query, $1wp_rewrite;",
+				"$1pages = '';",
+				"$1max = $1wp_query->max_num_pages;",
+				"if (!$1current = get_query_var('paged')) $1current = 1;",
+				"$1a['base'] = str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999)));",
+				"$1a['total'] = $1max;",
+				"$1a['current'] = $1current;",
+			
+				"$1total = 0; //1 - выводить текст \"Страница N из N\", 0 - не выводить",
+				"$1a['mid_size'] = 2; //сколько ссылок показывать слева и справа от текущей",
+				"$1a['end_size'] = 1; //сколько ссылок показывать в начале и в конце",
+				"$1a['prev_text'] = '&laquo;'; //текст ссылки \"Предыдущая страница\"",
+				"$1a['next_text'] = '&raquo;'; //текст ссылки \"Следующая страница\"",
+			
+				"if ($1max > 1) echo '<div class=\"pager\">';",
+				"if ($1total == 1 && $1max > 1) $1pages = '<span class=\"pages\">Страница ' . $1current . ' из ' . $1max . '</span>'.'/r/n';",
+				"echo $1pages . paginate_links($1a);",
+				"if ($1max > 1) echo '</div>';",
+			"}",
+		],
+		"description": "вывод пагинации"
+	}
+}

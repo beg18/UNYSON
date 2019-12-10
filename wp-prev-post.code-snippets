@@ -1,0 +1,9 @@
+{
+	"wp-prev-post": {
+		"prefix": "wp-prev-post",
+		"body": [
+			"<?php previous_post($1format, $1previous, $1title, $1in_same_cat, $1limitprev, $1excluded_categories)?>"
+		],
+		"description": "Ссылки на предыдущие статьи функция"
+	}
+}

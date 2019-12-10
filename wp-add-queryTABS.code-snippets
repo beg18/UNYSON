@@ -1,0 +1,35 @@
+{
+	"wp-add-queryTABS": {
+		"prefix": "wp-add-queryTABS",
+		"body": [
+			"<?php",
+			"$1id = 11; // номер категории",
+			"$1posts_tabs = new WP_Query(array('cat' => $1id, 'posts_per_page' => 4, 'order' => 'ASC'));",
+			"?>",
+			"<?php if ( $1posts_tabs->have_posts() ) : ?>",
+			"<div class=\"our-services\"><!-- Разметку ставим нужную согласно вёрстки-->",
+			"<h1 class=\"center-n\"><span class=\"hnc\">Our Services</span></h1>",
+			"<div id=\"tabs\">",
+			"<ul>",
+			"<?php while ( $1posts_tabs->have_posts() ) : $1posts_tabs->the_post(); ?>",
+			"<li><a href=\"#tabs-<?php the_ID(); ?>\"><?php the_title(); ?></a></li>",
+			"<?php endwhile; ?>",
+			"</ul>",
+			"<?php while ( $1posts_tabs->have_posts() ) : $1posts_tabs->the_post(); ?>",
+			"<div id=\"tabs-<?php the_ID(); ?>\">",
+			"<?php the_content(); ?>",
+			"</div>",
+			"<?php endwhile; ?>",
+			"</div>",
+			"</div>",
+			"<?php else: ?>",
+			"<div class=\"our-services\">",
+			"<h1 class=\"center-n\"><span class=\"hnc\">Записи в формате вкладок</span></h1>",
+			" </div>",
+			"<?php endif; ?>",
+			"</div>",
+			"</div>"
+		],
+		"description": "Вывод вкладок ТАБОВ образец"
+	}
+}

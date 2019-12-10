@@ -1,0 +1,14 @@
+{
+	"wp-breadcrumb": {
+		"prefix": "wp-breadcrumb",
+		"body": [
+			"<?php $1cat = get_the_category(); ?> // создаём переменную",
+			"<p class=\"page-title-map\">",
+			"<a href=\"<?php echo home_url(); ?>\">Home</a><!-- ссылка на главную стра-цу-->",
+			"/  <a href=\"<?php echo get_category_link($1cat[0]->cat_ID); ?>\"><?php echo $1cat[0]->name; ?></a>",
+			"/ <?php the_title(); ?>",
+			"</p>",
+		],
+		"description": " Хлебные крошки"
+	}
+}

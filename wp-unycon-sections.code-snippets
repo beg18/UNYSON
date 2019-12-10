@@ -1,0 +1,21 @@
+{
+	"wp-unycon-sections": {
+		"prefix": "wp-unycon-sections",
+		"body": [
+			"//создаём в папке themes папки по директорию: ",
+			"//themes/clean/framework-customizations/extensions/ shortcodes/shortcodes/",
+			"// копируем сюда те папки которые нам надо например sections & icons",
+			"// в файле options.php мы добавляем к секцию свои ID & CLASS",
+			"// СВЯЗАН co сниппетом WP-UNYCON-VIEWS-SECTION",
+			 "'custom_id' => array(",
+			 "'label' => __('Custom ID', '$1'),// второй параметр наименование домэйна темы, например clean",
+			 "'type'  => 'text',",
+		" ),",
+		 "'custom_class' => array(",
+			" 'label' => __('Custom Class', '$1'),// второй параметр наименование домэйна темы, например clean",
+			 "'type'  => 'text',",
+		" ),",
+		],
+		"description": "Добавляем к секцию свои ID  и классы"
+	}
+}

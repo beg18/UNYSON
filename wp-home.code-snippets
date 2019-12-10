@@ -1,0 +1,9 @@
+{
+	"wp-home": {
+		"prefix": "wp-home",
+		"body": [
+			"<?php echo home_url('/'); ?>",
+		],
+		"description": "главная страница"
+	}
+}

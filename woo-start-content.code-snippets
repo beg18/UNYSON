@@ -1,0 +1,13 @@
+{
+	"woo-start-content": {
+		"prefix": "woo-start-content",
+		"body": [
+			"// вызываем ХУК woocommerce_before_main_content",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-hooks.php",
+			"// вызываем функцию woocommerce_output_content_wrapper",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-functions.php",
+			"<?php do_action('woocommerce_before_main_content'); ?>"
+		],
+		"description": "Ставим фунцию вместо открывающих дивов на главной странице"
+	}
+}

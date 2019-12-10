@@ -1,0 +1,16 @@
+{
+	"wp-UniqueTemplatesForCategories ": {
+		"prefix": "wp-UniqueTemplatesForCategories ",
+		"body": [
+			"//https://neolot.com/wp-content/uploads/2009/08/WordPress-Snippets.pdf",
+			"<?php  $1post = $1wp_query- >post; // переменная $1post ДОЛЛАР",
+			"if ( in_category('3') ) { ",
+			"include(TEMPLATEPATH . '/cat3.php’);", 
+			"} elseif ( in_category('4') ) {", 
+			"include(TEMPLATEPATH . '/cat4.php');", 
+			"} else { include(TEMPLATEPATH . '/cat.php');", 
+			"} ?>",
+		],
+		"description": " Поместите этот код в верхняя часть category.php.Этот фрагмент будет назначать уникальный шаблон для определенных категорий. В этом случае 'cat3.php' будет назначен 'Категории 3', 'cat4.php' будет назначен категории 4 ', а остальным категориям будет присвоен' cat.php '."
+	}
+}

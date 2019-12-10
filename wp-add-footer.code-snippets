@@ -1,0 +1,17 @@
+{
+	//https://misha.blog/wordpress/get_footer.html
+	"wp-add-footer": {
+		
+		"prefix": "wp-add-footer",
+		"body": [
+			"<?php",
+			"if( is_single( 5 ) ) {",
+			"get_footer('$1');",// footer-{'name'}.php
+			"} else {",
+			"get_footer();",// footer.php
+			"}",
+			"?>",
+		],
+		"description": "с использованием условного тега is_single(), то есть в итоге будет один нестандартный футер footer-{name}.php для записи с ID=5:"
+	}
+}

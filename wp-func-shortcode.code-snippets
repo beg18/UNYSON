@@ -1,0 +1,15 @@
+{
+	"wp-func-shortcode": {
+		"prefix": "wp-func-shortcode",
+		"body": [
+			"function $1_shortcode() {",
+			"return '<div class=\"$1\">Содержимое для шорткода</div>';// здесь ставим нужную разметку",
+			"// получение адреса до картинок в src .get_bloginfor('template_url'). /assets/i/.",
+			"// <img  class=\"$1-img\" src=\" '. get_bloginfor('template_url') .'/assets/i/\">",
+			"}",
+
+			"add_shortcode('$1', '$1_shortcode');"
+		],
+		"description": "  Пользовательская функция для создания шорткодов"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"wp-shortcode": {
+		
+		"prefix": "wp-shortcode",
+		"body": [
+			"<?php echo do_shortcode('//СЮДА СТАВИМ shortcode') ?> ",
+		],
+		"description": "СЮДА СТАВИМ shortcode"
+	}
+}

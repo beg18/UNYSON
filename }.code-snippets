@@ -1,0 +1,18 @@
+{
+	
+	//https://misha.blog/wordpress/get_search_form.html:
+	"wp-search_form": {
+		// get_search_form( $echo = true )
+		// $echo
+		// (логическое) false — функция возвращает форму поиска, true — выводит
+		"prefix": "wp-search_form",
+		"body": [
+			"function $1_search_form( $form ) {",
+			"$form = '...';",// в эту переменную записываем новую поисковую форму
+			" return $form;",
+			"}",
+			"add_filter( 'get_search_form', 'true_search_form' );",
+		],
+		"description": "вставлять в файл functions.php использовать хук get_search_form, чтобы перезаписать HTML стандартной формы поиска в WordPress. "
+	}
+}

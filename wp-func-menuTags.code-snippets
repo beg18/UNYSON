@@ -1,0 +1,23 @@
+{
+	"wp-func-menuTags": {
+		"prefix": "wp-func-menuTags",
+		"body": [
+			"<!-- В связке со сниппетом wp-add-menuTags-->",
+			"function get_tags_in_cat($1cat_id){",
+			"$1posts = get_posts( array('category' => $1cat_id, 'numberposts' => -1) );",
+			"$1tags = array();",
+			"foreach($1posts as $1post){",
+			"$1post_tags = get_the_tags($1post->ID);",
+			"if( !empty($1post_tags) ){",
+			"foreach($1post_tags as $1tag){",
+			"$1tags[$1tag->term_id] = $1tag->name;",
+			"}",
+			"}",
+			"}",
+			"asort($1tags);",
+			"return $1tags;",
+			"}",
+		],
+		"description": "Получаем массив меток категорий"
+	}
+}

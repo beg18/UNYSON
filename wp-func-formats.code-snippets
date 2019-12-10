@@ -1,0 +1,9 @@
+{
+	"wp-func-formats": {
+		"prefix": "wp-func-formats",
+		"body": [
+			"add_theme_support( 'post-formats', array( 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio','chat') );",
+		],
+		"description": "Добавление разных форматов записей"
+	}
+}

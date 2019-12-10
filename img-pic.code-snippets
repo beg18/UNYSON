@@ -1,0 +1,16 @@
+{
+	"img-pic": {
+		"prefix": "img-pic",
+		"body": [
+			"<picture>",
+                    "<source media=\"(max-width: 480px)\" srcset=\"i/mobile.jpg\">",
+                    "<source media=\"(max-width: 640px)\" srcset=\"i/tablet.jpg\">",
+                    "<img src=\"i/img-800.jpg\"",
+                        " srcset=\"i/img-400.jpg 400w,",
+                                  "i/img-800.jpg 800w,",
+                                  "i/img-full.jpg 1400w\" alt=\"\">",
+                "</picture>",
+		],
+		"description": "img для адаптивной вёрстки"
+	}
+}

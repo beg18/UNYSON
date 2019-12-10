@@ -1,0 +1,11 @@
+{
+	"wp-reg-pagination": {
+		"prefix": "wp-reg-pagination",
+		"body": [
+			"the_posts_pagination( array( ",
+			"'end_size' => 2,",
+			"));",
+		],
+		"description": "в functions выводим пагинацию"
+	}
+}

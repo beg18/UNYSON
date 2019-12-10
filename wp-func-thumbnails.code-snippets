@@ -1,0 +1,12 @@
+{
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"<?php",
+			"add_theme_support('post-thumbnails');",// включаем поддержку миниатюр
+			"?>",
+		],
+		"description": "включаем поддержку миниатюр"
+	}
+}

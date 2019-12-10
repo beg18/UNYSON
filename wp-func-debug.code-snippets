@@ -1,0 +1,13 @@
+{
+	"wp-func-debug": {
+		"prefix": "wp-func-debug",
+		"body": [
+			"связан со сниппетом wp-debug",
+			"function debug($1data){",
+				"echo '<pre>' . print_r($1data, 1) . '</pre>';",
+			"}",
+			
+		],
+		"description": " Функция для просмотра данных"
+	}
+}

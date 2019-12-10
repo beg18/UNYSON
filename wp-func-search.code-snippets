@@ -1,0 +1,14 @@
+{
+	"wp-func-search": {
+		"prefix": "wp-func-search",
+		"body": [
+			"function $1_search_form( $2form ) {",
+				"$2form = '...'; // в эту переменную записываем новую поисковую форму",
+				"return $2form;",
+			"}",
+			 
+			"add_filter( 'get_search_form', '$1_search_form' );",
+		],
+		"description": "хук get_search_form, чтобы перезаписать HTML стандартной формы поиска в WordPress"
+	}
+}

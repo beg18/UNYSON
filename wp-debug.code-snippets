@@ -1,0 +1,10 @@
+{
+	"wp-debug": {
+		"prefix": "wp-debug",
+		"body": [
+			"связан со сниппетом wp-func-debug",
+			"<?php debug(get_theme_mods()); ?>",
+		],
+		"description": " Вывод данных объекта"
+	}
+}

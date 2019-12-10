@@ -1,0 +1,13 @@
+{
+	"woo-description-archive": {
+		"prefix": "woo-description-archive",
+		"body": [
+			"// описание текущей главной страницы",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-hooks.php",
+			"// вызываем функцию woocommerce_product_archive_description || woocommerce_taxonomy_archive_description",
+			"// вызываем ХУК woocommerce_archive_description",
+			"<?php do_action('woocommerce_archive_description');?>"
+		],
+		"description": "описание текущей главной страницы"
+	}
+}

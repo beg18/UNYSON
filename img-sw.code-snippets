@@ -1,0 +1,13 @@
+{
+	"img-sw": {
+		"prefix": "img-sw",
+		"body": [
+			"<img src=\"i/img-400.jpg\" alt=\"\"",
+                "sizes=\"(min-width: 480px) 50vw, 100vw\"",
+                "srcset=\"i/img-400.jpg 400w,",
+                         "i/img-800.jpg 800w,",
+                         "i/img-full.jpg 1400w\">",
+		],
+		"description": "img для адаптивной вёрстки"
+	}
+}

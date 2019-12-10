@@ -1,0 +1,27 @@
+{
+	"wp-menu": {
+		"prefix": "wp-menu",
+		"body": [
+			"<?php",
+			"// связан со СНИППЕТАМ WP-REG-ACTIONS WP-FILE-MENU WP-REG-MENU WP-REG-FILE-MENU",
+			"// эту функцию ставим внутри div(container_class) с классом collapse navbar-collapse",
+			"wp_nav_menu( array(",
+			"'theme_location' => 'header_menu1',",
+			"'container_class' => '',//collapse navbar-collapse",
+			"//'container_id' => '',//navbarSupportedContent из data-target=\"#bs-example-navbar-collapse-1\"",
+			"'menu_class' => '',//navbar-nav mr-auto  если пустой значит удаляем класс меню по умолчанию",
+			"//'menu_id' => '',//top-nav-ul",
+			"//'menu' => 'Меню в футере',",
+			"//'container' => 'div',//false/true",
+			"//'items_wrap' => '',//<ul id=\"%1$s\" class=\"nav navbar-nav %2$s\">%3$s</ul>",
+			"//'before'     => '',  // что вывести перед текстом, например: тире || <span> - </span>",
+			"//'after'      => '',  // что вывести после текста",
+			"//new bootstrap_menu(true) СОЗДАЁМ файл $1_Menu.php ||  $1_Walker_Nav_Menu.php",
+			"// связан со СНИППЕТАМИ WP-FILE-MENU wp-file-walker-navigation",
+			"//'walker' => new  $1_Walker_Nav_Menu ",
+			"));",
+			"?>",
+		],
+		"description": "header добавляем меню с параметром  и своими классами"
+	}
+}

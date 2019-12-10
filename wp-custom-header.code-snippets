@@ -1,0 +1,23 @@
+{
+	"wp-custom-header": {
+		"prefix": "wp-custom-header",
+		"body": [
+			"$1defaults = array(",
+			"'default-image'          => '', // фон шапки по умолчанию",
+			"'random-default'         => false, // нужно ли выводить изображения в случайном порядке",
+			"'width'                  => 0, // ширина шапки",
+			"'height'                 => 0, // высота шапки",
+			"'flex-height'            => false, // резиновая высота true / false",
+			"'flex-width'             => false, // резиновая ширина true / false",
+			"'default-text-color'     => '', // цвет текста по умолчанию",
+			"'header-text'            => true, // можно ли выводить текст в шапке",
+			"'uploads'                => true, // возможность пользователю загружать свои изображения",
+			"'wp-head-callback'       => '',",
+			"'admin-head-callback'    => '',",
+			"'admin-preview-callback' => '',",
+		");",
+		"add_theme_support( 'custom-header', $1defaults );"
+		],
+		"description": "Произвольная шапка"
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"wp-add-img": {
+		"prefix": "wp-add-img",
+		"body": [
+			"<?php if(has_post_thumbnail()): ?>",
+			"<?php the_post_thumbnail('thumbnail', array('class' => 'float-left mr-3'));?>",
+			"<?php else: ?> ",
+			"<img src=\"https://picsum.photos/150/150\" width=\"150\" height=\"150\" alt=\"\" class=\"float-left mr-3\">",
+			"<?php endif; ?>",
+		],
+		"description": "index добавляем миниатюру в отрывок текста"
+	}
+}

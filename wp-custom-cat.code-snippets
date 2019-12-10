@@ -1,0 +1,27 @@
+{
+	"wp-custom-cat": {
+		"prefix": "wp-custom-cat",
+		"body": [
+			"// в сниппетах wp-query-counter-bgimg wp-add-query данную категорию ,",
+			"//выводят в category_name' => get_theme_mod('category')",
+			"// Theme Custom Customizer",
+			"$2wp_customize->add_section('$1_theme_options', array(",
+			"'title' => __('Theme Options', '$1'),",
+			"'priority' => 10,",
+		"));",
+		"$2wp_customize->add_setting('$1_home_category', array(",
+			"'default' => '',",
+			"//'transport'=>'postMessage',",
+		"));",
+		"$2wp_customize->add_control(",
+			"'$1_home_category',",
+			"array(",
+				"'label' => __('Category on Home Page', '$1'),",
+				"'section' => '$1_theme_options',",
+				"'type' => 'text',",
+			")",
+		");",
+		],
+		"description": "В custom.php добавляем секцию категорий для гл.страницы"
+	}
+}

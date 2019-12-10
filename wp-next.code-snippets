@@ -1,0 +1,10 @@
+{
+	"wp-next": {
+		"prefix": "wp-next",
+		"body": [
+			"<?php next_post_link( $1format:string, $1link:string, $1in_same_term:boolean, $1excluded_terms:array|string, $1taxonomy:string )?>",
+			"//'%link <span>&raquo</span>' ставим в скобки"
+		],
+		"description": " Следующая запись"
+	}
+}

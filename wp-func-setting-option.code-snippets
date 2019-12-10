@@ -1,0 +1,16 @@
+{
+	"wp-func-setting-option": {
+		"prefix": "wp-func-setting-option",
+		"body": [
+			"// связан со сниппетом wp-setting-option",
+			"function $1_theme_option($2name){",
+				"if(defined('FW')){",
+					"return fw_get_db_settings_option($2name);",
+				"}else{",
+					"return $2name;",
+				"}",
+			"}",
+		],
+		"description": "изменения настроек с помощью unyson "
+	}
+}
