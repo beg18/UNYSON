@@ -1,0 +1,21 @@
+{
+	"woo-loop": {
+		"prefix": "woo-loop",
+		"body": [
+			"<?php if(have_posts()) :?>",
+			"// здесь открывающий тег",
+			"<ul>",
+			"<?php while(have_posts()) : the_post();?>",
+			"// здесь подключаем файл content-product-cat.php с повторяющим тегом например LI созданный в папке woocommerce",
+			"<?php wc_get_template_part('content','product-cat');?>",
+			"<?php endwhile;?>",
+			"// здесь закрывающий тег",
+			"</ul>",
+			"<?php else :?>",
+			"// здесь подключаем файл no-products-found.php созданный в папке woocommerce-> loop сниппет woo-file-no-found",
+			"<?php wc_get_template('loop/no-products-found.php')?>",
+			"<?php endif;?>",
+		],
+		"description": "цикл для плагина woocommerce "
+	}
+}

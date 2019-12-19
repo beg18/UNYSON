@@ -1,0 +1,21 @@
+{
+	"woo-start-loop": {
+		"prefix": "woo-start-loop",
+		"body": [
+			"<?php // временно ",
+			"// связаны сниппеты woo-func-remove-start-loop,woo-file-orderby, ",
+			"// к данному ХУКу woocommerce_before_shop_loop связаны две функции",
+			"// первая: woocommerce_result_count исп-ся для показа кол-во найденных элементов",
+			"// в данной функции подключается файл result-count.php из папки loop ",
+			"// т.к. данная функция нам не нужен то её мы отвяжим woo-func-remove-start-loop",
+			"// вторая: woocommerce_catalog_ordering исп-ся для форимрования механизма сортировки",
+			"// в данной функции в начале формируется параметры и подключается файл orderby.php из папки loop ",
+			"// в папке loop из темы создаём файл orderby.php woo-file-orderby",
+			"<div class=\"mens-toolbar\">// это из разметки меняем под разметку",
+			"<?php do_action( 'woocommerce_before_shop_loop' ); ?>",
+			"<div class=\"clearfix\"></div>",
+			"</div>",
+		],
+		"description": "событие который срабатывает до цикла исп-ся для форимрования механизма сортировки и для показа кол-во найденных элементов"
+	}
+}

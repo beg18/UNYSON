@@ -1,0 +1,17 @@
+{
+	"woo-func-remove-start-loop": {
+		"prefix": "woo-func-remove-start-loop",
+		"body": [
+			"<?php // временно ",
+			"// связаны сниппеты woo-start-loop, woo-file-orderby, ",
+			"// к данному ХУКу woocommerce_before_shop_loop связаны две функции",
+			"// первая: woocommerce_result_count исп-ся для показа кол-во найденных элементов",
+			"// в данной функции подключается файл result-count.php из папки loop ",
+			"// т.к. данная функция нам не нужен то её мы отвяжим в файле functions.php",
+			"if(!is_shop()) {",
+				"remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 ); ",
+			"}", 
+		],
+		"description": "функция woocommerce_result_count нам не нужен то её мы отвяжим"
+	}
+}

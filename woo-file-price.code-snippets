@@ -1,0 +1,26 @@
+{
+	"woo-file-price": {
+		"prefix": "woo-file-price",
+		"body": [
+			"// связан со сниппетом woo-price-rating",
+			"// функция для отображения цены woocommerce_template_loop_price",
+			"<?php",
+			"if (! defined('ABSPATH')) {",
+			"exit; // Exit if accessed directly",
+			"}",		
+			"global $1product;",			
+			"$1price_html = $1product->get_price_html();",		
+			"if($1price_html && !is_shop()) :",			
+			"?>",		
+			"<div class=\"pricey\"><span class=\"item_price\"><?php echo $1price_html?></span></div>",
+			"<div class=\"clearfix\"></div>",
+			"</div>",
+			"</div>",
+			"</div>",
+			"</div>",
+			"</div>",			
+			"<?php endif;?>",		   			
+		],
+		"description": "Log output to console"
+	}
+}

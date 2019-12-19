@@ -1,0 +1,25 @@
+{
+	"woo-func-per-page": {
+		"prefix": "woo-func-per-page",
+		"body": [
+			"<?php // временно ",
+			"// связаны сниппеты  woo-pagination, woo-func-loop-pagination, woo-file-pagination,woo-func-per-page, woo-option-select",
+			"// чтобы на странице показывался определенное кол-во эл-тов(товаров) создаём функцию",
+			"add_filter('loop_shop_per_page', '$2_loop_shop_per_page');//второй  ТАБ имя темы",
+			"function $2_loop_shop_per_page($1cols) { // первый ТАБ доллар",
+			"// print_r($2cols);",
+			"$1cols = 9;",
+			"// $1ppp  означает post_per_page",
+			"$1ppp = false;",
+			"if(isset($1_GET['ppp'])) {",
+			"$1ppp = $1_GET['ppp'];",
+			"}",
+			"if($1ppp) {",
+			"return $1ppp;",
+			"}",
+			"return $1cols;",
+			"}",
+		],
+		"description": "чтобы на странице показывался определенное кол-во эл-тов(товаров) "
+	}
+}

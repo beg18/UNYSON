@@ -1,0 +1,31 @@
+{
+	"woo-script-for-pagination": {
+		"prefix": "woo-script-for-pagination",
+		"body": [
+			"// связаны сниппеты woo-option-select, woo-pagination, woo-func-loop-pagination, woo-file-pagination,woo-func-per-page, ",
+			"// в файле footer.php пишем данный js script",
+			"<script>",
+			"jQuery(function($1) {",
+			"$1('#pagination-posts').on('change',function() {",
+			"var countPage = $1('#pagination-posts').val();",
+			"var args = {};",
+			"var query = window.location.search.substring(1);",
+			"var parts = query.split('&');",
+			"for(var i = 0; i < parts.length; ++i) {",
+			"var pos = parts[i].indexOf('=');",
+			"if(pos == -1) {",
+			"continue;",
+			"}",
+			"var name = parts[i].substring(0,pos);",
+			"var value = parts[i].substring(pos+1);",
+			"args[name] = value;",
+			"}",
+			"args['ppp'] = countPage;",
+			"window.location.href = '?' + $1.param(args);",
+			"});",
+			"})",
+			"</script>",
+		],
+		"description": "в файле footer.php пишем данный js script"
+	}
+}

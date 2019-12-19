@@ -1,0 +1,17 @@
+{
+	"woo-add-defined-empty": {
+		"prefix": "woo-add-defined-empty",
+		"body": [
+			"<?php",
+			"if (!defined('ABSPATH')) {",
+			"exit; // Exit if accessed directly",
+			"}",
+			"global $1product;",
+			"if (empty($1product) || !$1product->is_visible()) {",
+			"return;",
+			"}",
+			"?>",
+		],
+		"description": "Log output to console"
+	}
+}
