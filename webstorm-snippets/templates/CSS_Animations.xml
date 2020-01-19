@@ -1,0 +1,43 @@
+<templateSet group="CSS_Animations">
+  <template name="Animate a Background changing color" value=".$className$ {&#10;&#9;background: #1abc9c;&#10;&#9;animation: bgColor 5s;&#10;}&#10;&#10;&#10;@keyframe$className$ {&#10;&#9;from {&#10;&#9;&#9;background: #1abc9c;&#10;&#9;}&#10;&#9;to {&#10;&#9;&#9;background: #ebebeb;&#10;&#9;}&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Animate with Ease Timing Function" value=".$className$ {&#10;&#9;position: relative;&#10;&#10;&#9;/* Standard syntax */&#10;&#9;animation-name: easeAnimation;&#10;&#9;animation-duration: 5s;&#10;&#9;animation-timing-function: ease;&#10;&#9;animation-delay: 2s;&#10;&#9;animation-iteration-count: infinite;&#10;&#9;animation-direction: alternate;&#10;&#9;animation-play-state: running;&#10;}&#10;&#10;&#10;@keyframes easeAnimation {&#10;&#9;0% {&#10;&#9;&#9;left: 0;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;&#9;100% {&#10;&#9;&#9;left: 200px;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Animate with Ease-In Timing Function" value=".easeinAnimObj {&#10;&#9;position: relative;&#10;&#9;&#10;&#9;/* Standard syntax */&#10;&#9;animation-name: ease-inAnimation;&#10;&#9;animation-duration: 5s;&#10;&#9;animation-timing-function: ease-in;&#10;&#9;animation-delay: 2s;&#10;&#9;animation-iteration-count: infinite;&#10;&#9;animation-direction: alternate;&#10;&#9;animation-play-state: running;&#10;}&#10;&#10;&#10;/* Standard syntax */&#10;@keyframes ease-inAnimation {&#10;&#9;0% {&#10;&#9;&#9;left: 0;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;&#9;100% {&#10;&#9;&#9;left: 200px;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Animate with Ease-In-Out Timing Functiona" value=".$className$ {&#10;&#9;position: relative;&#10;&#10;&#9;animation-name: ease-in-outAnimation;&#10;&#9;animation-duration: 5s;&#10;&#9;animation-timing-function: ease-in-out;&#10;&#9;animation-delay: 2s;&#10;&#9;animation-iteration-count: infinite;&#10;&#9;animation-direction: alternate;&#10;&#9;animation-play-state: running;&#10;}&#10;&#10;/* &#10;Define the keyframe and changes&#10;*/&#10;&#10;&#10;@keyframes ease-in-outAnimation {&#10;&#9;0% {&#10;&#9;&#9;left: 0;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;&#9;100% {&#10;&#9;&#9;left: 200px;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Animate with Ease-Out Timing Function" value="&#10;.$className$ {&#10;&#9;position: relative;&#10;&#9;&#10;&#9;animation-name: ease-outAnimation;&#10;&#9;animation-duration: 5s;&#10;&#9;animation-timing-function: ease-out;&#10;&#9;animation-delay: 2s;&#10;&#9;animation-iteration-count: infinite;&#10;&#9;animation-direction: alternate;&#10;&#9;animation-play-state: running;&#10;}&#10;&#10;&#10;@keyframes ease-outAnimation {&#10;&#9;0% {&#10;&#9;&#9;left: 0;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;&#9;100% {&#10;&#9;&#9;left: 200px;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Animate with Linear Timing Function" value="&#10;.$className$ {&#10;&#9;position: relative;&#10;&#9;&#10;&#9;animation-name: linearAnimation;&#10;&#9;animation-duration: 5s;&#10;&#9;animation-timing-function: linear;&#10;&#9;animation-delay: 2s;&#10;&#9;animation-iteration-count: infinite;&#10;&#9;animation-direction: alternate;&#10;&#9;animation-play-state: running;&#10;}&#10;&#10;&#10;@keyframes linearAnimation {&#10;&#9;0% {&#10;&#9;&#9;left: 0;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;&#9;100% {&#10;&#9;&#9;left: 200px;&#10;&#9;&#9;top: 0;&#10;&#9;}&#10;}&#10;" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="CSS3 Keyframe Animation Syntax" value="@keyframes $$Animation-Title {&#10;&#9;0% {&#10;&#9;&#9;/* Add some property like - color: #1abc9c;*/&#10;&#9;}&#10;&#9;50% {&#10;&#9;&#9;/* Add some property like - color: #16F1C6;*/&#10;&#9;}&#10;&#9;100% {&#10;&#9;&#9;/* Add some property like - color: #06F9C9;*/&#10;&#9;}&#10;}&#10;&#10;.$className$ {&#10;&#9;&#10;&#9;animation: $$Animation-Title 3s infinite;&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>

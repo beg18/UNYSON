@@ -1,0 +1,26 @@
+<templateSet group="CSS_Transitions">
+  <template name="Transition with Ease Timing Function" value=".$className$ {&#10;&#9;transition-property: /*property*/ ;&#10;&#9;transition-duration: 1s;&#10;&#9;transition-timing-function: ease;&#10;&#9;transition-delay: 1s;&#10;}&#10;&#10;&#10;.$className$:hover {&#10;    /*Set the final value for which you would like the property to transition to. Ex: width:500px;*/&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Transition with Ease-In Timing Function" value=".$className$ {&#10;&#9;&#10;&#9;transition-property: /*property*/ ;&#10;&#9;transition-duration: 1s;&#10;&#9;transition-timing-function: ease-in;&#10;&#9;transition-delay: 1s;&#10;}&#10;&#10;/*Pick the action to trigger the animation - Ex: hover */&#10;.$className$:hover {&#10;&#9;/*Set the final value for which you would like the property to transition to. Ex: width:500px;*/&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Transition with Ease-In-Out Timing Function" value=".$className$ {&#10;&#9;&#10;&#9;transition-property: /*property*/;&#10;&#9;transition-duration: 1s;&#10;&#9;transition-timing-function: ease-in-out;&#10;&#9;transition-delay: 1s;&#10;}&#10;&#10;.$className$:hover {&#10;&#9;/*Set the final value for which you would like the property to transition to. Ex: width:500px;*/&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Transition with Ease-Out Timing Function" value="&#10;.$className$ {&#10;&#9;&#10;&#9;transition-property: /*property*/ ;&#10;&#9;transition-duration: 1s;&#10;&#9;transition-timing-function: linear;&#10;&#9;transition-delay: 1s;&#10;}&#10;&#10;.$className$:hover {&#10;&#9;/*Set the final value for which you would like the property to transition to. Ex: width:500px;*/&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="className" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>

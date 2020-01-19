@@ -1,0 +1,40 @@
+<templateSet group="CSS_Effects">
+  <template name="Adjust the Brightness &amp; Contrast of an image using CSS" value="img {&#10;  -webkit-filter: brightness(3);&#10;  filter: brightness(3);&#10;&#10;  -webkit-filter: contrast(4);&#10;  filter: contrast(4);&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Blur out text using CSS" value=".$blurryText$ {&#10;&#9;color: transparent;&#10;&#9;text-shadow: 0 0 5px rgba(131,246,228,0.8);&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="blurryText" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Convert an Image to Greyscale using CSS" value="img {&#10;&#9;-webkit-filter: grayscale(1);&#10;&#9;filter: grayscale(1);&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Convert an Image to Sepia using CSS" value="img {&#10;  -webkit-filter: sepia(1);&#10;  filter: sepia(1);&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Create a Box Shadow" value=".$boxShadow$ {&#10;&#9;box-shadow: 6px 6px 14px 6px #ebebeb;&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="boxShadow" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="Create a Drop Caps" value="p.$dropcaps$:first-child:first-letter {&#10;&#9;float: left;&#10;&#9;color: #1abc9c;&#10;&#9;font-size: 80px;&#10;&#9;line-height: 40px;&#10;&#9;padding-top: 6px;&#10;&#9;padding-right: 6px;&#10;&#9;padding-left: 6px;&#10;}" toReformat="false" toShortenFQNames="true">
+    <variable name="dropcaps" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+  <template name="loader" value=".loader {&#10;  background: none repeat scroll 0 0 #ffffff;&#10;  bottom: 0;&#10;  height: 100%;&#10;  left: 0;&#10;  position: fixed;&#10;  right: 0;&#10;  top: 0;&#10;  width: 100%;&#10;  z-index: 9999; }&#10;  .loader .loader_inner {&#10;    background-image: url(&quot;../i/preloader.gif&quot;);&#10;    background-size: cover;&#10;    background-repeat: no-repeat;&#10;    background-posirion: center center;&#10;    background-color: #fff;&#10;    height: 60px;&#10;    width: 60px;&#10;    margin-top: -30px;&#10;    margin-left: -30px;&#10;    left: 50%;&#10;    top: 50%;&#10;    position: absolute; }" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="CSS" value="true" />
+    </context>
+  </template>
+</templateSet>

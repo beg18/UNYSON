@@ -1,0 +1,336 @@
+<templateSet group="JavaScript">
+  <template name="slide-M" value="/* Begin $varName$ */&#10;    var slideIndex = 1,&#10;        $varName$_prev = document.querySelector('.$varName$__prev'),&#10;        $varName$_next = document.querySelector('.$varName$__next');&#10;&#10;$varName$_prev.addEventListener('click', plusDivs(-1));&#10;$varName$_next.addEventListener('click', plusDivs(-1));&#10;showDivs(slideIndex);&#10;&#10;function plusDivs(n) {&#10;  showDivs(slideIndex += n);&#10;}&#10;&#10;function showDivs(n) {&#10;  var i;&#10;  var $varName$_img = document.getElementsByClassName(&quot;$varName$__img&quot;);&#10;  if (n &gt; $varName$_img.length) {slideIndex = 1}    &#10;  if (n &lt; 1) {slideIndex = $varName$_img.length}&#10;  for (i = 0; i &lt; $varName$_img.length; i++) {&#10;     $varName$_img[i].style.display = &quot;none&quot;;  &#10;  }&#10;  $varName$_img[slideIndex-1].style.display = &quot;block&quot;;  &#10;}&#10;/* END $varName$ */" toReformat="false" toShortenFQNames="true">
+    <variable name="varName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="$" value="$(function(){&#10;    $name$&#10;});   " toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="click-id" value="$('#$selector$').click(function(){});" toReformat="false" toShortenFQNames="true">
+    <variable name="selector" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="id-anim" value="$('#$selector$').animate({},time, easy);" toReformat="false" toShortenFQNames="true">
+    <variable name="selector" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="class-anim" value="$('.$selector$').animate({},time, easy);" toReformat="false" toShortenFQNames="true">
+    <variable name="selector" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="click-class" value="$('.$selector$').click(function(){});" toReformat="false" toShortenFQNames="true">
+    <variable name="selector" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ef-id" value="$('#$selector$').[EFFECT](time, function(){});" toReformat="false" toShortenFQNames="true">
+    <variable name="selector" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="ef-class" value="$('.$selector$').[EFFECT](time, function(){});" toReformat="false" toShortenFQNames="true">
+    <variable name="selector" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="anim-id" value="$('#$SELECTOR$').animate({properties},[duration], [easing], [callback]);" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="anim-class" value="$('.$SELECTOR$').animate({properties},[duration], [easing], [callback]);" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="anim" value="$('$SELECTOR$').animate({properties},[duration], [easing], [callback]);" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="w" value="window.onload = function (){};" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="navad" value="$('.menuToggle').on('click' , function (event) {&#10;    event.preventDefault();&#10;    $('.navigation__menu').slideToggle(300, function () {&#10;        if ($(this).css('display') ==='none'){&#10;            $(this).removeAttr('style');&#10;        }&#10;    });&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="get-id" value="var get = function (id){&#10;    return document.getElementById(id);&#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="query" value="var query = function(selector) {&#10;   return document.querySelector(selector); &#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="queryAll" value="var queryAll = function(string) {&#10;   return document.querySelectorAll(string); &#10;}" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="get-attr" value="$($SELECTOR$).attr(имя атрибута);" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="attr" value="$('$SELECTOR$').attr(имя атрибута, новое значение);" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="rem-attr-class" value="$('.$SELECTOR$').attr(имя атрибута, новое значение);" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="attr-id" value="$('#$SELECTOR$').attr(имя атрибута, новое значение);" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="get-attr-class" value="$('.$SELECTOR$').attr(имя атрибута);" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="get-attr-id" value="$('#$SELECTOR$').attr(имя атрибута);" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="set-attr" value="$('$SELECTOR$').attr({&#10;    первый_атрибут: 'новое_значение', &#10;    второй_атрибут: 'новое_значение' &#10;});" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="set-attr-class" value="$('.$SELECTOR$').attr({&#10;    первый_атрибут: 'новое_значение', &#10;    второй_атрибут: 'новое_значение' &#10;});" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="set-attr-id" value="$('#$SELECTOR$').attr({&#10;    первый_атрибут: 'новое_значение', &#10;    второй_атрибут: 'новое_значение' &#10;});" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="replaceWith" value="$('$Name$').replaceWith(чем заменить);" toReformat="false" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="replaceAll" value="$Name$.replaceAll(что заменить);" toReformat="false" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="$-teg" value="$('$Name$')" toReformat="false" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="$-class" value="$('.$Name$')" toReformat="false" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="$-id" value="$('#$Name$')" toReformat="false" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="eq" value="$('$name$').eq();" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="eq-class" value="$('.$name$').eq(INDEX);" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="eq-id" value="$('#$name$').eq(номер);" toReformat="false" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="modal" value="$('.js_modal').each(function() {&#10;    var modalWidth = $(this).innerWidth()/2;&#10;    $(this).css({&#10;        'marginLeft' : '-' + modalWidth + 'px'&#10;    });&#10;});&#10;&#10;$('.js_show-modal').on('click', function(e){&#10;    e.preventDefault();&#10;    var currentModal = $(this).attr('data-href');&#10;    /*var currentModal = $(this).attr('href');*/&#10;    $(currentModal).fadeIn(500);&#10;    $('body')&#10;        .append('&lt;div class=&quot;overlay&quot; id=&quot;js_overlay&quot;&gt;&lt;/div&gt;')&#10;        .addClass('stop-scroll');&#10;  });&#10;    &#10;$('.js-modal-close').on('click', function(e){&#10;    e.preventDefault();&#10;    &#10;    $('.js_modal').fadeOut(100);&#10;    $('body').removeClass('stop-scroll');&#10;    $('#js_overlay').remove();&#10;});&#10; &#10; $('body').on('click', '#js_overlay' , function(){&#10;    $('.js_modal').fadeOut(100);&#10;    $('body').removeClass('stop-scroll');&#10;    $('#js_overlay').remove();&#10;});   &#10;&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="tab-pit" value="$('.nav-tab-list__link').click(function (e) {&#10;    e.preventDefault();&#10;&#10;    $(this)&#10;        .parents('.tab-wrap')&#10;        .find('.tab-cont')&#10;        .addClass('tab-cont-hide');&#10;    $(this)&#10;        .parent()&#10;        .siblings()&#10;        .removeClass('item-active');&#10;    var id = $(this).attr('href');&#10;    $(id).removeClass('tab-cont-hide');&#10;    $(this)&#10;        .parent()&#10;        .addClass('item-active');&#10;    return false;&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="acc" value=" $(&quot;#accordion&quot;).accordion({&#10;     /*heightStyle: &quot;fill&quot;*/&#10;     heightStyle: &quot;content&quot;,&#10;     collapsible: true&#10;});    " toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tab-data" value="var tab = $('.tabs__link');&#10;tab.on('click',function (e) {&#10;   e.preventDefault();&#10;   $('.content').removeClass('content-active');&#10;   $('.content[data-tab=' + $(this).attr('data-tab') + ']')&#10;       .toggleClass('content-active');&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="sidebar" value="    /* Делаем адаптивное меню на jQuery */   &#10;    var menuLink = $('.menu-link');&#10;&#9;var menu = $('menu');&#10;&#9;var close = $('.close-btn');&#10;&#9;var navLink = $('li a');&#10;&#10;&#9;menuLink.click(function() {&#10;&#9;&#9;menu.toggleClass('active-menu');&#10;&#9;});&#10;&#9;close.click(function() {&#10;&#9;&#9;menu.toggleClass('active-menu');&#10;&#9;});&#10;&#10;&#9;navLink.on('click', function(event) {&#10;&#9;&#9;event.preventDefault();&#10;&#9;&#9;var target = $(this).attr('href');&#10;&#9;&#9;var top = $(target).offset().top;&#10;&#9;&#9;$('html,body').animate({scrollTop: top}, 500)&#10;&#9;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="tabs-short" value="$(&quot;.tab_item&quot;).not(&quot;:first&quot;).hide();&#10;$(&quot;.wrapper .tab&quot;).click(function() {&#10;&#9;$(&quot;.wrapper .tab&quot;).removeClass(&quot;active&quot;).eq($(this).index()).addClass(&quot;active&quot;);&#10;&#9;$(&quot;.tab_item&quot;).hide().eq($(this).index()).fadeIn()&#10;}).eq(0).addClass(&quot;active&quot;);&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="acc-short" value="$(&quot;.accordeon dd&quot;).hide().prev().click(function() {&#10;&#9;$(this).parents(&quot;.accordeon&quot;).find(&quot;dd&quot;).not(this).slideUp().prev().removeClass(&quot;active&quot;);&#10;&#9;$(this).next().not(&quot;:visible&quot;).slideDown().prev().addClass(&quot;active&quot;);&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="animate-css" value="/*&#10;Animate CSS + WayPoints javaScript Plugin&#10;Example: $(&quot;.element&quot;).animated(&quot;zoomInUp&quot;);&#10;$(&quot;.section_header&quot;).animated(&quot;fadeInUp&quot;, &quot;fadeOutDown&quot;);&#10;$(&quot;.animation_1&quot;).animated(&quot;flipInY&quot;, &quot;fadeOutDown&quot;);&#10;$(&quot;.animation_2&quot;).animated(&quot;fadeInLeft&quot;, &quot;fadeOutDown&quot;);&#10;$(&quot;.animation_3&quot;).animated(&quot;fadeInRight&quot;, &quot;fadeOutDown&quot;);&#10;$(&quot;.left .resume_item&quot;).animated(&quot;fadeInLeft&quot;, &quot;fadeOutDown&quot;);&#10;$(&quot;.right .resume_item&quot;).animated(&quot;fadeInRight&quot;, &quot;fadeOutDown&quot;);&#10;*/&#10;(function($)&#10;  {&#10;    $.fn.animated = function(inEffect, outEffect) {&#10;      $(this).css(&quot;opacity&quot;, &quot;0&quot;).addClass(&quot;animated&quot;).waypoint(function(dir)&#10;        {&#10;          if (dir === &quot;down&quot;) {&#10;            $(this).removeClass(outEffect).addClass(inEffect).css(&quot;opacity&quot;, &quot;1&quot;);&#10;          } else {&#10;            $(this).removeClass(inEffect).addClass(outEffect).css(&quot;opacity&quot;, &quot;1&quot;);&#10;          };&#10;        }, {&#10;        offset: &quot;80%&quot;&#10;        }&#10;      ).waypoint(function(dir) {&#10;          if (dir === &quot;down&quot;) {&#10;            $(this).removeClass(inEffect).addClass(outEffect).css(&quot;opacity&quot;, &quot;1&quot;);&#10;          } else {&#10;            $(this).removeClass(outEffect).addClass(inEffect).css(&quot;opacity&quot;, &quot;1&quot;);&#10;          };&#10;        }, {&#10;        offset: -$(window).height()&#10;        }&#10;      );&#10;    };&#10;  }&#10;)(jQuery);" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="close" value="$(&quot;#toggle&quot;).click(function() {&#10;    $(this).toggleClass(&quot;on&quot;);&#10;    $(&quot;#menu&quot;).slideToggle();&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="btn-pop" value="$(&quot;a[href='#callback']&quot;).magnificPopup({&#10;&#9;&#9;mainClass: 'my-mfp-zoom-in',&#10;&#9;&#9;removalDelay: 300,&#10;&#9;&#9;type: 'inline',&#10;&#9;});&#10;&#10;&#9;$(&quot;a[href='#callback']&quot;).click(function() {&#10;&#9;&#9;var dataForm = $(this).data(&quot;form&quot;);&#10;&#9;&#9;var dataText = $(this).data(&quot;text&quot;);&#10;&#9;&#9;$(&quot;.form-callback h4&quot;).text(dataText);&#10;&#9;&#9;$(&quot;.form-callback [name=admin-data]&quot;).val(dataForm);&#10;&#9;});&#10;&#10;&#10;$(&quot;a[href='#callback']&quot;).click(function() {&#10;&#9;var dataForm = $(this).data(&quot;form&quot;);&#10;&#9;var dataText = $(this).data(&quot;text&quot;);&#10;&#9;$(&quot;.form-callback h4&quot;).text(dataText);&#10;&#9;$(&quot;.form-callback [name=admin-data]&quot;).val(dataForm);&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="mnu" value="$(&quot;.toggle_mnu&quot;).click(function() {&#10;&#9;&#9;$(&quot;.sandwich&quot;).toggleClass(&quot;active&quot;);&#10;&#9;});&#10;&#10;$(&quot;.top_mnu ul a&quot;).click(function() {&#10;&#9;$(&quot;.top_mnu&quot;).fadeOut(600);&#10;&#9;$(&quot;.sandwich&quot;).toggleClass(&quot;active&quot;);&#10;}).append(&quot;&lt;span&gt;&quot;);&#10;&#10;$(&quot;.toggle_mnu&quot;).click(function() {&#10;&#9;if ($(&quot;.top_mnu&quot;).is(&quot;:visible&quot;)) {&#10;&#9;&#9;$(&quot;.top_mnu&quot;).fadeOut(600);&#10;&#9;&#9;$(&quot;.top_mnu li a&quot;).removeClass(&quot;fadeInUp animated&quot;);&#10;&#9;} else {&#10;&#9;&#9;$(&quot;.top_mnu&quot;).fadeIn(600);&#10;&#9;&#9;$(&quot;.top_mnu li a&quot;).addClass(&quot;fadeInUp animated&quot;);&#10;&#9;};&#10;});&#10;//&lt;script src=&quot;libs/scroll2id/PageScroll2id.min.js&quot;&gt;&lt;/script&gt; &#10;$(&quot;.top_mnu ul a&quot;).mPageScroll2id();   " toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="loader" value="$(window).load(function() {&#10;&#10;&#9;$(&quot;.loader_inner&quot;).fadeOut();&#10;&#9;$(&quot;.loader&quot;).delay(400).fadeOut(&quot;slow&quot;);&#10;&#10;&#9;$(&quot;.top_text h1&quot;).animated(&quot;fadeInDown&quot;, &quot;fadeOutUp&quot;);&#10;&#9;$(&quot;.top_text p&quot;).animated(&quot;fadeInUp&quot;, &quot;fadeOutDown&quot;);&#10;&#10;}); " toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="jQ-resize-height" value="//For parallax effect&#10;&#9;function heightDetect() {&#10;&#9;&#9;$('.main_head').css('height', $(window).height);&#10;    }&#10;&#10;    heightDetect();&#10;&#10;&#9;$(window).resize(function () {&#10;&#9;&#9;heightDetect();&#10;    });" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="menu-flex" value="window.onload = function (){&#10;    const humburger = document.querySelector('.menu__humburger');&#10;    if (humburger) {&#10;        humburger.addEventListener('click', function (e) {&#10;            e.target.closest('.menu').classList.toggle('menu--active');&#10;        })&#10;    }&#10;};" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nav-menu" value="var mobileMenuOutsideClick = function() {&#10;&#10;&#9;&#9;$(document).click(function (e) {&#10;&#9;    var container = $(&quot;#fh5co-offcanvas, .js-fh5co-nav-toggle&quot;);&#10;&#9;    if (!container.is(e.target) &amp;&amp; container.has(e.target).length === 0) {&#10;&#10;&#9;    &#9;if ( $('body').hasClass('offcanvas') ) {&#10;&#10;    &#9;&#9;&#9;$('body').removeClass('offcanvas');&#10;    &#9;&#9;&#9;$('.js-fh5co-nav-toggle').removeClass('active');&#10;&#10;&#9;    &#9;}&#10;&#10;&#10;&#9;    }&#10;&#9;&#9;});&#10;&#10;&#9;};&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="top-line-menu" value="$(&quot;.toggle-mnu&quot;).click(function() {&#10;    $(this).toggleClass(&quot;on&quot;);&#10;    $(&quot;.main-mnu&quot;).slideToggle();&#10;    return false;&#10;});&#10;&#10;$(&quot;.main-footer .toggle-mnu&quot;).click(function() {&#10;    $(&quot;html, body&quot;).animate({ scrollTop: $(document).height() }, &quot;slow&quot;);&#10;    return false;&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="gallery-css" value="/*&#10;===============================================================================&#10;в main.js&#10;//= ../../bower_components/modernizr/modernizr.js&#10;//= ../../bower_components/imagesloaded/imagesloaded.pkgd.min.js&#10;//= ../../bower_components/imagefill/jquery-imagefill.js&#10;//= ../../bower_components/masonry/masonry.pkgd.min.js&#10;====================================MASONRY===========================================&#10;в custom.js &#10;*/&#10; // external js: masonry.pkgd.js, imagesloaded.pkgd.js&#10;&#10;    var grid = document.querySelector('.grid');&#10;    var msnry;&#10;&#10;    imagesLoaded( grid, function() {&#10;        // init Isotope after all images have loaded&#10;        msnry = new Masonry( grid, {&#10;            itemSelector: '.grid-item',&#10;            columnWidth: '.grid-sizer',&#10;            percentPosition: true&#10;        });&#10;    });" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="full-menu" value="$(function() {&#10;    $('a.page-scroll').bind('click', function(event) {&#10;        var $anchor = $(this);&#10;        $('html, body').stop().animate({&#10;            scrollTop: $($anchor.attr('href')).offset().top&#10;        }, 1500, 'easeInOutExpo');&#10;        event.preventDefault();&#10;    });&#10;});&#10;&#10;// Highlight the top nav as scrolling occurs&#10;$('body').scrollspy({&#10;    target: '.navbar-fixed-top'&#10;})&#10;&#10;// Closes the Responsive Menu on Menu Item Click&#10;$('.navbar-collapse ul li a').click(function() {&#10;    $('.navbar-toggle:visible').click();&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="basic-menu" value="$(function() {&#10;&#9;menu = $('nav ul');&#10;&#10;  $('#openup').on('click', function(e) {&#10;    e.preventDefault(); menu.slideToggle();&#10;  });&#10;  &#10;  $(window).resize(function(){&#10;    var w = $(this).width(); if(w &gt; 480 &amp;&amp; menu.is(':hidden')) {&#10;      menu.removeAttr('style');&#10;    }&#10;  });&#10;  &#10;  $('nav li').on('click', function(e) {                &#10;    var w = $(window).width(); if(w &lt; 480 ) {&#10;      menu.slideToggle(); &#10;    }&#10;  });&#10;  $('.open-menu').height($(window).height());&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="menu-bar" value="$(document).ready(function(){&#10;&#10;&#9;(function($) {&#10;&#10;&#9;&#9;$('#header__icon').click(function(e){&#10;&#9;&#9;&#9;e.preventDefault();&#10;&#9;&#9;&#9;$('body').toggleClass('with--sidebar');&#10;&#9;&#9;});&#10;    &#10;    $('#site-cache').click(function(e){&#10;      $('body').removeClass('with--sidebar');&#10;    });&#10;&#10;&#9;})(jQuery);&#10;&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="flex-menu" value="/* &#10;https://codepen.io/joe-watkins/pen/Emzxf?editors=0110&#10;Support: IE10+, FF28+&#10;&#10;Checkbox hack:&#10;http://timpietrusky.com/advanced-checkbox-hack &#10;&#10;Polyfill for old IE:&#10;http://flexiejs.com/&#10;&#10;Warning: Not super accessible - just for fun&#10;&#10;&#10;*/" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="menu-toggle" value="/*&#10;Responsive nav menu with sub menus only on larger screens.&#10;&#10;This is more than three years old now - please take it with a big pinch of salt - there are better ways to achieve the same thing!&#10;*/&#10;&#10;/**********&#10;MOBILE MENU&#10;**********/&#10;$('.menu-toggle').click(function(e){&#10;  //click event for left clicks only! http://www.jacklmoore.com/notes/click-events&#10;  if (!(e.which &gt; 1 || e.shiftKey || e.altKey || e.metaKey)) {&#10;    e.preventDefault();&#10;    if($(this).parent().find('.menu').hasClass('expanded-mobile-menu')){&#10;      $(this).removeClass('expanded-menu-toggle').parent().removeClass('nav-expanded').find('.menu').removeClass('expanded-mobile-menu');&#10;    }else{&#10;      $(this).addClass('expanded-menu-toggle').parent().addClass('nav-expanded').find('.menu').addClass('expanded-mobile-menu');&#10;    }&#10;  }&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="menu-gantit" value="$(function() {&#10;&#9;var pull &#9;&#9;= $('#pull');&#10;&#9;menu &#9;&#9;= $('nav ul');&#10;&#9;menuHeight&#9;= menu.height();&#10;    $(pull).on('click', function(e) {&#10;&#9;    e.preventDefault();&#10;&#9;    menu.slideToggle();&#10;    });&#10;    $(window).resize(function(){&#10;    &#9;&#9;var w = $(window).width();&#10;    &#9;&#9;if(w &gt; 320 &amp;&amp; menu.is(':hidden')) {&#10;    &#9;&#9;&#9;menu.removeAttr('style');&#10;    &#9;&#9;}&#10;  &#9;});&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="menu-batman" value="// Sticky Header&#10;$(window).scroll(function() {&#10;&#10;    if ($(window).scrollTop() &gt; 100) {&#10;        $('.main_h').addClass('sticky');&#10;    } else {&#10;        $('.main_h').removeClass('sticky');&#10;    }&#10;});&#10;&#10;// Mobile Navigation&#10;$('.mobile-toggle').click(function() {&#10;    if ($('.main_h').hasClass('open-nav')) {&#10;        $('.main_h').removeClass('open-nav');&#10;    } else {&#10;        $('.main_h').addClass('open-nav');&#10;    }&#10;});&#10;&#10;$('.main_h li a').click(function() {&#10;    if ($('.main_h').hasClass('open-nav')) {&#10;        $('.navigation').removeClass('open-nav');&#10;        $('.main_h').removeClass('open-nav');&#10;    }&#10;});&#10;&#10;// Navigation Scroll - ljepo radi materem&#10;$('nav a').click(function(event) {&#10;    var id = $(this).attr(&quot;href&quot;);&#10;    var offset = 70;&#10;    var target = $(id).offset().top - offset;&#10;    $('html, body').animate({&#10;        scrollTop: target&#10;    }, 500);&#10;    event.preventDefault();&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="menu-multilevel" value="$(document).ready(function() {&#10;  &#9; &#9;&#10;&#10;/* the Responsive menu script */&#10; &#9;$('body').addClass('js');&#10;&#9;&#9;  var $menu = $('#menu'),&#10;&#9;&#9;  &#9;  $menulink = $('.menu-link'),&#10;&#9;&#9;  &#9;  $menuTrigger = $('.has-subnav &gt; a');&#10;&#9;&#9;&#10;&#9;$menulink.click(function(e) {&#10;&#9;&#9;&#9;e.preventDefault();&#10;&#9;&#9;&#9;$menulink.toggleClass('active');&#10;&#9;&#9;&#9;$menu.toggleClass('active');&#10;&#9;});&#10;&#10;&#9;var add_toggle_links = function() { &#9;&#9;&#10;&#9; &#9;if ($('.menu-link').is(&quot;:visible&quot;)){&#10;&#9; &#9;&#9;if ($(&quot;.toggle-link&quot;).length &gt; 0){&#10;&#9; &#9;&#9;}&#10;&#9; &#9;&#9;else{&#10;&#9; &#9;&#9;&#9;$('.has-subnav &gt; a').before('&lt;span class=&quot;toggle-link&quot;&gt; Open submenu &lt;/span&gt;');&#10;&#9; &#9;&#9;&#9;$('.toggle-link').click(function(e) {&#9;&#9;&#10;&#9;&#9;&#9;&#9;&#9;var $this = $(this);&#10;&#9;&#9;&#9;&#9;&#9;$this.toggleClass('active').siblings('ul').toggleClass('active');&#10;&#9;&#9;&#9;&#9;});&#9;&#10;&#9; &#9;&#9;}&#10;&#9; &#9;}&#10;&#9;&#9;else{&#10;&#9;&#9;&#9;$('.toggle-link').empty();&#10;&#9;&#9;}&#10;&#9; }&#10;&#9;add_toggle_links();&#10;&#9;$(window).bind(&quot;resize&quot;, add_toggle_links);&#9;&#10;&#9;&#9;&#10;&#9;&#9;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="menu-pure" value="var navigation = responsiveNav(&quot;.nav-collapse&quot;, {&#10;  animate: true,                    // Boolean: Use CSS3 transitions, true or false&#10;  transition: 284,                  // Integer: Speed of the transition, in milliseconds&#10;  label: &quot;Menu&quot;,                    // String: Label for the navigation toggle&#10;  insert: &quot;before&quot;,                  // String: Insert the toggle before or after the navigation&#10;  customToggle: &quot;&quot;,                 // Selector: Specify the ID of a custom toggle&#10;  closeOnNavClick: false,           // Boolean: Close the navigation when one of the links are clicked&#10;  openPos: &quot;relative&quot;,              // String: Position of the opened nav, relative or static&#10;  navClass: &quot;nav-collapse&quot;,         // String: Default CSS class. If changed, you need to edit the CSS too!&#10;  navActiveClass: &quot;js-nav-active&quot;,  // String: Class that is added to &lt;html&gt; element when nav is active&#10;  jsClass: &quot;js&quot;,                    // String: 'JS enabled' class which is added to &lt;html&gt; element&#10;  init: function(){},               // Function: Init callback&#10;  open: function(){},               // Function: Open callback&#10;  close: function(){}               // Function: Close callback&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="menu-level" value="/* JS Table of Contents: &#10;-------------------------------------------------------------- &#10;#1: Line 8: Original JS for menu functionality (plus added resize event)&#10;#2: Line 272: Additional JS for responsive functionality&#10;&#10;*/&#10;&#10;/* #1: Original JS */&#10;&#10;// I've added a resize event to reset the menu when the window is above a certain width (800px here) - line 166&#10;/**&#10; * jquery.dlmenu.js v1.0.1&#10; * http://www.codrops.com&#10; *&#10; * Licensed under the MIT license.&#10; * https://www.opensource.org/licenses/mit-license.php&#10; *&#10; * Copyright 2013, Codrops&#10; * http://www.codrops.com&#10; */&#10;&#10;(function($, window, undefined) {&#10;  &quot;use strict&quot;;&#10;&#10;  // global&#10;  var Modernizr = window.Modernizr,&#10;      $body = $(&quot;body&quot;);&#10;&#10;  $.DLMenu = function(options, element) {&#10;    this.$el = $(element);&#10;    this._init(options);&#10;  };&#10;&#10;  // the options&#10;  $.DLMenu.defaults = {&#10;    // classes for the animation effects&#10;    animationClasses: {&#10;      classin: &quot;dl-animate-in-1&quot;,&#10;      classout: &quot;dl-animate-out-1&quot;&#10;    },&#10;    // callback: click a link that has a sub menu&#10;    // el is the link element (li); name is the level name&#10;    onLevelClick: function(el, name) {&#10;      return false;&#10;    },&#10;    // callback: click a link that does not have a sub menu&#10;    // el is the link element (li); ev is the event obj&#10;    onLinkClick: function(el, ev) {&#10;      return false;&#10;    }&#10;  };&#10;&#10;  $.DLMenu.prototype = {&#10;    _init: function(options) {&#10;      // options&#10;      this.options = $.extend(true, {}, $.DLMenu.defaults, options);&#10;      // cache some elements and initialize some variables&#10;      this._config();&#10;&#10;      var animEndEventNames = {&#10;        WebkitAnimation: &quot;webkitAnimationEnd&quot;,&#10;        OAnimation: &quot;oAnimationEnd&quot;,&#10;        msAnimation: &quot;MSAnimationEnd&quot;,&#10;        animation: &quot;animationend&quot;&#10;      },&#10;          transEndEventNames = {&#10;            WebkitTransition: &quot;webkitTransitionEnd&quot;,&#10;            MozTransition: &quot;transitionend&quot;,&#10;            OTransition: &quot;oTransitionEnd&quot;,&#10;            msTransition: &quot;MSTransitionEnd&quot;,&#10;            transition: &quot;transitionend&quot;&#10;          };&#10;      // animation end event name&#10;      this.animEndEventName =&#10;        animEndEventNames[Modernizr.prefixed(&quot;animation&quot;)] + &quot;.dlmenu&quot;;&#10;      // transition end event name&#10;      (this.transEndEventName =&#10;       transEndEventNames[Modernizr.prefixed(&quot;transition&quot;)] + &quot;.dlmenu&quot;),&#10;        // support for css animations and css transitions&#10;        (this.supportAnimations = Modernizr.cssanimations),&#10;        (this.supportTransitions = Modernizr.csstransitions);&#10;&#10;      this._initEvents();&#10;    },&#10;    _config: function() {&#10;      this.open = false;&#10;      this.$trigger = this.$el.children(&quot;.dl-trigger&quot;);&#10;      this.$menu = this.$el.children(&quot;ul.dl-menu&quot;);&#10;      this.$menuitems = this.$menu.find(&quot;li:not(.dl-back)&quot;);&#10;      this.$el&#10;        .find(&quot;ul.dl-submenu&quot;)&#10;        .prepend('&lt;li class=&quot;dl-back&quot;&gt;&lt;a href=&quot;#&quot;&gt;back&lt;/a&gt;&lt;/li&gt;');&#10;      this.$back = this.$menu.find(&quot;li.dl-back&quot;);&#10;      this.mobileBreakpoint = 800;&#10;    },&#10;    _initEvents: function() {&#10;      var self = this;&#10;&#10;      this.$trigger.on(&quot;click.dlmenu&quot;, function() {&#10;        if (self.open) {&#10;          self._closeMenu();&#10;        } else {&#10;          self._openMenu();&#10;        }&#10;        return false;&#10;      });&#10;&#10;      this.$menuitems.on(&quot;click.dlmenu&quot;, function(event) {&#10;        event.stopPropagation();&#10;&#10;        var $item = $(this),&#10;            $submenu = $item.children(&quot;ul.dl-submenu&quot;);&#10;&#10;        if ($submenu.length &gt; 0) {&#10;          var $flyin = $submenu&#10;          .clone()&#10;          .css(&quot;opacity&quot;, 0)&#10;          .insertAfter(self.$menu),&#10;              onAnimationEndFn = function() {&#10;                self.$menu&#10;                  .off(self.animEndEventName)&#10;                  .removeClass(self.options.animationClasses.classout)&#10;                  .addClass(&quot;dl-subview&quot;);&#10;                $item&#10;                  .addClass(&quot;dl-subviewopen&quot;)&#10;                  .parents(&quot;.dl-subviewopen:first&quot;)&#10;                  .removeClass(&quot;dl-subviewopen&quot;)&#10;                  .addClass(&quot;dl-subview&quot;);&#10;                $flyin.remove();&#10;              };&#10;&#10;          setTimeout(function() {&#10;            $flyin.addClass(self.options.animationClasses.classin);&#10;            self.$menu.addClass(self.options.animationClasses.classout);&#10;            if (self.supportAnimations) {&#10;              self.$menu.on(self.animEndEventName, onAnimationEndFn);&#10;            } else {&#10;              onAnimationEndFn.call();&#10;            }&#10;&#10;            self.options.onLevelClick($item, $item.children(&quot;a:first&quot;).text());&#10;          });&#10;&#10;          return false;&#10;        } else {&#10;          self.options.onLinkClick($item, event);&#10;        }&#10;      });&#10;&#10;      this.$back.on(&quot;click.dlmenu&quot;, function(event) {&#10;        var $this = $(this),&#10;            $submenu = $this.parents(&quot;ul.dl-submenu:first&quot;),&#10;            $item = $submenu.parent(),&#10;            $flyin = $submenu.clone().insertAfter(self.$menu);&#10;&#10;        var onAnimationEndFn = function() {&#10;          self.$menu&#10;            .off(self.animEndEventName)&#10;            .removeClass(self.options.animationClasses.classin);&#10;          $flyin.remove();&#10;        };&#10;&#10;        setTimeout(function() {&#10;          $flyin.addClass(self.options.animationClasses.classout);&#10;          self.$menu.addClass(self.options.animationClasses.classin);&#10;          if (self.supportAnimations) {&#10;            self.$menu.on(self.animEndEventName, onAnimationEndFn);&#10;          } else {&#10;            onAnimationEndFn.call();&#10;          }&#10;&#10;          $item.removeClass(&quot;dl-subviewopen&quot;);&#10;&#10;          var $subview = $this.parents(&quot;.dl-subview:first&quot;);&#10;          if ($subview.is(&quot;li&quot;)) {&#10;            $subview.addClass(&quot;dl-subviewopen&quot;);&#10;          }&#10;          $subview.removeClass(&quot;dl-subview&quot;);&#10;        });&#10;&#10;        return false;&#10;      });&#10;      // the only piece added to the original - resets the menu when the browser is greater than a certain width&#10;      $(window).resize(function() {&#10;        if ($(window).width() &gt; self.mobileBreakpoint) {&#10;          self._resetMenu();&#10;        }&#10;      });&#10;    },&#10;    closeMenu: function() {&#10;      if (this.open) {&#10;        this._closeMenu();&#10;      }&#10;    },&#10;    _closeMenu: function() {&#10;      var self = this,&#10;          onTransitionEndFn = function() {&#10;            self.$menu.off(self.transEndEventName);&#10;            self._resetMenu();&#10;          };&#10;&#10;      this.$menu.removeClass(&quot;dl-menuopen&quot;);&#10;      this.$menu.addClass(&quot;dl-menu-toggle&quot;);&#10;      this.$trigger.removeClass(&quot;dl-active&quot;);&#10;&#10;      if (this.supportTransitions) {&#10;        this.$menu.on(this.transEndEventName, onTransitionEndFn);&#10;      } else {&#10;        onTransitionEndFn.call();&#10;      }&#10;&#10;      this.open = false;&#10;    },&#10;    openMenu: function() {&#10;      if (!this.open) {&#10;        this._openMenu();&#10;      }&#10;    },&#10;    _openMenu: function() {&#10;      var self = this;&#10;      // clicking somewhere else makes the menu close&#10;      $body.off(&quot;click&quot;).on(&quot;click.dlmenu&quot;, function() {&#10;        self._closeMenu();&#10;      });&#10;      this.$menu&#10;        .addClass(&quot;dl-menuopen dl-menu-toggle&quot;)&#10;        .on(this.transEndEventName, function() {&#10;        $(this).removeClass(&quot;dl-menu-toggle&quot;);&#10;      });&#10;      this.$trigger.addClass(&quot;dl-active&quot;);&#10;      this.open = true;&#10;    },&#10;    // resets the menu to its original state (first level of options)&#10;    _resetMenu: function() {&#10;      this.$menu.removeClass(&quot;dl-subview&quot;);&#10;      this.$menuitems.removeClass(&quot;dl-subview dl-subviewopen&quot;);&#10;    }&#10;  };&#10;&#10;  var logError = function(message) {&#10;    if (window.console) {&#10;      window.console.error(message);&#10;    }&#10;  };&#10;&#10;  $.fn.dlmenu = function(options) {&#10;    if (typeof options === &quot;string&quot;) {&#10;      var args = Array.prototype.slice.call(arguments, 1);&#10;      this.each(function() {&#10;        var instance = $.data(this, &quot;dlmenu&quot;);&#10;        if (!instance) {&#10;          logError(&#10;            &quot;cannot call methods on dlmenu prior to initialization; &quot; +&#10;            &quot;attempted to call method '&quot; +&#10;            options +&#10;            &quot;'&quot;&#10;          );&#10;          return;&#10;        }&#10;        if (!$.isFunction(instance[options]) || options.charAt(0) === &quot;_&quot;) {&#10;          logError(&quot;no such method '&quot; + options + &quot;' for dlmenu instance&quot;);&#10;          return;&#10;        }&#10;        instance[options].apply(instance, args);&#10;      });&#10;    } else {&#10;      this.each(function() {&#10;        var instance = $.data(this, &quot;dlmenu&quot;);&#10;        if (instance) {&#10;          instance._init();&#10;        } else {&#10;          instance = $.data(this, &quot;dlmenu&quot;, new $.DLMenu(options, this));&#10;        }&#10;      });&#10;    }&#10;    return this;&#10;  };&#10;})(jQuery, window);&#10;&#10;/* #2: javascript added for responsive functionality: mix of jquery and plain js (already had the plain js written for another site) &#10;-------------------------------------------------------------- */&#10;&#10;$(function() {&#10;  var mobileBreakpoint = 800;&#10;  &#10;  duplicateParentofSubs(createDLMenu);&#10;&#10;  function createDLMenu() {&#10;    $(&quot;#dl-menu&quot;).dlmenu({&#10;      animationClasses: {&#10;        classin: &quot;dl-animate-in-2&quot;,&#10;        classout: &quot;dl-animate-out-2&quot;&#10;      }&#10;    });&#10;&#10;    determineNav();&#10;  }&#10;&#10;  function determineNav() {&#10;    var winWidth = $(window).width(),&#10;        dlMenu = $(&quot;.nav-main&quot;),&#10;        dlSubList = $(&quot;.nav-sub-list&quot;),&#10;        dlSubSub = $(&quot;.nav-sub-sub&quot;);&#10;&#10;    removeDLInfo();&#10;    addDLInfo();&#10;&#10;    $(window).resize(function() {&#10;      winWidth = $(window).width();&#10;&#10;      removeDLInfo();&#10;      addDLInfo();&#10;    });&#10;&#10;    function removeDLInfo() {&#10;      if (winWidth &gt; mobileBreakpoint) {&#10;        if (dlMenu.hasClass(&quot;dl-menuwrapper&quot;)) {&#10;          dlMenu.removeClass(&quot;dl-menuwrapper&quot;).attr(&quot;id&quot;, &quot;&quot;);&#10;          dlSubList.removeClass(&quot;dl-submenu&quot;);&#10;          dlSubSub.removeClass(&quot;dl-submenu&quot;);&#10;        }&#10;      }&#10;    }&#10;&#10;    function addDLInfo() {&#10;      if (winWidth &lt;= mobileBreakpoint) {&#10;        if (!dlMenu.hasClass(&quot;dl-menuwrapper&quot;)) {&#10;          dlMenu.addClass(&quot;dl-menuwrapper&quot;).attr(&quot;id&quot;, &quot;dl-menu&quot;);&#10;          dlSubList.addClass(&quot;dl-submenu&quot;);&#10;          dlSubSub.addClass(&quot;dl-submenu&quot;);&#10;        }&#10;      }&#10;    }&#10;  }&#10;&#10;  function duplicateParentofSubs(callback) {&#10;    var navSub = document.getElementsByClassName(&quot;dl-submenu&quot;),&#10;        mainNavItem = null,&#10;        mainNavItemLink = null,&#10;        winWidth = viewport(),&#10;        addItems = true;&#10;&#10;    checkWidth();&#10;    window.onresize = checkWidth;&#10;&#10;    callback();&#10;&#10;    function viewport() {&#10;      var e = window,&#10;          a = &quot;inner&quot;;&#10;      if (!(&quot;innerWidth&quot; in window)) {&#10;        a = &quot;client&quot;;&#10;        e = document.documentElement || document.body;&#10;      }&#10;      return { width: e[a + &quot;Width&quot;] };&#10;    }&#10;&#10;    function checkWidth() {&#10;      winWidth = viewport().width;&#10;      for (i = 0; i &lt; navSub.length; i++) {&#10;        mainNavItem = navSub[i].parentNode;&#10;        mainNavItemLink = mainNavItem.getElementsByTagName(&quot;a&quot;)[0];&#10;&#10;        if (addItems) {&#10;          clonedItems(mainNavItem, false);&#10;        }&#10;        if (winWidth &lt;= mobileBreakpoint) {&#10;          mainNavItemLink.onclick = function(event) {&#10;            event.preventDefault();&#10;          };&#10;        } else {&#10;          mainNavItemLink.onclick = function() {&#10;            return true;&#10;          };&#10;        }&#10;      }&#10;      addItems = false;&#10;    }&#10;&#10;    function clonedItems(mainListItem) {&#10;      var subNavItem = mainListItem.cloneNode(false),&#10;          subNavItemLink = mainListItem.children[0].cloneNode(true),&#10;          subNav = mainListItem.children[1];&#10;&#10;      subNavItem.appendChild(subNavItemLink);&#10;      subNav.insertBefore(subNavItem, subNav.children[0]);&#10;      subNavItem.setAttribute(&quot;class&quot;, &quot;nav-sub-item mobile-main-item&quot;);&#10;    }&#10;  }&#10;});&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="mixi" value="$(&quot;#portfolio_grid&quot;).mixItUp();&#10;&#10;$(&quot;.portfolio li&quot;).click(function() {&#10;    $(&quot;.portfolio li&quot;).removeClass(&quot;active&quot;);&#10;    $(this).addClass(&quot;active&quot;);&#10;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

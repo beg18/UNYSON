@@ -1,0 +1,47 @@
+<templateSet group="ValacJQ">
+  <template name="scrollTop" value=" /* Smooth scroll to Plans Block&#10;    ====================================*/&#10;&#10;    $(&quot;#js-get-started&quot;).on(&quot;click&quot;, function(e) {&#10;&#10;        e.preventDefault();&#10;        var plansOffset = $(&quot;#js-plans&quot;).offset().top;&#10;&#10;        $(&quot;html, body&quot;).animate({&#10;            scrollTop: plansOffset&#10;        }, 500);&#10;&#10;    });" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nav-fixed" value="/* Fixed header when scroll&#10;    ====================================*/&#10;&#10;    var headerH = $(&quot;#js-header&quot;).height(),&#10;        navH = $(&quot;#js-nav-container&quot;).innerHeight();&#10;&#10;    $(document).on(&quot;scroll&quot;, function() {&#10;&#10;        var documentScroll = $(this).scrollTop();&#10;&#10;        if(documentScroll &gt; headerH) {&#10;            $(&quot;#js-nav-container&quot;).addClass(&quot;fixed&quot;);&#10;&#10;            $(&quot;#js-header&quot;).css({&#10;                &quot;paddingTop&quot;: navH&#10;            });&#10;        } else {&#10;            $(&quot;#js-nav-container&quot;).removeClass(&quot;fixed&quot;);&#10;            $(&quot;#js-header&quot;).removeAttr(&quot;style&quot;);&#10;        }" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="scroll-block" value="/* Smooth scroll to the pages block&#10;    ====================================*/&#10;&#10;    $(&quot;#js-nav a&quot;).on(&quot;click&quot;, function(e) {&#10;&#10;        e.preventDefault();&#10;&#10;        var currentBlock = $(this).attr(&quot;href&quot;),&#10;            currentBlockOffset = $(currentBlock).offset().top;&#10;&#10;        $(&quot;html, body&quot;).animate({&#10;            scrollTop: currentBlockOffset - 20&#10;        }, 500);&#10;&#10;    });" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="acc-next" value=" /* FAQ&#10;    ========================*/&#10;&#10;    $(&quot;.js-faq-title&quot;).on(&quot;click&quot;, function(e) {&#10;&#10;        e.preventDefault();&#10;        var $this = $(this);&#10;&#10;        if( !$this.hasClass(&quot;active&quot;) ) {&#10;            $(&quot;.js-faq-content&quot;).slideUp();&#10;            $(&quot;.js-faq-title&quot;).removeClass(&quot;active&quot;);&#10;        }&#10;&#10;        $this.toggleClass(&quot;active&quot;);&#10;        $this.next().slideToggle();&#10;&#10;    });" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="acc-id" value="$(&quot;.js-faq-title&quot;).on(&quot;click&quot;, function(e) {&#10;&#10;        e.preventDefault();&#10;        var $this = $(this),&#10;            answerId = $this.attr(&quot;href&quot;);&#10;&#10;        if( !$this.hasClass(&quot;active&quot;) ) {&#10;            $(&quot;.js-faq-content&quot;).slideUp();&#10;            $(&quot;.js-faq-title&quot;).removeClass(&quot;active&quot;);&#10;        }&#10;&#10;        $this.toggleClass(&quot;active&quot;);&#10;        $(answerId).slideToggle();&#10;&#10;    });" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="pop-id" value="/* Popup&#10;    ========================*/&#10;&#10;    $(&quot;.js-popup-hover&quot;).hover(function() {&#10;&#10;        var $this = $(this),&#10;            popupId = $this.attr(&quot;href&quot;);&#10;&#10;        $(popupId).fadeIn();&#10;&#10;&#10;    }, function() {&#10;&#10;        $(&quot;.js-popup&quot;).fadeOut();&#10;    });&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="mod" value="&#10;    /* Modals&#10;    ====================================*/&#10;&#10;    $(&quot;.js-modal&quot;).each(function() {&#10;        var modalWidth = $(this).innerWidth() / 2;&#10;&#10;        $(this).css({&#10;            &quot;marginLeft&quot;: &quot;-&quot; + modalWidth + &quot;px&quot;&#10;        });&#10;    });&#10;&#10;    $(&quot;.js-show-modal&quot;).on(&quot;click&quot;, function(e) {&#10;&#10;        e.preventDefault();&#10;&#10;        var currentModal = $(this).attr(&quot;href&quot;);&#10;&#10;        $(currentModal).fadeIn(500);&#10;        $(&quot;body&quot;).append(&quot;&lt;div class='overlay' id='js-overlay'&gt;&lt;/div&gt;&quot;).addClass(&quot;open-modal&quot;);&#10;&#10;    });&#10;&#10;&#10;    $(&quot;.js-modal-close&quot;).on(&quot;click&quot;, function(e) {&#10;&#10;        e.preventDefault();&#10;        $(&quot;.js-modal&quot;).fadeOut(100);&#10;        $(&quot;body&quot;).removeClass(&quot;open-modal&quot;);&#10;        $(&quot;#js-overlay&quot;).remove();&#10;&#10;    });&#10;&#10;&#10;    $(&quot;body&quot;).on(&quot;click&quot;, &quot;#js-overlay&quot;, function() {&#10;        $(&quot;.js-modal&quot;).fadeOut(100);&#10;        $(&quot;body&quot;).removeClass(&quot;open-modal&quot;);&#10;        $(&quot;#js-overlay&quot;).remove();&#10;    });&#10;&#10;&#10;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="read-more" value="$(&quot;.js-read-more&quot;).on(&quot;click&quot;, function(e) {&#10;&#10;        e.preventDefault();&#10;&#10;        var $this = $(this),&#10;            text = $this.text();&#10;&#10;        if( text == &quot;Read More&quot; ) {&#10;            $this.text(&quot;Hide&quot;);&#10;        } else {&#10;            $this.text(&quot;Read More&quot;);&#10;        }&#10;&#10;        $(this).prev(&quot;.js-blog-content&quot;).toggleClass(&quot;hidden&quot;);&#10;&#10;    });" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="menu-flat" value="&#9;var touch &#9;= $('#touch-menu');&#10;&#9;var menu &#9;= $('.menu');&#10;&#10;&#9;$(touch).on('click', function(e) {&#10;&#9;&#9;e.preventDefault();&#10;&#9;&#9;menu.slideToggle();&#10;&#9;});&#10;&#10;&#9;$(window).resize(function(){&#10;&#9;&#9;var w = $(window).width();&#10;&#9;&#9;if(w &gt; 767 &amp;&amp; menu.is(':hidden')) {&#10;&#9;&#9;&#9;menu.removeAttr('style');&#10;&#9;&#9;}&#10;&#9;});" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>

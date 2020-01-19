@@ -1,0 +1,32 @@
+<templateSet group="ValackHTML">
+  <template name="modals-simple" value="&lt;!-- Modals --&gt;&#10;&lt;div class=&quot;overlay&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;modal&quot;&gt;&#10;    &lt;h2&gt;Modal Title&lt;/h2&gt;&#10;    &lt;p&gt;&#10;        Lorem&#10;    &lt;/p&gt;&#10;    &lt;a href=&quot;#&quot; class=&quot;btn btn_red&quot;&gt;Close&lt;/a&gt;&#10;&lt;/div&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="acc-next" value=" &lt;div class=&quot;faq__item&quot;&gt;&#10;            &lt;a href=&quot;#&quot; class=&quot;faq-title&quot;&gt;Question 1&lt;/a&gt;&#10;            &lt;div class=&quot;faq-content&quot;&gt;&#10;                &lt;p&gt;&#10;                    Lorem &#10;                &lt;/p&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;&#10;&#10;        &lt;div class=&quot;faq__item&quot;&gt;&#10;            &lt;a href=&quot;#&quot; class=&quot;faq-title&quot;&gt;Question 2&lt;/a&gt;&#10;            &lt;div class=&quot;faq-content&quot;&gt;&#10;                &lt;p&gt;&#10;                    Lorem &#10;                &lt;/p&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;&#10;&#10;        &lt;div class=&quot;faq__item&quot;&gt;&#10;            &lt;a href=&quot;#&quot; class=&quot;faq-title&quot;&gt;Question 3&lt;/a&gt;&#10;            &lt;div class=&quot;faq-content&quot;&gt;&#10;                &lt;p&gt;&#10;                    Lorem &#10;                &lt;/p&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="acc-id" value="&lt;div class=&quot;faq&quot;&gt;&#10;&#10;        &lt;div class=&quot;faq__item&quot;&gt;&#10;            &lt;a href=&quot;#question-1&quot; class=&quot;faq-title js-faq-title&quot;&gt;Question 1&lt;/a&gt;&#10;            &lt;div class=&quot;faq-content js-faq-content&quot; id=&quot;question-1&quot;&gt;&#10;                &lt;p&gt;&#10;                    Lorem&#10;                &lt;/p&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;&#10;&#10;        &lt;div class=&quot;faq__item&quot;&gt;&#10;            &lt;a href=&quot;#question-2&quot; class=&quot;faq-title js-faq-title&quot;&gt;Question 2&lt;/a&gt;&#10;            &lt;div class=&quot;faq-content js-faq-content&quot; id=&quot;question-2&quot;&gt;&#10;                &lt;p&gt;&#10;                    Lorem&#10;                &lt;/p&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;&#10;&#10;        &lt;div class=&quot;faq__item&quot;&gt;&#10;            &lt;a href=&quot;#question-3&quot; class=&quot;faq-title js-faq-title&quot;&gt;Question 3&lt;/a&gt;&#10;            &lt;div class=&quot;faq-content js-faq-content&quot; id=&quot;question-3&quot;&gt;&#10;                &lt;p&gt;&#10;                    Lorem&#10;                &lt;/p&gt;&#10;            &lt;/div&gt;&#10;        &lt;/div&gt;&#10;&#10;    &lt;/div&gt;&lt;!-- /.faq --&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="pop-id" value="&lt;a href=&quot;#popup-1&quot; class=&quot;popup-rel js-popup-hover&quot;&gt;&#10;                            chat with a live person&#10;    &lt;span class=&quot;popup js-popup&quot; id=&quot;popup-1&quot;&gt;&#10;        Some text popup&#10;    &lt;/span&gt;&#10;&lt;/a&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="mod" value="&lt;a href=&quot;#js-login-modal&quot; class=&quot;btn btn_login pull-right js-show-modal&quot;&gt;login&lt;/a&gt; &#10;&lt;!-- Modals --&gt;&#10;&lt;div class=&quot;modal js-modal&quot; id=&quot;js-login-modal&quot;&gt;&#10;    &lt;h2&gt;Modal Title&lt;/h2&gt;&#10;    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&#10;    Dolore aut officiis eaque itaque repudiandae nemo, ea&#10;    praesentium ullam tempora nisi numquam harum accusamus nihil,&#10;    animi iure minus quasi labore doloremque.&lt;/p&gt;&#10;    &lt;a href=&quot;#&quot; class=&quot;btn btn_red js-modal-close&quot;&gt;Close&lt;/a&gt;&#10;&lt;/div&gt;&#10;&#10;&lt;div class=&quot;modal modal_lg js-modal&quot; id=&quot;js-login-modal2&quot;&gt;&#10;    &lt;h2&gt;Modal Title&lt;/h2&gt;&#10;    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&#10;    Dolore aut officiis eaque itaque repudiandae nemo,&#10;    ea praesentium ullam tempora nisi numquam harum accusamus nihil,&#10;    animi iure minus quasi labore doloremque.&lt;/p&gt;&#10;    &lt;a href=&quot;#&quot; class=&quot;btn btn_red js-modal-close&quot;&gt;Close&lt;/a&gt;&#10;&lt;/div&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+  <template name="read-more" value="&lt;p&gt;&#10;    Текст в абзаце....&#10;    &lt;span class=&quot;hidden js-blog-content&quot;&gt;&#10;        Скрытый текст...&#10;    &lt;/span&gt; &#10;    &lt;a href=&quot;#&quot; class=&quot;js-read-more&quot;&gt;Read More&lt;/a&gt;&#10;&lt;/p&gt;" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="HTML" value="true" />
+    </context>
+  </template>
+</templateSet>
