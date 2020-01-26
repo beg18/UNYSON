@@ -1,0 +1,22 @@
+{
+	"wp-func-get-tags": {
+		"prefix": "wp-func-get-tags",
+		"body": [
+			"function my_list_tags($1echo = true){ // название фунции ставим в разметку для вывода меток <?php $1_list_tags() ?>  ",
+			"$1tags = get_the_tags();",
+			"$1tag_str = null;",
+			"if($1tags){",
+			"$1tag_str = '<p>';// открывающий тэг в разметке размещены названия меток",
+			"foreach($1tags as $1tag){",
+			"$1tag_str .= $1tag->name . ', ';//конкинируем точкой- разделение запятым и пробелом",
+			"}",
+			"$1tag_str = rtrim($1tag_str, ', ');// очищаем конец от запятой и пробел",
+			"$1tag_str .= '</p>';//конкинируем точкой закрывающий тэг в разметке размещены названия меток",
+			"}",
+			"if($1echo) echo $1tag_str;",
+			"else return $1tag_str;",
+			"}",
+		],
+		"description": " Получаем список меток"
+	}
+}

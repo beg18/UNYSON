@@ -1,0 +1,9 @@
+{
+	"wp-echo-formats": {
+		"prefix": "wp-echo-formats",
+		"body": [
+			"<?php echo get_post_format();?>",
+		],
+		"description": "вызов  отдельного поста статьи"
+	}
+}

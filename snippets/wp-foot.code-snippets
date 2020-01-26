@@ -1,0 +1,9 @@
+{
+	"wp-foot": {
+		"prefix": "wp-foot",
+		"body": [
+			"<?php wp_footer(); ?>"
+		],
+		"description": "Ставится в конце футер шаблона перед закрывающим body"
+	}
+}

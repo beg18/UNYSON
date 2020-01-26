@@ -1,0 +1,9 @@
+{
+	"wp-search": {
+		"prefix": "wp-search",
+		"body": [
+			"<? php get_search_form(); ?>"
+		],
+		"description": "выводит HTML формы поиска"
+	}
+}

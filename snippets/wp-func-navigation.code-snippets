@@ -1,0 +1,14 @@
+{
+	"wp-func-navigation": {
+		"prefix": "wp-func-navigation",
+		"body": [
+			"// связан со сниппетом wp-navigation",
+			"function get_navigation() {",
+			"$1templates = array(); // переменная через ДОЛЛАР",
+			"$1templates[] = 'navigation.php';// переменная через ДОЛЛАР",
+			"locate_template( $1templates, true );// true||false переменная через ДОЛЛАР",
+			"}",
+		],
+		"description": "функация для подключения файла navigation.php"
+	}
+}

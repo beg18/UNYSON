@@ -1,0 +1,22 @@
+{
+	"wp-cat-name": {
+		"prefix": "wp-cat-name",
+		"body": [
+			"<?php //временно",
+			"// ТАБ доллар",
+			"//<?php $1cat = get_the_category(); ?>// создаём переменную",
+			"<!--<?php print_r($1cat); ?>-->",
+			"<!--<h1><?php echo $1cat[0]->name; ?></h1>-->",
+			"<header class=\"section__header\">",
+			"<h2 class=\"section__title\">",
+			"<?php",
+			"$1idObj = get_category_by_slug('obo-mne'); // ярлык рубрики",
+			"$1id = $1idObj->term_id;",
+			"echo get_cat_name($1id); // получаем имя рубрики",
+			"?>",
+			"</h2>",
+			"</header>",
+		],
+		"description": "Получение название рубрики, категории"
+	}
+}

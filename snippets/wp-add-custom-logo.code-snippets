@@ -1,0 +1,13 @@
+{
+	"wp-add-custom-logo": {
+		"prefix": "wp-add-custom-logo",
+		"body": [
+			"//связан со сниппетом wp-reg-logo wp-func-logo",
+			"<?php if( has_custom_logo() ): the_custom_logo(); ?>",
+			"<?php else: ?>",
+			"<a class=\"navbar-brand\" href=\"<?php echo home_url(); ?>\"><?php bloginfo('name'); ?></a>",
+			"<?php endif; ?>",
+		],
+		"description": "выводим логотип из панели WP Настроить"
+	}
+}

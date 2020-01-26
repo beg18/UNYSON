@@ -1,0 +1,10 @@
+{
+	"wp-time": {
+		"prefix": "wp-time",
+		"body": [
+			"//https://wp-kama.ru/id_7433/formaty-daty-i-vremeni-v-wordpress.html",
+			"<?php the_time('j F Y'); ?>"
+		],
+		"description": "Выводит на экран время (дату) публикации текущей записи в Цикле WordPress."
+	}
+}

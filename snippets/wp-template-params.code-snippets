@@ -1,0 +1,11 @@
+{
+	"wp-template-params": {
+		"prefix": "wp-template-params",
+		"body": [
+			"get_template_part( 'mymenu' ); // mymenu.php в директории темы",
+			"get_template_part( 'mymenu', 'header' ); // mymenu-header.php в папке темы",
+			"get_template_part( 'parts/entry', 'video' ); // entry-video.php в директории 'parts'"
+		],
+		"description": "подключает файлы темы"
+	}
+}

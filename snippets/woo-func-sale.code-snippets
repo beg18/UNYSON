@@ -1,0 +1,22 @@
+{
+	"woo-func-sale": {
+		"prefix": "woo-func-sale",
+		"body": [
+			"// связан со сниппетом wp-img",
+			"// с данным  связан с функцией: ",
+			"// woocommerce_show_loop_product_sale_flash для подключения и показа иконок распродажи ",
+			"// в данной функции подключает файл sale-flash.php->loop->woocommerce",
+			"// файл sale-flash.php из plugins->woocommerce->templates->loop копируем ;",
+			"// вставим в woocommerce->loop->sale-flash.php свою тему",
+			"// поменяем ХУК->фильтр  woocommerce_sale_flash",
+			"// создадаим функцию куда ставим свою разметку и поменяем стили в style.css добавив свой класс otop",
+			"function change_sale_flash() {",
+			"$1html = '<div class=\"offer otop\"><p>40%</p><small>Sale</small></div>';// ДОЛЛАР переменная",
+			"return $1html;",
+			"}",
+			"add_filter('woocommerce_sale_flash','change_sale_flash');",
+			"?>",
+		],
+		"description": "меняем разметку метки распродажи"
+	}
+}

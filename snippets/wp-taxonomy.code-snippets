@@ -1,0 +1,12 @@
+{
+	"wp-taxonomy": {
+		"prefix": "wp-taxonomy",
+		"body": [
+			"// связан со снипетами wp-reg-taxonomy || wp-func-taxonomy",
+			"//https://wp-kama.ru/function/the_terms",
+			"//<?php the_terms( $1id-получчить ID текущего поста, $1taxonomy-имя таксономии, $1before-что стоит до, $1sep-разделитель, $1after-что стоит после ); ?>",
+			"<?php the_terms( get_the_ID(), 'skills', '', ' / ', ' ' ); ?>"
+		],
+		"description": "Вывод таксономии"
+	}
+}

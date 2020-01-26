@@ -1,0 +1,10 @@
+{
+	"wp-header": {
+		
+		"prefix": "wp-header",
+		"body": [
+			"<?php get_header(); ?>",
+		],
+		"description": "index подключаем header"
+	}
+}

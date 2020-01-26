@@ -1,0 +1,10 @@
+{
+	"wp-tag-title": {
+		"prefix": "wp-tag-title",
+		"body": [
+			"<?php single_tag_title($1prefix, $1dispaly); ?>",
+			"<!---<h2><?php single_tag_title(); ?></h2> // переменная prefix загаловкой--> "
+		],
+		"description": " вывод заголовка меток"
+	}
+}

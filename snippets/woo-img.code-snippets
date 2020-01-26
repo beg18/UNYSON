@@ -1,0 +1,13 @@
+{
+	"woo-img": {
+		"prefix": "woo-img",
+		"body": [
+			"// аналогичен сниппету wp-img",
+			"// с данным ХУКом связан функциями: ",
+			"// woocommerce_show_loop_product_sale_flash для подключения и показа иконок распродажи ",
+			"// woocommerce_template_loop_product_thumbnail подключает миниатюры",
+			"<?php do_action('woocommerce_before_shop_loop_item_title'); ?>",
+		],
+		"description": "подключает миниатюры и иконки распродажи"
+	}
+}

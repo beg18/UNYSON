@@ -1,0 +1,23 @@
+{
+	"wp-func-customizeCss": {
+		"prefix": "wp-func-customizeCss",
+		"body": [
+			"function $1_customize_css(){",
+			"$$1_link_color = get_theme_mod('$1_link_color');",
+			"echo <<<HEREDOC",
+			"<style type=\"text/css\">",
+			"a { color: $$1_link_color; }",
+			"</style>",
+			"HEREDOC;",
+			
+				// ?><
+				// <style type="text/css">
+				// 	a { color: <?php /*echo get_theme_mod('$1_link_color'); */?>; }
+				// </style>
+				// <?php
+			"}",
+			"add_action('wp_head', '$1_customize_css');",	
+		],
+		"description": "Ввод стилей цвета ссылок без переразгрузки страницы"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"wp-url": {
+		"prefix": "wp-url",
+		"body": [
+			"// чтобы подключить картинки нам надо заменить в файле пути к ним",
+			"// заменить для style=\"background-image:  url(images  НА url(<?php <?php bloginfo('template_url'); ?>/assets/images",
+			"// заменить для <img>  src=\"images НА src=\"<?php <?php bloginfo('template_url'); ?>/assets/images",
+			"<?php bloginfo('template_url'); ?>",
+		],
+		"description": "Пути для изображений Информация о сайте bloginfo URL Темы: get_template_directory()"
+	}
+}

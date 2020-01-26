@@ -1,0 +1,12 @@
+{
+	"wp-template-url": {
+		"prefix": "wp-template-url",
+		"body": [
+			"// чтобы подключить картинки нам надо заменить в файле пути к ним",
+			"// заменить для style=\"background-image:  url(images  НА url(<?php <?php bloginfo('template_url'); ?>/assets/images",
+			"// заменить для <img>  src=\"images НА src=\"<?php <?php bloginfo('template_url'); ?>/assets/images",
+			"<?php bloginfo('template_directory'); ?>"
+		],
+		"description": "Пути для изображений Тоже что и template_url wp-url()"
+	}
+}

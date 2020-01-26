@@ -1,0 +1,21 @@
+{
+	"wp-func-textdomain": {
+		"prefix": "wp-func-textdomain",
+		"body": [
+			"// создаём папку languages",
+			"// в файле style.css заполняем Text Domain: здесь пишем название темы wp-style-page",
+			"// подключение файла перевода из папки languages",
+			"// скачать и установить софт POEDIT",
+			"// копировать и вставить в папку languages шаблон перевода test.pot из доп.мат",
+			"// язык перевода английский(США)-> OK -> en_US -> сохранить",
+			"// каталог -> св-ва -> название и версия проекта->$1",
+			"// дополнительные слова ->  названия функции без скобок __(); _e(); esc_html_e();esc_html___()-> OK-> обновить",
+			"// в окне перевод пишем английское значение указанного слова напр. Читать далее-> Read more",
+			"// связан с wp-textdomain wp-text__domain",
+			"function $1_textdomain_setup(){",
+				"load_theme_textdomain('$1', get_template_directory() . '/languages');",
+			"}",
+		],
+		"description": " Подключение файла перевода"
+	}
+}

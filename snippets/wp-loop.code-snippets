@@ -1,0 +1,36 @@
+{
+	"loop": {
+		"prefix": "loop",
+		"body": [
+			"<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>",
+			"<!--============================Начало разметки повторяющий блок===================-->",
+			"<!--html-РАЗМЕТКА повторяющего блока-->",
+			"<!--=====1: вариант: если в разметке есть картинки, то вставляем эти условия иначе удаляем ===== -->",
+			"<?php if(has_post_thumbnail()): ?> ",
+			"<?php the_post_thumbnail(); ?>",
+			"<?php else: ?> ",
+			"<img src=\"https://picsum.photos/180/180\" alt=\"\">';",
+			"<!--echo \"<img src=\" . get_template_directory_uri() . \"/assets/i/clients/project_placeholder.jpg>\";-->",
+			"<?php endif; ?> ",
+			"<!--==== 2 вариант: если в разметке есть картинки, то вставляем эти условия иначе удаляем===== -->",
+			"<?php",
+			"if( has_post_thumbnail() ){",
+			"$1img_url = get_the_post_thumbnail_url();",
+			"}else{",
+			"$1img_url = 'https://picsum.photos/1280/864';",
+			"}",
+			"?>",
+			"<div class=\"fh5co-portfolio-figure animate-box\" style=\"background-image: url(<?php echo $1img_url; ?>);\"></div> ",
+			"<!--можно использовать переменную и так <img src=\"<?php echo $1img_url; ?>\" alt=\"\">-->",
+			"<!--=======================Конец разметки повторяющий блок=========================-->",
+			"<?php endwhile; ?>",	
+			"<!-- post navigation -->",
+			"<?php else: ?>",
+			"<!-- no posts found -->",
+			"<p>Постов нет...</p>",
+			"// для woocommerce сниппет woo-file-no-found <?php wc_get_template('loop/no-products-found.php')?>",
+			"<?php endif; ?> "
+		],
+		"description": "wp Loop- цикл для подключения динамических заголовков и контента статей, записей и т.д."
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"wp-add-bgimg-url": {
+		"prefix": "wp-add-bgimg-url",
+		"body": [
+			"// в первую очередь в файле fucntions поддержка миниатюр- сниппет wp-reg-action",
+			"// получаем путь к картинке через ссылку на неё с помощью этой функции:",
+			"<?php",
+			"if( has_post_thumbnail() ){",
+			"$2img_url = get_the_post_thumbnail_url();//ТАБ доллар перемення",
+			"}else{",
+			"$2img_url = 'https://picsum.photos/1280/864'; //ТАБ доллар перемення размеры по разметке",
+			"// echo get_template_directory_uri() . '/assets/img/not-found.jpg';",
+			"}",
+			"?>",
+			"<div class=\"toys__item\" style=\"background-image: url(<?php echo $2img_url; ?>);\"></div> ",			
+		],
+		"description": "добавляем картинки через ссылки на них"
+	}
+}

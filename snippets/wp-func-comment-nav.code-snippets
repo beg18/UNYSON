@@ -1,0 +1,29 @@
+{
+	"wp-func-comment-nav": {
+		"prefix": "wp-func-comment-nav",
+		"body": [
+			"// связан со сниппетом wp-file-comment-nav",
+			"function $1_comment_nav() {",
+			"// Are there comments to navigate through?",
+			"if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :",
+			"?>",
+			"<nav class=\"navigation comment-navigation\" role=\"navigation\">",
+			"<h2 class=\"screen-reader-text\"><?php _e( 'Comment navigation', '$1' ); ?></h2>",
+			"<div class=\"nav-links\">",
+			"<?php",
+			"if ( $2prev_link = get_previous_comments_link( __( 'Older Comments', '$1' ) ) ) :",
+			"printf( '<div class=\"nav-previous\">%s</div>', $2prev_link );",
+			"endif;",
+			"if ( $2next_link = get_next_comments_link( __( 'Newer Comments', '$1' ) ) ) :",
+			"printf( '<div class=\"nav-next\">%s</div>', $2next_link );",
+			"endif;",
+			"?>",
+			"</div><!-- .nav-links -->",
+			"</nav><!-- .comment-navigation -->",
+			"<?php",
+			"endif;",
+			"}",
+		],
+		"description": " Функция комментариев"
+	}
+}

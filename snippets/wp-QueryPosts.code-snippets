@@ -1,0 +1,10 @@
+{
+	"wp-QueryPosts": {
+		"prefix": "wp-QueryPosts",
+		"body": [
+			"//https://neolot.com/wp-content/uploads/2009/08/WordPress-Snippets.pdf",
+			"<?php query_posts('cat=2&showposts=5'); ?>"
+		],
+		"description": " Поместите этот код прямо перед циклом.Этот фрагмент покажет 5 последних записей только из категории 2."
+	}
+}

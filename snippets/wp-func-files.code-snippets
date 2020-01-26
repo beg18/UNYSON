@@ -1,0 +1,36 @@
+{
+	"wp-func-files": {
+		"prefix": "wp-func-files",
+		"body": [
+			"<?php",
+			"function $1_scripts(){",
+			" // подключаем шрифты из googleFont wp_enqueue_style('$1-googleFont', 'https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800');",
+			"wp_enqueue_style('$1-animate-style', get_template_directory_uri() . '/assets/css/animate.css');",
+			"wp_enqueue_style('$1-bootstrap-style', get_template_directory_uri() . '/assets/css/bootstrap.css');",
+			"wp_enqueue_style('$1-slick-theme-style', get_template_directory_uri() . '/assets/css/slick-theme.css');",
+			"wp_enqueue_style('$1-slick-style', get_template_directory_uri() . '/assets/css/slick.css');",
+			"wp_enqueue_style('$1-slicknav-style', get_template_directory_uri() . '/assets/css/slicknav.min.css');",
+			"wp_enqueue_style('$1-style', get_stylesheet_uri());",
+			"// УСЛОВНЫЕ КОММЕНТАРИЯ подключение JS:  wp_enqueue_script( '$1-respond-js', get_template_directory_uri() . '/assets/js/respond.min.js' ); ",
+    		"// УСЛОВНЫЕ КОММЕНТАРИЯ подключение JS: wp_script_add_data('$1-respond-js', 'conditional', 'lt IE 9');",
+			"wp_deregister_script( 'jquery' );",
+			"wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js', array(), null, true);",
+			"// или подключаем из папки wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/jquery.min.js');",
+			"wp_enqueue_script('jquery');",
+			"wp_enqueue_script('$1-maskedinput-js', get_template_directory_uri() . '/assets/js/jquery.maskedinput.min.js', array('jquery'), null, true);",
+			"wp_enqueue_script('$1-slick-js', get_template_directory_uri() . '/assets/js/slick.min.js', array('jquery'), null, true);",
+			"wp_enqueue_script('$1-slicknav-js', get_template_directory_uri() . '/assets/js/jquery.slicknav.min.js', array('jquery'), null, true);",
+			"wp_enqueue_script('$1-bootstrap-js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array('jquery'), null, true);",
+			"wp_enqueue_script('$1-ie10-viewport-js', 'http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js', array('jquery'), null, true);",
+			"wp_enqueue_script('$1-main-js', get_template_directory_uri() . '/assets/js/main.js', array('jquery'), null, true); ",
+			"//добавляем доп-ные данные перед указанным скриптом, кот.должен быть в очереди на вывод",
+			"// теперь перед $1-main-js появится переменная $1Data в кокторой указан точный путь к теме ",
+			"// данная переменная $1Data можно теперь использовать в JS коде: сниппет.tpl папке  framework-customizations",
+			"// например var= loader = '<img class=\"loader\" src=\"' + $1Data.themePath + '/assets/images/loader.gif\">'; ",
+			"// wp_localize_script('$1-main-js', '$1Data', array('themePath' => get_template_directory_uri()));",
+			"}",
+			"add_action('wp_enqueue_scripts', '$1_scripts');"
+		],
+		"description": "Подключения файлов стилей и скриптов js"
+	}
+}

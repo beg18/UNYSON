@@ -1,0 +1,27 @@
+{
+	"wp-func-newpostype-slider": {
+		"prefix": "wp-func-newpostype-slider",
+		"body": [
+			" // новый тип записей например слайдер",
+			" // в панеле самом внизу появится пункт 'Слайдер'",
+			" // в пункте 'Слайдер' подпункты Все слайды и Добавить новый слайд",
+			" // выводим с помощью сниппета wp-add-guery",
+			"add_action('init','$1_index');",
+			"function $1_index() {",
+			"register_post_type('$1',array(",
+			"'public'=>true,",
+			"'supports' => array('title','editor','thumbnail'),",
+			"'menu_position' =>120,",
+			"'menu_icon' => admin_url().'images/media-button-other.gif',",
+			"'labels' => array(",
+			"'name' => 'Слайдер',",
+			"'all_items' => 'Все слайды',",
+			"'add_new' => 'Добавить новый слайд',",
+			"'add_new_item' => 'Новый слайд'",
+			")",
+			"));",
+			"}",
+		],
+		"description": " Создание нового типа записей например слайдер"
+	}
+}

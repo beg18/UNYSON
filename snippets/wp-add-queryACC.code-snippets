@@ -1,0 +1,27 @@
+{
+	"wp-add-queryACC": {
+		"prefix": "wp-add-queryACC",
+		"body": [
+			"<?php",
+			"$1id = 10; // номер категории",
+			"$1posts_accordion = new WP_Query(array('cat' => $1id, 'posts_per_page' => 3, 'order' => 'ASC'));",
+			"?>",
+			"<?php if ( $1posts_accordion->have_posts() ) : ?>",
+			"<div class=\"why-us\"><!-- Разметку ставим нужную согласно вёрстки-->",
+			"<h1 class=\"center-n\"><span class=\"hnc\">Why Choose Us</span></h1>",
+			"<div id=\"accordion\">",
+			"<?php while ( $1posts_accordion->have_posts() ) : $1posts_accordion->the_post(); ?>",
+			"<h3><?php the_title(); ?></h3>",
+			"<div><?php the_content(); ?></div>",
+			"<?php endwhile; ?>",
+			"</div>",
+			"</div>",
+			"<?php else: ?>",
+			"<div class=\"why-us\">",
+			"<h1 class=\"center-n\"><span class=\"hnc\">Записи в формате аккордеона</span></h1>",
+			"</div>",
+			"<?php endif; ?>"
+		],
+		"description": "Вывод аккордиона образец"
+	}
+}

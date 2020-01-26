@@ -1,0 +1,11 @@
+{
+	
+	"wp-cat-title": {
+		"prefix": "wp-cat-title",
+		"body": [
+			"<?php single_cat_title($1prefix, $1dispaly); ?>",
+			"<!---<h2><?php single_cat_title('Рубрика: '); ?></h2>  переменная prefix загаловкой--> "
+		],
+		"description": " Заголовок рубрик"
+	}
+}

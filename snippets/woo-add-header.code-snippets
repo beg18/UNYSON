@@ -1,0 +1,27 @@
+{
+	"woo-add-navigation": {
+		"prefix": "woo-add-navigation",
+		"body": [
+			"// в wp-content-> plugins-> woocommerce-> templates-> файл taxonomy-product_cat.php файл для категории товаров",
+			"// этот файл сохраняем как файл taxonomy-product_cat.php в теме папке woocommerce",
+			"// или же сохраняем файл product.html сохраняем как файл taxonomy-product_cat.php в теме папке woocommerce",
+			"// сюда добавляем нужные шаблоны woo-add-defined, wp-header, wp-navigation, wp-siderbar('content_bottom'), wp-footer",
+			"// если есть какая-та разница в разметке для шапки или других участков то добавляем данный код: ",
+			"//в начало файла navigation.php условия если текущая страница главная ставим код из разметки главной страницы",
+			"<?php if(is_home() || is_front_page()):?>",
+			"<div class=\"banner-top\">",
+			"<div class=\"container\">",
+			"//условия иначе код из разметки другой страницы",
+			"<?php else :?>",
+			"<div class=\"inner-banner\">",
+			"<div class=\"container\">",
+			"<div class=\"banner-top inner-head\">",
+			"<?php endif;?>",
+			"//в конец файла navigation.php т.к. у другой страницы открываются три дива",
+			"<?php if(!is_home()|| !is_front_page()) :?>",
+			"</div>",
+			"<?php endif;?>",
+		],
+		"description": "если есть какая-та разница в разметке для шапки или других участков то добавляем данный код"
+	}
+}

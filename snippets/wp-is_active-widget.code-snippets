@@ -1,0 +1,13 @@
+{
+	"wp-is_active-widget": {
+		"prefix": "wp-is_active-widget",
+		"body": [
+			"<?php if(is_active_sidebar('right-sidebar')): ?>// здесь ID из functions.php wp-reg-sidebar ",
+			"<aside>",
+			"<?php dynamic_sidebar('right-sidebar'); ?>// здесь ID из functions.php wp-reg-sidebar",
+			"</aside>",
+			"<?php endif;?>"
+		],
+		"description": "втавить в sidebar.php если sidebar активен то вывести сайдбар"
+	}
+}

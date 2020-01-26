@@ -1,0 +1,14 @@
+{
+	"wp-custom-bgHeader": {
+		"prefix": "wp-custom-bgHeader",
+		"body": [
+			"//<div class=\"header-image\" style=\"background: url(<?php echo get_custom_header()->url; ?>) center no-repeat; background-size: cover; height: 50vh;\"></div>",
+			".header-image {",
+			"background: url(<?php echo get_custom_header()->url; ?>) center no-repeat;",
+			"background-size: cover;",
+			"height: 50vh;",
+			"}",
+		],
+		"description": " Фоновое изображение через background"
+	}
+}

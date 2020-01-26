@@ -1,0 +1,14 @@
+{
+	"wp-add-img-categories": {
+		"prefix": "wp-add-img-categories",
+		"body": [
+			"//https://neolot.com/wp-content/uploads/2009/08/WordPress-Snippets.pdf",
+			"<?php if (is_category('7') ):", 
+			"<img src=\"<?php bloginfo('template_url'); ?>/images/cat7.jpg\" alt=\"\" />",
+			"<?php } elseif (is_category('8') ):", 
+			"<img src=\"<?php bloginfo('template_url'); ?>/images/cat8.jpg\" alt=\"\" />",
+			"<?php endif; ?>",
+		],
+		"description": "Этот фрагмент назначает изображение (cat7.jpg) рядом с каждым заголовком сообщения в категории 7 и изображение (cat8.jpg) рядом с каждым заголовком сообщения в категории 8. Поместите этот код в файл category.php."
+	}
+}

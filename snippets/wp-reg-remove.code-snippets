@@ -1,0 +1,27 @@
+{
+	"wp-reg-remove": {
+		"prefix": "wp-reg-remove",
+		"body": [
+			"add_filter('navigation_markup_template', '$1_navigation_template', 10, 2 );",
+			"function $1_navigation_template( $2template, $2class ){ ",
+				"/*",
+					"Вид базового шаблона:",
+					"<nav class=\"navigation %1$s\" role=\"navigation\">",
+						"<h2 class=\"screen-reader-text\">%2$s</h2>",
+						"<div class=\"nav-links\">%3$s</div>",
+					"</nav>",
+				"*/",
+			"return '",
+			"<nav class=\"navigation\" role=\"navigation\">",
+			"<div class=\"nav-links\">%3$s</div>",
+			"</nav>",
+			"';",
+			"}",
+			" // выводим пагинацию",
+			"the_posts_pagination( array(", 
+			"'end_size' => 2,",
+			"));",
+		],
+		"description": "в functions удаляет H2 из шаблона пагинации"
+	}
+}

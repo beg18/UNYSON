@@ -1,0 +1,31 @@
+{
+	"wp-add-meta-slider": {
+		"prefix": "wp-add-meta-slider",
+		"body": [
+			"// загружаем картинки узнаём их post_ID (например: 129,130)",
+			"// к записи у которой есть галерея слайдер добавляем произвольные поля ",
+			"// например Имя: gallery; Значение: 129,130 то есть post_ID картинок",
+			"<?php $1gallery = get_post_meta($1post->ID, 'gallery', true); ?>",
+			"<?php if(!empty($1gallery)) : $1gallery = explode(\", \", $1gallery); ?>",
+			"// здесь НАЧАЛА РАЗМЕТКИ слайдера ОТКРЫВАЮЩИЕ ТЭГИ",
+			"<div class=\"slider-porfolio\">",
+			"<div class=\"flexslider\">",
+			"<ul class=\"slides\">",
+			"<?php foreach($1gallery as $1item): ?>",
+			"// в цикле foreach повторяющий участок кода в разметке ТЕЛО РАЗМЕТКИ",
+			"<li>",
+			"// здесь основная картинка",
+			"<?php echo wp_get_attachment_image($1item, 'full'); ?>",
+			"// эта  дикоративная картинка ТЕНЬ ставим путь до картинки WP-URL",
+			"<img src=\"<?php bloginfo('template_url') ?>/assets/images/portfolio-shadow.png\" alt=\"\" />",
+			"</li>",
+			"<?php endforeach; ?>",
+			"// здесь КОНЕЦ РАЗМЕТКИ слайдера ЗАКРЫВАЮЩИЕ ТЭГИ",
+			"</ul>",
+			"</div>",
+			"</div>",
+			"<?php endif; ?>",
+		],
+		"description": " вывода слайдера ЗАПИСЕЙ по произвольным полям в записе статье"
+	}
+}

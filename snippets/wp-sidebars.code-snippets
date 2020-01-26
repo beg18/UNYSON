@@ -1,0 +1,13 @@
+{
+	"wp-sidebars": {
+		"prefix": "wp-sidebars",
+		"body": [
+			"<?php get_header() ?>",
+			"<?php get_sidebar('left') /* sidebar-left.php */ ?>",
+			"<div id=\"content\">содержимое страницы</div>",
+			"<?php get_sidebar('right') /* sidebar-right.php */ ?>",
+			"<?php get_footer() ?>",
+		],
+		"description": "используются две боковые колонки — слева от контента и справа от контента"
+	}
+}

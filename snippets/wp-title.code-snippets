@@ -1,0 +1,11 @@
+{
+	
+	"wp-title": {
+	
+		"prefix": "wp-title",
+		"body": [
+			"<?php the_title(); ?>",
+		],
+		"description": "Подключения динамически заголовков"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"wp-loop-counter": {
+		"prefix": "wp-loop-counter",
+		"body": [
+			"<?php if ( $1query->have_posts() ) : $1i = 1; while ( $1query->have_posts() ) : $1query->the_post(); ?>",
+			"<?php $1i++; endwhile; ?>",
+        	"<?php else: ?>",
+           " <!-- no posts found -->",
+        	"<?php endif; ?>",
+        	"<?php wp_reset_postdata(); ?>",
+		],
+		"description": "Цикл со счетнчиком для добавления чередующих классов"
+	}
+}

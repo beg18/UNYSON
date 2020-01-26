@@ -1,0 +1,13 @@
+{
+	"woo-end-content": {
+		"prefix": "woo-end-content",
+		"body": [
+			"// вызываем ХУК woocommerce_output_content_wrapper_end",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-hooks.php",
+			"// вызываем функцию woocommerce_after_main_content",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-functions.php",
+			"<?php do_action('woocommerce_after_main_content');?>"
+		],
+		"description": "Ставим фунцию вместо закрывающих дивов на главной странице"
+	}
+}

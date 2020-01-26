@@ -1,0 +1,36 @@
+{
+	"wp-func-cutomizer-option": {
+		"prefix": "wp-func-cutomizer-option",
+		"body": [
+			"<?php // временно первый ТАБ имя темы второй ТАБ доллар",
+			"// Настройки статистической сраницы с постоянным контентом front-page.php",
+			"// если тема генерирован сервером undercores, то эту функцию ставим в inc/customizer.php",
+			"// во внутрь функции $1_customize_register  ",
+			"// Ставим ярлык рубрики прямо из натройки в поле Category от Home Page",
+			"// связан со сниппетами wp-add-query-customizer-option где есть условия:",
+			"// если это главная страница front-page  и есть данная насторойка",
+			"// в этом случае мы выводим данный блок при этом это условия добавляем к front-page.php и index.php",
+			"function $1_customize_register( $2wp_customize ) {//название темы и доллар",
+			"// Theme Custom Customizer",
+			"$2wp_customize->add_section('$1_theme_options', array(//название темы и доллар",
+			"'title' => __('Theme Options', '$1'),//название темы",
+			"'priority' => 10,",
+			"));",
+			"$2wp_customize->add_setting('$1_home_category', array(//название темы и доллар",
+			"'default' => '',",
+			"//'transport'=>'postMessage',",
+			"));",
+			"$2wp_customize->add_control(// доллар",
+			"'$1_home_category',//название темы",
+			"array(",
+			"'label' => __('Category on Home Page', '$1'),",
+			"'section' => 'clean_theme_options',",
+			"'type' => 'text',",
+			")",
+			");",
+			"}",
+			"add_action( 'customize_register', '$1_customize_register' );",
+		],
+		"description": "Настройки статистической сраницы с постоянным контентом front-page.php"
+	}
+}

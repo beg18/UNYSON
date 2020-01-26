@@ -1,0 +1,9 @@
+{
+	"wp-sidebar": {
+		"prefix": "wp-sidebar",
+		"body": [
+			"<?php get_sidebar(); ?>",
+		],
+		"description": "Подключение сайдбара..."
+	}
+}

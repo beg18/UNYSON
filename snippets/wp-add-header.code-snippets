@@ -1,0 +1,17 @@
+{// https://misha.blog/wordpress/get_header.html
+	"wp-add-header": {
+		"prefix": "wp-add-header",
+		"body": [
+			"<?php",
+			"if( is_single() ) {",
+			"get_header('post');",//header-post.php
+			"} elseif ( is_page() ) {",
+			"get_header('page');",//header-page.php
+			"} else {",
+			"get_header();",     //header.php
+			"}",
+			"?>",
+		],
+		"description": "здесь у нас будет две «особых» шапки для постов header-post.php и постоянных страниц header-page.php WordPress, для остальных страниц сайта будет использоваться стандартный header.php..."
+	}
+}

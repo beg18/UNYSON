@@ -1,0 +1,12 @@
+{
+	// Example:wp-func-image_size
+	"wp-func-image_size": {
+        "prefix": "wp-func-image_size",
+        "body": [
+            "<?php",
+            "add_image_size('big-thumb', 400, 400, true);",// добавляем еще один размер картинкам 400x400 с обрезкой
+            "?>",
+        ],
+        "description": "добавляем еще один размер картинкам 400x400 с обрезкой"
+    }
+}

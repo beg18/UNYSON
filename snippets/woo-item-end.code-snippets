@@ -1,0 +1,12 @@
+{
+	"woo-item-end": {
+		"prefix": "woo-item-end",
+		"body": [
+			"// данная функция подключает часть шаблона закрывающего тега wp-add-query после endwhile;",
+			"// создаём в папке woocommerce-> папку loop-> в нём файл loop-end.php",
+			"// файле loop-end.php вставим woo-add-defined и закрывающий тег после endwhile",
+			"<?php woocommerce_product_loop_end();?>"
+		],
+		"description": "данная функция подключает часть шаблона закрывающего тега после endwhile"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"wp-add-contentOnlyForTheHomePage": {
+		"prefix": "wp-add-contentOnlyForTheHomePage",
+		"body": [
+			"//https://neolot.com/wp-content/uploads/2009/08/WordPress-Snippets.pdf",
+			"<?php if ( is_home() ) { include ('example.php'); } ?>",
+		],
+		"description": "Содержание только для домашней страницы.Этот фрагмент будет включать указанный файл, только если пользователь находится на главной странице сайта. Поместите этот код в index.php файле"
+	}
+}

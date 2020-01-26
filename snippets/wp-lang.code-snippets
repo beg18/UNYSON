@@ -1,0 +1,9 @@
+{
+	"wp-lang": {
+		"prefix": "wp-lang",
+		"body": [
+			"<?php bloginfo('language'); ?>"
+		],
+		"description": "локаль сайта (язык): ru-RU"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"wp-date": {
+		"prefix": "wp-date",
+		"body": [
+			"//https://wp-kama.ru/id_7433/formaty-daty-i-vremeni-v-wordpress.html",
+			"<?php echo date('Y') ?>",
+		],
+		"description": " Год например в копирайте"
+	}
+}

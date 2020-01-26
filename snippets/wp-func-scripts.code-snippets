@@ -1,0 +1,26 @@
+{
+	"wp-func-scripts": {
+		"prefix": "wp-func-scripts",
+		"body": [
+			"// приклеем ф-ю на добавление скриптов в футер",
+			"add_action('wp_footer', 'add_scripts');",
+			"// если ф-я уже есть в дочерней теме - нам не надо её определять",
+			"if (!function_exists('add_scripts')) {",
+			"// добавление скриптов",	
+			"function add_scripts() {",
+			"// если мы в админке - ничего не делаем",
+			"if(is_admin()) return false;",
+			"// выключаем стандартный jquery", 
+			"wp_deregister_script('jquery');",
+			"//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js','','',true); // добавляем свой",
+			"wp_enqueue_script('jquery', '//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js','','',true);",
+			"// бутстрап",
+			"wp_enqueue_script('bootstrap', get_template_directory_uri().'/js/bootstrap.min.js','','',true);",
+			"// и скрипты шаблона",
+			"wp_enqueue_script('main', get_template_directory_uri().'/js/main.js','','',true);",
+			"}",
+			"}",
+		],
+		"description": "Прикрепляем в футер скрипты"
+	}
+}

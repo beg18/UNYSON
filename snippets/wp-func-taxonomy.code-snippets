@@ -1,0 +1,35 @@
+{
+	"wp-func-taxonomy": {
+		"prefix": "wp-func-taxonomy",
+		"body": [
+			"function $1_create_taxonomy(){",
+			"// список параметров: http://wp-kama.ru/function/get_taxonomy_labels",
+			"register_taxonomy('$1', array('post'), array(// здесь указываем к какому типу записи использовать post|| или portfolio",
+			"'label'                 => '', // определяется параметром $labels->name",
+			"'labels'                => array(",
+			"'name'              => '$2',// второй ТАБ на русском",
+			"'singular_name'     => '$2',",
+			"'search_items'      => 'Найти $2',",
+			"'all_items'         => 'Все $2',",
+			"'view_item '        => 'Смотреть $2',",
+			"'parent_item'       => 'Родительский $2' ,",
+			"'parent_item_colon' => 'Родительский $2' ,",
+			"'edit_item'         => 'Редактировать $2',",
+			"'update_item'       => 'Обновить $2',",
+			"'add_new_item'      => 'Добавить новую $2',",
+			"'new_item_name'     => 'Название новой $2',",
+			"'menu_name'         => '$2',",
+			"),",
+			"'description'           => 'Краткое описание $2', // описание таксономии",
+			"'public'                => true,",
+			"'publicly_queryable'    => null, // равен аргументу public",
+			"'hierarchical'          => false,",
+			"'rewrite'               => true,",
+			") );",
+			"}",
+			"// хук для регистрации",
+			"add_action( 'init', '$1_create_taxonomy' );"
+		],
+		"description": "Добавляет (регистрирует) новую (пользовательскую) таксономию. Можно перезаписать существующую таксономию."
+	}
+}

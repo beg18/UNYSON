@@ -1,0 +1,14 @@
+{
+	"wp-func-meta": {
+		"prefix": "wp-func-meta",
+		"body": [
+			"<!--https://misha.blog/wordpress/custom-fields.html-->",
+			"function $1_custom_fields() {",
+				"add_post_type_support( 'Прозвольные поля', 'custom-fields'); // в качестве первого параметра укажите название типа поста",
+			"}",
+			 
+			"add_action('init', '$1_custom_fields');",
+		],
+		"description": " Добавляем поддержку произвольных полей в теме"
+	}
+}

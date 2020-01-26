@@ -1,0 +1,9 @@
+{
+	"wp-widget": {
+		"prefix": "wp-widget",
+		"body": [
+			"<?php dynamic_sidebar('$1'); ?>"
+		],
+		"description": "Вызов виджета"
+	}
+}

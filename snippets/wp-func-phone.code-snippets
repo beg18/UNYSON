@@ -1,0 +1,42 @@
+{
+	"wp-func-phone": {
+		"prefix": "wp-func-phone",
+		"body": [
+			"// custom section",
+			"$2wp_customize->add_section('$1_site_data', array(",
+			"'title' => __('Информация сайта', '$1'),",
+			"'priority' => 10,",
+			"));",
+
+			"$2wp_customize->add_setting('$1_phone', array(",
+			"'default' => '',",
+			"//'transport'=>'postMessage',",
+			"));",
+
+			"$2wp_customize->add_control(",
+			"'$1_phone',",
+			"array(",
+				"'label' => __('Телефон', '$1'),",
+				"'section' => '$1_site_data',",
+				"'type' => 'text',",
+			"));",
+	
+			"$2wp_customize->add_setting('$1_show_phone', array(",
+			"'default' => true,",
+			"//'transport'=>'postMessage',",
+			"));",
+			
+			"$2wp_customize->add_control(",
+			"'$1_show_phone',",
+			"array(",
+				"'label' => __('Показывать телефон', '$1'),",
+				"'section' => '$1_site_data',",
+				"'type' => 'checkbox',",
+			"));",
+	
+		"}",
+		"add_action('customize_register', '$1_customize_register');",
+		],
+		"description": "Добавление ввода телефона"
+	}
+}

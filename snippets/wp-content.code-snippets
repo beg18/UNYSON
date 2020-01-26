@@ -1,0 +1,10 @@
+
+	{
+		"wp-content": {
+			"prefix": "wp-content",
+			"body": [
+				"<?php the_content(); ?>",
+			],
+			"description": "Подключения контента статей..."
+		}
+	}

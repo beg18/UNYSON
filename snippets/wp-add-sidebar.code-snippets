@@ -1,0 +1,14 @@
+{
+	"wp-add-sidebar": {
+		"prefix": "wp-add-sidebar",
+		"body": [
+			"<?php",
+			"if(!is_active_sidebar('right-sidebar')) return;",
+			"?>",
+			"<div class=\"col-3\">",
+			"<?php dynamic_sidebar('right-sidebar'); ?>",
+			"</div>",
+		],
+		"description": "sidebar условия если сайдбар имеет контент, то показать на сайте..."
+	}
+}

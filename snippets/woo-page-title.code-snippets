@@ -1,0 +1,12 @@
+{
+	"woo-page-title": {
+		"prefix": "woo-page-title",
+		"body": [
+			"// заголовок  текущей главной страницы",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-functions.php",
+			"// вызываем функцию function woocommerce_page_title( $1echo = true )",
+			"<h3 class=\"head text-center\"><?php woocommerce_page_title(); ?></h3> "
+		],
+		"description": "заголовок  текущей главной страницы"
+	}
+}

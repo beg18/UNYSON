@@ -1,0 +1,20 @@
+{
+	"wp-func-foreach-return": {
+		"prefix": "wp-func-foreach-return",
+		"body": [
+			"<!-- https://clip-share.net/video/1_g6V46bEvY/-Лендинг на WordPresss -->",
+			"<!-- создаём например новый тип записи  ||flat||faq||slider-->",
+			"<!-- для этого используем сниппеты:wp-func-newpostype||wp-reg-newposttype и другие -->",
+			"<!-- связан со снипетоми:wp-foreach-return || wp-func-newpostype||wp-reg-newposttype -->",
+			"function get_$1(){// первый ТАБ название нового типа записи ||flat||faq||slider",
+				"$2args = array( //второй ТАБ ДОЛЛАР",
+				"'orderby' => 'date',// по дате",
+				"'order' => 'ASC',//ASC DESC порядок вывода",
+				"'post_type' => '$1', //здесь тип записи post ||flat||faq||slider",
+				");  ",
+				"return get_posts($2args)", 
+			"}",
+		],
+		"description": "функция возврата записи или нового вида записи"
+	}
+}

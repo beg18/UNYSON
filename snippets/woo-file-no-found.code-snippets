@@ -1,0 +1,17 @@
+{
+	"woo-file-no-found": {
+		"prefix": "woo-file-no-found",
+		"body": [
+			"// связан со сниппетом woo-loop",
+			"// заходим wp-content-> plugins-> woocommerce-> templates-> loop-> сохраняем как файл no-products-found.php",
+			"// в папке woocommerce из темы файл no-products-found.php ",
+			"<?php",
+			"if ( ! defined( 'ABSPATH' ) ) {",
+			"exit; // Exit if accessed directly",
+			"}",
+			"?>",
+			"<p class=\"woocommerce-info\"><?php _e( 'No products were found matching your selection.', 'woocommerce' ); ?></p>",
+		],
+		"description": "создаём файл no-products-found.php"
+	}
+}

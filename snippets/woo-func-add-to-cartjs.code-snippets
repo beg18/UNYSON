@@ -1,0 +1,21 @@
+{
+	"woo-func-add-to-cartjs": {
+		"prefix": "woo-func-add-to-cartjs",
+		"body": [
+			"// переходим в wp-content-> plugins-> woocommerce-> assets-> frontend-> файл add-to-cart.js",
+			"// сохраняем ее как add-to-cart.js только в папке темы js",
+			"// затем вносим туда необходимые изменения:var $1thisbutton = $1( this ) ТАБ доллар",
+			"// $1thisbutton.text('Загрузка'); под строкой 25",
+			"// после комментраиев View cart text на строке 83",
+			"//$1thisbutton.attr('href',wc_add_to_cart_params.cart_url);",
+			"//$1thisbutton.text(wc_add_to_cart_params.i18n_view_cart);",
+			"//$1thisbutton.attr('class','added_to_cart wc-forward');",
+			"// ПОДКЛЮЧАЕМ этот файл в functions.php",
+			"add_action('wp_enqueue_scripts','load_script',9);",
+			"function load_script() {",
+			"wp_enqueue_script('wc-add-to-cart',get_template_directory_uri().'/js/add-to-cart.js', WC_VERSION, true);",
+			"}",
+		],
+		"description": "ПОДКЛЮЧАЕМ  файл  add-to-cart.js в functions.php"
+	}
+}

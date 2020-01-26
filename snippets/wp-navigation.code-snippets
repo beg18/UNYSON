@@ -1,0 +1,11 @@
+{
+	"wp-navigation": {
+		"prefix": "wp-navigation",
+		"body": [
+			"// подключаем меню (навигацию) файл navigation.php ",
+			"// связан со сниппетом wp-func-navigation",
+			"<?php get_navigation(); ?>"
+		],
+		"description": "подключаем  файл navigation.php"
+	}
+}

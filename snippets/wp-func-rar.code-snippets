@@ -1,0 +1,15 @@
+{
+	"wp-func-rar": {
+		"prefix": "wp-func-rar",
+		"body": [
+			"function $1_Rar($2mimes) {",
+			"$2mimes = ['rar'] = 'application/x-tar'",
+			"return $2mimes;",
+			"}",
+
+			"add_filter('upload_mimes', '$1_Rar')"
+
+		],
+		"description": "функция который разрешает WP загружать архивы в  RAR"
+	}
+}

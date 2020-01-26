@@ -1,0 +1,17 @@
+{
+	"woo-func-loop-pagination": {
+		"prefix": "woo-func-loop-pagination",
+		"body": [
+			"<?php // временно ",
+			"// связаны сниппеты  woo-func-remove-pagination, woo-pagination, woo-file-pagination,woo-func-per-page,woo-option-select",
+			"// к событию (ХУКу) woocommerce_after_shop_loop исп-ся после цикла связана функция",
+			"// woocommerce_pagination, который мы отвяжим от этого ХУКа сниппет woo-func-remove-pagination",
+			"// и добавим к ХУКу (из сниппета woo-start-loop) woocommerce_before_shop_loop, чтобы",
+			"// пагинации пявился наверху a не в конце страницы на место вызова сниппет woo-func-loop-pagination",
+			"if(!is_shop()) {// сюда ставим все экшины касающиеся",
+			"add_action( 'woocommerce_before_shop_loop', 'woocommerce_pagination', 35 );",
+			"}"
+		],
+		"description": "добавим к ХУКу, чтобы пагинации пявился наверху a не в конце страницы на место вызова"
+	}
+}

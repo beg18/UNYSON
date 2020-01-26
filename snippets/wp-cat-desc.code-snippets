@@ -1,0 +1,19 @@
+{
+	"wp-cat-desc": {
+		"prefix": "wp-cat-desc",
+		"body": [
+			"<!--https://help-wp.ru/vyvesti-opisanie-rubriki-wordpress/-->",
+			"<!--<?php echo category_description( $1category_id );?>--> ",
+			"<!--<?php $1str=category_description(); if(!empty($1str)){echo apply_filters(\"the_content\", $1str);}?>-->",
+			"<!--<?php category_description($1category_id); ?>-->",
+			"<?php",
+			"$1idObj = get_category_by_slug('obo-mne'); // ярлык рубрики",
+			"$1id = $1idObj->term_id;",
+			"?>",
+			"<div class=\"section__descr\">",
+			"<?php echo category_description($1id); ?>// получаем описание рубрики",
+			"</div>",
+		],
+		"description": "выводит классическое описание рубрики wordpress"
+	}
+}

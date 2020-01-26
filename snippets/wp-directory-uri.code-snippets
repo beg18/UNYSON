@@ -1,0 +1,12 @@
+{
+	"wp-directory-uri": {
+		"prefix": "wp-directory-uri",
+		"body": [
+			"// чтобы подключить картинки нам надо заменить в файле пути к ним",
+			"// заменить для style=\"background-image:  url(images  НА url(<?php echo get_template_directory_uri() ?>/assets/images",
+			"// заменить для <img>  src=\"images НА src=\"<?php echo get_template_directory_uri() ?>/assets/images",
+			"<?php echo get_template_directory_uri() ?>",
+		],
+		"description": "Пути для изображений:чтобы подключить картинки нам надо заменить в файле пути к ним"
+	}
+}

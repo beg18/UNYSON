@@ -1,0 +1,12 @@
+{
+	"wp-pagination": {
+		"prefix": "wp-pagination",
+		"body": [
+			"<?php posts_nav_link($1sep, $1prelabel, $1nxtlabel)?>",
+			"//$1sep-разделитель",
+			"//$1prelabel - ссылка на предыдущий",
+			"//$1nxtlabel - ссылка на следуюдущий"
+		],
+		"description": "Вызов пагинации"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"wp-logo": {
+		"prefix": "wp-logo",
+		"body": [
+			"<a class=\"navbar-brand\" href=\"<?php echo home_url(); ?>\"><?php bloginfo('name'); ?></a>",
+		],
+		"description": "ссылка в лого на главную страницу сайта"
+	}
+}

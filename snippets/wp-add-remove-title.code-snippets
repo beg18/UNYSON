@@ -1,0 +1,14 @@
+{
+	"wp-add-remove-title": {
+		"prefix": "wp-add-remove-title",
+		"body": [
+			"<!--Если заголовк записи имеет например значение Portfolio-->",
+			"<!--То заголовк с таким значением не показать-->",
+			"<?php $1category = get_the_category(); ?>",
+			"<?php if($1category[0]->cat_name != \"Portfolio\"): ?>",
+			"<h1><?php the_title() ?></h1>",
+			"<?php endif; ?>",
+		],
+		"description": " Не показать заголовок у определенных записей"
+	}
+}

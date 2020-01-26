@@ -1,0 +1,25 @@
+{
+	"wp-add-get-tags": {
+		"prefix": "wp-add-get-tags",
+		"body": [
+			"// https://gist.github.com/agragregra/eb962af841825399ff57",
+			"<?php  // ТАБ доллар",
+			"$1tags = get_tags();",
+			"if ($1tags) {",
+			"foreach ($1tags as $1tag) {",
+			"echo '<p>Tag: <a href=\"' . get_tag_link( $1tag->term_id ) . '\" title=\"' . sprintf( __(\"View all posts in %s\" ), $1tag->name ) . '\" ' . '>' . $1tag->name.'</a> </p> ';",
+			"}",
+			"}",
+			"?>",
+			"<?php",
+			"$1tags = wp_get_post_tags($1post->ID);",
+			"if ($1tags) {",
+			"foreach($1tags as $1tag) {",
+			"echo '<p>' . $1title . '<a href=\"' . get_term_link( $1tag, 'post_tag' ) . '\" title=\"' . sprintf( __( \"View all posts in %s\" ), $1tag->name) . '\" ' . '>' . $1tag->name.'</a> has ' . $1tag->count . ' post(s). </p> ';",
+			"}",
+			"}",
+			"?>",
+		],
+		"description": "Вывод по меткам"
+	}
+}

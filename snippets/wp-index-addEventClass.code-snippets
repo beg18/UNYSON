@@ -1,0 +1,9 @@
+{
+	"wp-index-addEventClass": {
+		"prefix": "wp-index-addEventClass",
+		"body": [
+			"<div class=\"fh5co-portfolio-item <?php if( $1i % 2 == 0 ) echo 'fh5co-img-right'; ?>\"> ",
+		],
+		"description": "Добавляем чередующий класс"
+	}
+}

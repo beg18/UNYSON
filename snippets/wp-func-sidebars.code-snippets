@@ -1,0 +1,58 @@
+{
+	"wp-func-sidebars": {
+		"prefix": "wp-func-sidebars",
+		"body": [
+			"<?php",
+			"function $1_register_wp_sidebars() {",
+	
+			"register_sidebar(array(",// регистрируем левую колонку, этот кусок можно повторять для добавления новых областей для виджитов
+            "'name' => 'Сайдбар',",// Название в админке
+            "'id' => \"$1_sidebar\",",// идентификатор для вызова в шаблонах 
+            "'description' => 'Обычная колонка в сайдбаре',",
+            "'before_widget' => '<div id=\"%1$s\" class=\"widget %2$s\">',",// разметка до вывода каждого виджета
+            "'after_widget' => \"</div>\n\",",// разметка после вывода каждого виджета
+            "'before_title' => '<span class=\"widgettitle\">',",//  разметка до вывода заголовка виджета
+            "'after_title' => \"</span>\n\", ",//  разметка после вывода заголовка виджета
+            "));",
+            
+			"register_sidebar(",
+			"array(",
+			"'id' => '$1_side',",
+			"'name' => 'Боковая колонка',",
+			"'description' => 'Перетащите сюда виджеты, чтобы добавить их в сайдбар.',",
+			"'before_widget' => '<div id=\"%1$s\" class=\"side widget %2$s\">',", 
+			"'after_widget' => '</div>',",
+			"'before_title' => '<h3 class=\"widget-title\">',",
+			"'after_title' => '</h3>,'",
+			")",
+			");",
+
+			"register_sidebar( array(",
+        	"'name' => 'Сайдбар справа',",
+        	"'id' => '$1_right-sidebar',",
+        	"'description' => 'Область для виджетов в сайдбаре справа',",
+        	"'class' => 'test2',",
+        	"'before_widget' => '<div id=\"%1$s\" class=\"widget %2$s\">',",
+        	"'after_widget' => \"</div>\n\",",
+    		"));",
+
+			"/* В подвале - второй сайдбар */",
+			"register_sidebar(",
+			"array(",
+			"'id' => '$1_foot',",
+			"'name' => 'Футер',",
+			"'description' => 'Перетащите сюда виджеты, чтобы добавить их в футер.',",
+			"'before_widget' => '<div id=\"%1$s\" class=\"foot widget %2$s\">',",
+			"'after_widget' => '</div>',",
+			"'before_title' => '<h3 class=\"widget-title\">',",
+			"'after_title' => '</h3>,'",
+			"));",
+
+			"}",
+			"add_action( 'widgets_init', '$1_register_wp_sidebars');",
+
+			"?>"
+		],
+		"description": "мы будем создавать разные сайдбары "
+	}
+}

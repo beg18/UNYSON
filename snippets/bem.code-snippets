@@ -1,0 +1,47 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"bem": {
+		"prefix": "bem",
+		"body": [
+			"<div class=\"$1\">",
+				"<header class=\"$1__heading\">",
+					"<h4 class=\"$1__title\">",
+						"$2",
+					"</h4>",
+					"<p class=\"$1__descr\">",
+						"$2",
+					"</p>",
+				"</header>",
+				"<div class=\"$1__avatar\">",
+					"<img src=\"\" class=\"$1__img\" alt=\"$1\">",
+				"</div>",
+				"<!-- // $1__avatar -->",
+				"<div class=\"$1__icon\">",
+					"<img src=\"\" class=\"$1__image\" alt=\"$1_name\">",
+				"</div>",
+				"<!-- // $1__icon -->",
+				"<figure class=\"$1__figure\">",
+					"<img src=\"\" class=\"$1__image\" alt=\"$1_name\">",
+					"<figcaption class=\"$1__caption\">",
+						"$2",
+					"</figcaption>",
+				"</figure>",
+				"<!-- // $1__figure -->",
+				"<div class=\"$1__contents\">",
+					"$2",
+				"</div>",
+				"<footer class=\"$1__footer\">",
+					"$2",
+				"</footer>",
+			"</div>",
+			"<!-- // $1 -->",
+		],
+		"description": "bem"
+	}
+}

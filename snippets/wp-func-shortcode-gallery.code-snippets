@@ -1,0 +1,34 @@
+{
+	"wp-func-shortcode-gallery": {
+		"prefix": "wp-func-shortcode-gallery",
+		"body": [
+			"function $1_gallery($attr, $text=''){// названия функции",
+			"// получаем массив ID картинок",
+			"$2img_src = explode(\",\", $attr['ids']); // переменная",
+			"// шаблон удаления атрибутов width/height",
+			"$2pattern = \"#(width|height)='d+'#\";// перед d+ ставит слэш для экранирования",
+			"$2return = '<ul id=\"slide_2\" class=\"slidik\">'; // переменная",
+			"// счетчик",
+			"$2i = 1; // переменная",
+			"foreach ($2img_src as $2item) {",
+			"// получаем HTML-код картинки",
+			"$2image_url = wp_get_attachment_image( $2item, 'full' );",
+			"// вырезаем атрибуты width/height",
+			"$2image_url = preg_replace($2pattern, \"\", $2image_url);",
+			"// формируем вывод картинок",
+			"if($2i == 1) $return .= '<li class=\"show\">' . $2image_url . '</li>';",
+			"else $2return .= '<li>' . $2image_url . '</li>';",
+			"$2i++;",
+			"}",
+			"$2return .= '<a data-slidik=\"slide_2\" class=\"next\" href=\"#\">Next</a>",
+			"<a data-slidik=\"slide_2\" class=\"prev\" href=\"#\">Prev</a>",
+			"<div class=\"captionWrap\"><div data-slidik=\"slide_2\" class=\"caption\"></div></div>",
+			"<div class=\"portfolio-close\"><a href=\"#\"></a></div>",
+			"</ul>';",
+			"echo $2return;",
+			"}",
+			"add_shortcode('shortcode_gallery', '$1_gallery');",
+		],
+		"description": " собственная функция для галлерии"
+	}
+}

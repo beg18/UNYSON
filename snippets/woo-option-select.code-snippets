@@ -1,0 +1,25 @@
+{
+	"woo-option-select": {
+		"prefix": "woo-option-select",
+		"body": [
+			"<?php // временно ",
+			"// связаны сниппеты  woo-pagination, woo-func-loop-pagination, woo-file-pagination,woo-func-per-page",
+			"// возвращаемя в файл для категорий товаров taxonomy-product_cat.php",
+			"<div class=\"pages\">",
+			"<div class=\"limiter visible-desktop\">",
+			"<label>Show</label>",
+			" <select id=\"pagination-posts\">// ТАБ доллар",
+			"<option <?php if(isset($1_GET['ppp']) && $1_GET['ppp'] == 3) :?> selected=\"selected\" <?php endif;?> value=\"3\" >",
+			" 3</option>",
+			"<option <?php if(isset($1_GET['ppp']) && $1_GET['ppp'] == 6) :?> selected=\"selected\" <?php endif;?> value=\"6\">",
+			"6</option>",
+			"<option <?php if($1_GET['ppp'] == 9 || !isset($1_GET['ppp'])) :?> selected=\"selected\" <?php endif;?> value=\"9\">",
+			"9</option>",
+			" </select> per page",
+			"</div>",
+			"</div>",
+			"<div class=\"clearfix\"></div>",
+		],
+		"description": " возвращаемя в файл для категорий товаров taxonomy-product_cat.php"
+	}
+}

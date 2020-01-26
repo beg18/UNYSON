@@ -1,0 +1,26 @@
+{
+	"wp-func-menu-linkClass": {
+		"prefix": "wp-func-menu-linkClass",
+		"body": [
+			"// связаны со сниппетом wp-menu",
+			"// добавляем к ссылке в пункте меню свои классы по разметке",
+			"// 10 - приоритет, 3- количество параметров",
+			"add_filter('nav_menu_link_attributes', '$1_nav_menu_link', 10, 3); // первый ТАБ имя темы ",
+			"function $1_nav_menu_link($2atts, $2item, $2args) {// второй ТАБ доллар",
+			" if ($2args->menu === 'Main') { // значение Main из пункта 'menu' => || $2args->theme_location",
+			"$2atts['class'] = 'header__nav-item'; // это наш класс из разметки к ссылкам",
+			"if ($2item->current) { // если активен",
+			"$2atts['class'] .= ' header__nav-item-active'; //(точка перед равно и пробел) то добавляем данный второй класс к ссылке",
+			" }",
+			"// print_r($2item) // чтобы узнать ID активного пункта",
+			"if($2item->ID === 150 && ( in_category( 'soft_toys' ) || in_category( 'edu_toys' ))){",
+			"$2atts['class'] .= ' header__nav-item-active'; ",
+			"}",
+			"};",
+			"return $2atts;",
+			"}",
+			"}"
+		],
+		"description": "добавляем к ссылке в пункте меню свои классы по разметке"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"wp-file": {
+		"prefix": "wp-file",
+		"body": [
+			"<?php get_template_part('file'); ?>"
+		],
+		"description": "Файлы Темы (подключение)file.php"
+	}
+}

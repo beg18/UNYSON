@@ -1,0 +1,12 @@
+{
+	"wp-prevNext-posts": {
+		"prefix": "wp-prevNext-posts",
+		"body": [
+			"<ul class=\"post-nav cf\">",
+            "<li class=\"prev\"><?php previous_post_link($1format='%link', $1link='<strong>Previous Article</strong>%title'); ?></li>",
+            "<li class=\"next\"><?php next_post_link($1format ='%link', $1link='<strong>Next Article</strong>%title'); ?></li>",   
+            "</ul>"
+		],
+		"description": "Ссылки на предыдущие и следующие статьи с разметкой HTML"
+	}
+}

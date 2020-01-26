@@ -1,0 +1,9 @@
+{
+	"wp-comment-form": {
+		"prefix": "wp-comment-form",
+		"body": [
+			"<?php comment_form( $1args, $1post_id ); ?>// https://wp-kama.ru/function/comment_form",	
+		],
+		"description": "Выводит на экран готовый код формы комментирования, который можно использовать в шаблонах."
+	}
+}

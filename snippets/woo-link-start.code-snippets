@@ -1,0 +1,11 @@
+{
+	"woo-link-start": {
+		"prefix": "woo-link-start",
+		"body": [
+			"// аналогичен сниппету wp-link",
+			"// с данным ХУКом связан функция woocommerce_template_loop_product_link_open",
+			"<?php do_action('woocommerce_before_shop_loop_item'); ?>"
+		],
+		"description": " открывающий тег ссылки на другую страницу пермалинк"
+	}
+}

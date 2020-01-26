@@ -1,0 +1,23 @@
+{
+	"wp-func-class-by-sidebar": {
+		"prefix": "wp-func-class-by-sidebar",
+		"body": [
+			// если ф-я уже есть в дочерней теме - нам не надо её определять
+			"if (!function_exists('content_class_by_sidebar')) {",
+			// функция для вывода класса в зависимости от существования виджетов в сайдбаре
+			"function content_class_by_sidebar() {",
+			// если есть
+			"if (is_active_sidebar( 'sidebar' )) {",
+			// пишем класс на 80% ширины 
+			"echo 'col-sm-9';",
+			// если нет 
+			"} else {",
+			// контент на всю ширину 
+			"echo 'col-sm-12'; ",
+			"}",
+			"}",
+			"}",
+		],
+		"description": "Добавление класса к виджетам"
+	}
+}

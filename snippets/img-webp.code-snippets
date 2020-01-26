@@ -1,0 +1,12 @@
+{
+	"img-webp": {
+		"prefix": "img-webp",
+		"body": [
+			"<picture>",
+			"<source type=\"image/webp\" srcset=\"i/img-full.webp\">",
+			"<img src=\"i/img-full.jpg\" alt=\"\">",
+			"</picture>"
+		],
+		"description": "img для адаптивной вёрстки"
+	}
+}

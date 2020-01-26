@@ -1,0 +1,10 @@
+{
+	"wp-TagsCloud": {
+		"prefix": "wp-TagsCloud",
+		"body": [
+			"//https://neolot.com/wp-content/uploads/2009/08/WordPress-Snippets.pdf",
+			"<?php wp_tag_cloud('smallest=1&largest=9&'); ?>"
+		],
+		"description": "Этот фрагмент создаст облако тегов в алфавитном порядке с самым маленьким текстом в 1 пункт и самым большим текстом в 9 пунктов."
+	}
+}

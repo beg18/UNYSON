@@ -1,0 +1,16 @@
+{
+	"wp-func-remove-head": {
+		"prefix": "wp-func-remove-head",
+		"body": [
+			"//Удаляем лишние файлы google fonts",
+			"remove_action('wp_head', 'rsd_link');",
+			"//Удаляем лишние файлы rsd-xml",
+			"remove_action('wp_head', 'wlwmanifest_link');",
+			"//Удаляем лишние файлы генератор",
+			"remove_action('wp_head', 'wp_generator');",
+			"//отключаем админбар",
+			"show_admin_bar(false);"
+		],
+		"description": " Удаляем лишние файлы из head и отключаем админбар"
+	}
+}

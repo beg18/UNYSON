@@ -1,0 +1,14 @@
+{
+	"wp-add-comments": {
+		"prefix": "wp-add-comments",
+		"body": [
+			"// если комментария разрешены или имеются какие-то, то подключаем файл comments.php в single.php",
+			"<?php",
+			"if( comments_open() || get_comments_number() ){",
+			"comments_template();",
+			" }",
+			"  ?>",
+		],
+		"description": " в single.php до endwhile погружает файл comments.php"
+	}
+}

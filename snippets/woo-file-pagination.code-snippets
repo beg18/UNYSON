@@ -1,0 +1,38 @@
+{
+	"woo-file-pagination": {
+		"prefix": "woo-file-pagination",
+		"body": [
+			"<?php // временно ",
+			"// связаны сниппеты  woo-pagination, woo-func-loop-pagination,woo-func-rmove-pagination, woo-func-per-page,woo-option-select",
+			"// к событию (ХУКу) woocommerce_after_shop_loop исп-ся после цикла связана функция",
+			"// woocommerce_pagination, в  которой подключается файл pagination.php из папки loop",
+			"<?php",
+			"if ( ! defined( 'ABSPATH' ) ) {",
+			"exit; // Exit if accessed directly",
+			"}",
+			"global $1wp_query;// ТАБ доллар",
+			"if ( $1wp_query->max_num_pages <= 1 ) {",
+			"return;",
+			"}",
+			"?>",
+			"// код из разметки <ul class=\"women_pagenation\">....</ul>",
+			"<ul class=\"women_pagenation\">",
+			"<?php",
+			"echo paginate_links( apply_filters( 'woocommerce_pagination_args', array(",
+			"'base'=> esc_url_raw( str_replace( 999999999, '%#%', remove_query_arg( 'add-to-cart', get_pagenum_link( 999999999, false ) ) ) ),",
+			"'format'       => '',",
+			"'add_args'     => false,",
+			"'current'      => max( 1, get_query_var( 'paged' ) ),",
+			"'total'        => $1wp_query->max_num_pages,",
+			"'prev_text'    => '&larr;',",
+			"'next_text'    => '&rarr;',",
+			"'type'         => 'list',",
+			"'end_size'     => 3,",
+			"'mid_size'     => 3",
+			") ) );",
+			"?>",
+			"</ul>",
+		],
+		"description": "файл pagination.php из папки loop"
+	}
+}

@@ -1,0 +1,13 @@
+{
+	
+	// Example:
+	"wp-func-title": {
+		"prefix": "wp-func-title",
+		"body": [
+			"<?php",
+			"add_theme_support('title-tag');",
+			"?>",
+		],
+		"description": "тайтл управляется самим wp"
+	}
+}

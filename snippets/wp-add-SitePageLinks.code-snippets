@@ -1,0 +1,14 @@
+{
+	"wp-add-SitePageLinks": {
+		"prefix": "wp-add-SitePageLinks",
+		"body": [
+			"//https://neolot.com/wp-content/uploads/2009/08/WordPress-Snippets.pdf",
+			"<ul>",
+			"<li<?php if(is_home()) { ?> class=\"current_page_item\"<?php } ?>>",
+			"<a href=\"<?php bloginfo('home'); ?>\">home</a></li>",
+			"<?php wp_list_pages('sort_column=menu_order&depth=1&title_li='); ?>",
+			"</ul>",
+		],
+		"description": " Поместите этот код в шаблон файла.Этот фрагмент будет сначала повторять текст «home» со ссылкой на домашнюю страницу. Затем он отобразит ссылки на страницы WordPress в списке в порядке, определенном вашими настройками, исключая дочерние страницы и исключая заголовок заголовка для списка. Если одна из страниц в списке активна, ссылке на эту страницу будет присвоен класс «current_page_item», который теперь можно стилизовать в вашем CSS."
+	}
+}

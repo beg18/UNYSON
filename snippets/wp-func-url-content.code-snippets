@@ -1,0 +1,15 @@
+{
+	"wp-func-url-content": {
+		"prefix": "wp-func-url-content",
+		"body": [
+			"function $1_change_wp_content_url( $2url, $2path ) {",
+				"// как видите фильтр позволяет оперировать параметрами $2url (результат действия функции) и $2path (описано выше)",
+				"// есть люди, которые полностью скрывают следы использования WordPress, в том числе переименовывают папку wp-content",
+				"return str_replace('wp-content', 'misha-content', $2url);",
+			"}",
+			 
+			"add_filter( 'content_url', '$1_change_wp_content_url', 10, 2);"
+		],
+		"description": "При помощи этого фильтра вы можете изменить возвращаемые значения всех функций"
+	}
+}

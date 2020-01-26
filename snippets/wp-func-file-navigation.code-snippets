@@ -1,0 +1,16 @@
+{
+	"wp-func-file-navigation": {
+		"prefix": "wp-func-file-navigation",
+		"body": [
+			"// связан со СНИППЕТАМ WP-REG-ACTIONS WP-FILE-MENU WP-REG-MENU WP-REG-FILE-MENU wp-file-walker-navigation",
+			"// первый регистрируем меню в файле functions.php сниппет wp-reg-actions ",
+			"// в ПА-> Внешний вид-> Menu создаём меню выбираем область  ",
+			"// в ПА-> Внешний вид-> Menu создаём второй уровень (заголовок)категории в произвольной ссылки URL:# текст ссылки название заголовка(категории) ",
+			"// в ПА-> Внешний вид-> Menu третий уровень ставим как дочерние",
+			"// создаем  файл $1_Walker_Nav_Menu.php и ставим в папке inc сниппет wp-file-walker-navigation",
+			"// создаем объект $1_Walker_Nav_Menu.php в свойстве walker в сниппете wp-menu",
+			"include \"inc/$1_Walker_Nav_Menu.php\";",
+		],
+		"description": " Подключаем файл Walker_Nav_Menu.php"
+	}
+}

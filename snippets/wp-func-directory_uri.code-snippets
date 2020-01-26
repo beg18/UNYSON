@@ -1,0 +1,14 @@
+{
+	"wp-func-directory_uri": {
+		"prefix": "wp-func-directory_uri",
+		"body": [
+			"// связан со сниппетом wp-path",
+			"<?php",
+			"function e_path() {",
+			"echo get_template_directory_uri();",
+			"}",
+			"?>",
+		],
+		"description": " Подключаем с помощью этой функции файлы"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"woo-template-part": {
+		"prefix": "woo-template-part",
+		"body": [
+			"// мы в отдельные файлы loop/loop-start.php & loop-end.php поставили начало и конец ",
+			"// создаём файл для отдельного(повторяющего блока) продукта content-product.php",
+			"// теперь подключим файл content-product.php внутри поль-го цикла на место повторяющего блока",
+			"<?php wc_get_template_part('content','product');?>"
+		],
+		"description": "Подключение шаблонов плагина woocommerce"
+	}
+}

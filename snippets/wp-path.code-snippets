@@ -1,0 +1,11 @@
+{
+	"wp-path": {
+		"prefix": "wp-path",
+		"body": [
+			"// связан со сниппетом wp-func-directory-uri",
+			"//<link href=\"<?php e_path(); ?>/vendor/bootstrap/css/bootstrap.min.css\" rel=\"stylesheet\">",
+			"<?php e_path(); ?>/assets/"
+		],
+		"description": " Поключаем файлы по имени функции из сниппета wp-func-directory-uri"
+	}
+}

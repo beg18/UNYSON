@@ -1,0 +1,10 @@
+{
+	"wp-sidebar": {
+		"scope": "javascript,typescript",
+		"prefix": "wp-sidebar",
+		"body": [
+			"<?php get_sidebar(); ?>",
+		],
+		"description": "index подключаем сайдбар"
+	}
+}

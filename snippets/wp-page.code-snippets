@@ -1,0 +1,12 @@
+{
+	"wp-page": {
+		"prefix": "wp-page",
+		"body": [
+			"<?php", 
+				"/*Template Name: $1*/",
+				"/*Template Post Type: post, page, product*/"
+			"?>"
+		],
+		"description": "Ставится в начале шаблона для страниц"
+	}
+}

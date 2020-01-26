@@ -1,0 +1,15 @@
+{
+	"wp-func-addText": {
+		"prefix": "wp-func-addText",
+		"body": [
+			"function $1_Add_text($2content) {",
+				"$2myText = $2content . '<p><strong>' Новый текст для статьи '</strong></p>'",
+				"return $2myText;",
+				"}",
+	
+				"add_filter('the_content', '$1_Add_text')"
+	
+		],
+		"description": "Добавляем одновременно текст ко всем статьям на сайте"
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"wp-unycon-views-icon": {
+		"prefix": "wp-unycon-views-icon",
+		"body": [
+			"// в файле VIEWS.php мы ОБОРАЧИВАЕМ ИКОНКИ В ССЫЛКУ по условиям",
+			"// СВЯЗАН co сниппетом WP-UNYCON-ICON",
+			"/**",
+			"* @var array $2atts",
+			"*/",
+			"?>",
+			"<?php if( isset( $2atts['url'] ) && $2atts['url'] ): ?>",
+			"<a href=\"<?php echo esc_attr($2atts['url']); ?>\">",
+			"<?php endif; ?>",
+			"<span class=\"fw-icon\">",
+			"<i class=\"<?php echo esc_attr($2atts['icon']); ?>\"></i>",
+			"<?php if (!empty($2atts['title'])): ?>",
+			"<br/>",
+			"<span class=\"list-title\"><?php echo $2atts['title'] ?></span>",
+			"<?php endif; ?>",
+			"</span>",
+			"<?php if( isset( $2atts['url'] ) && $2atts['url'] ): ?>",
+			" </a>",
+			"<?php endif; ?>"
+		],
+		"description": "Задействуем добавленную ссылку к иконкам"
+	}
+}

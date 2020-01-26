@@ -1,0 +1,13 @@
+{
+	"wp-reg-custom-bg": {
+		"prefix": "wp-reg-custom-bg",
+		"body": [
+			"// к BODY добавить класс wp-body-класс",
+			"add_theme_support('custom-background', array(",
+			"'default-color' => 'ffffff',",
+			"'default-image' => get_template_directory_uri() . '/assets/image/background.png',",
+			"));",
+		],
+		"description": " Добавление цвета фона и изображение к сайту"
+	}
+}

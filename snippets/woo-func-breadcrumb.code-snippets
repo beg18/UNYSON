@@ -1,0 +1,32 @@
+{
+	"woo-func-breadcrumb": {
+		"prefix": "woo-func-breadcrumb",
+		"body": [
+			"<?php// временно ",
+			"// связаны сниппеты woo-start-content, woo-remove-start-content, woo-file-breadcrumb",
+			"// вызываем ХУК woocommerce_before_main_content",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-hooks.php",
+			"// к этому ХУКу связаны два функции ",
+			"// первая функция woocommerce_output_content_wrapper подключает файл из папки wp-content->plugins->woocommerce->template->global/wrapper-start.php",
+			"// и формирует wrapper ",
+			"// т.к. функцию woocommerce_output_content_wrapper в теме не используется её отвяжим",
+			"// вторая функция woocommerce_breadcrumb формирует хлебные крошки",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-functions.php",
+			"// в  функции woocommerce_breadcrumb находим фильтр woocommerce_breadcrumb_defaults",
+			"// поменяем в файле functions.php её ",
+			"add_filter('woocommerce_breadcrumb_defaults','$1_breadcrump_args');// ТАБ имя темы",
+			"function $1_breadcrump_args() {",
+			"// ставим в параметры теги и классы согласно разметки ",
+			"return array(",
+			"'delimiter'   => '&nbsp;<span>&gt;</span>',",
+			"'wrap_before' => '<div class=\"new-product-top\"><ul class=\"product-top-list\">',",
+			"'wrap_after'  => '</ul>',",
+			"'before'      => '<li>',",
+			"'after'       => '</li>',",
+			"'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' )",
+			");",
+			"}",
+		],
+		"description": "фильтр woocommerce_breadcrumb_defaults поменяем в файле functions.php её"
+	}
+}

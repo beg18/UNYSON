@@ -1,0 +1,10 @@
+{
+	"wp-func-trim": {
+		"prefix": "wp-func-trim",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+}

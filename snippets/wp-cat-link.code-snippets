@@ -1,0 +1,10 @@
+{
+	"wp-cat-link": {
+		"prefix": "wp-cat-link",
+		"body": [
+			"<a href=\"<?php echo get_category_link($1id); ?>\">View All Portfolio</a>",
+			"<!-- $1id это переменная в которой вложен ID категории-->"
+		],
+		"description": " Получаем корректную ссылку"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"wp-unycon-views-sections": {
+		"prefix": "wp-unycon-views-sections",
+		"body": [
+			"// в файле VIEWS.php мы добавляем к секцию свои ID & CLASS",
+			"// СВЯЗАН co сниппетом WP-UNYCON-SECTION",
+			"$2custom_id = ( isset( $2atts['custom_id'] ) && $2atts['custom_id'] ) ? $2atts['custom_id'] : '';",
+			"$2section_extra_classes .= ( isset( $2atts['custom_class'] ) && $2atts['custom_class'] ) ? $2atts['custom_class'] : '';",
+			"?>",
+			"<section id=\"<?php echo esc_attr($2atts['custom_id']); ?>\" class=\"fw-main-row <?php echo esc_attr($2section_extra_classes) ?>\" <?php echo $2section_style; ?> <?php echo $2bg_video_data_attr; ?>>",
+			"<div class=\"<?php echo esc_attr($2container_class); ?>\">",
+			"<?php echo do_shortcode( $2content ); ?>",
+			"</div>",
+			"</section>",
+		],
+		"description": "Чтобы подключить свои ID и классы к секцию"
+	}
+}

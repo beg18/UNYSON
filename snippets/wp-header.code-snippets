@@ -1,0 +1,10 @@
+{
+	
+	"wp-head": {
+		"prefix": "wp-head",
+		"body": [
+			"<?php wp_head(); ?>",
+		],
+		"description": "Подключение  в header.php перед закрывающим тэгом <head>"
+	}
+}

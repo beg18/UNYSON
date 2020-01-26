@@ -1,0 +1,9 @@
+{
+	"wp-style": {
+		"prefix": "wp-style",
+		"body": [
+			"<?php bloginfo('stylesheet_url'); ?>"
+		],
+		"description": "URL файла темы style.css: get_stylesheet_uri()"
+	}
+}

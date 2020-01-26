@@ -1,0 +1,11 @@
+{
+	"wp-reg-menu": {
+		"prefix": "wp-reg-menu",
+		"body": [
+			"//связан wp-file-menu; wp-menu 'walker' => new $1_Menu.php;",
+			"// создаём файл 'walker' => new $1_Menu.php ",
+			"require_once __DIR__ . '/$1_Menu.php'; ",
+		],
+		"description": "functions подключаем файл для меню"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"wp-style-page": {
+		"prefix": "wp-style-page",
+		"body": [
+			"/**",
+			"* Theme Name:  Название темы (обязательно)",
+			"* Template:    Название родительской темы. Пр: Twenty Seventeen",
+			"* Description: Короткое описание темы.",
+			"* Theme URI:   URL темы. Пр: http://wordpress.org/themes/twenty",
+			"* Author:      Имя автора",
+			"* Author URI:  URL автора",
+			"* License:     Лицензия. Пр: GNU General Public License v2 or later",
+			"* License URI: http://www.gnu.org/licenses/gpl-2.0.html",
+			"* Tags:        black, brown, orange",
+			"* Text Domain: Домен перевода темы. Пр: twentythirteen",
+			"* Version:     1.0",
+			"*/"
+		],
+		"description": "Log output to console"
+	}
+}

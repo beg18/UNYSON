@@ -1,0 +1,27 @@
+{
+	"woo-func-class-widget-menu": {
+		"prefix": "woo-func-class-widget-menu",
+		"body": [
+			"// чтобы добавить нужные параметры для оформление виджета произвольное меню",
+			"// нам надо переходить в wp-content-> wp-include-> widgets",
+			"// здесь нас интересует класс для виджета произвольного меню",
+			"// class-wp-nav-menu-widget.php меняем фильтр widget_nav_menu_args строка 79",
+			"// в файле functions.php:",
+			"add_filter('widget_nav_menu_args','change_menu','',4);",
+			"// где change_menu имя функции цифра четыре количество параметров",
+			"function change_menu($1nav_menu_args, $1nav_menu, $1args, $1instance) {// ТАБ доллар",
+			"if($1args['id'] == 'left_sidebar') {",
+			"$1nav_menu_args['menu_class'] = \"product-list\";// если это сайдбар с айди left_sidebar",
+			"$1nav_menu_args['container'] = \"\";",
+			"return $1nav_menu_args;",
+			"}",
+			"$1nav_menu_args['container'] = \"\";",
+			"$1nav_menu_args['menu_class'] = \"f_nav\";",
+			"$1nav_menu_args['link_before'] = \"<li>\";// можно добавить или удалить классы к тегу li оборачивающий ссылку",
+			"$1nav_menu_args['link_after'] = \"</li>\";",
+			"return $1nav_menu_args;",
+			"}",
+		],
+		"description": "Добавляем нужные параметры к произвольному меню виджета по разметке"
+	}
+}

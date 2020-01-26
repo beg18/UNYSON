@@ -1,0 +1,15 @@
+{
+	"wp-add-is_active-widget": {
+		"prefix": "wp-add-is_active-widget",
+		"body": [
+			"<?php if(is_active_sidebar('right-sidebar')): ?>// здесь ID из functions.php wp-reg-sidebar ",
+			"<aside>",
+			"<?php if(!dynamic_sidebar('right-sidebar')):?>// здесь ID из functions.php wp-reg-sidebar",
+			"<span> это область для меню добавляемое из виджета </span>// сюда ставим затычку или разметку одного виджета",
+			"<?php endif;?>",
+			"</aside>",
+			"<?php endif;?>"
+		],
+		"description": "втавить в sidebar.php если sidebar активен то вывести сайдбар"
+	}
+}

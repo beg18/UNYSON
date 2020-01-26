@@ -1,0 +1,22 @@
+{
+	"wp-func-styles": {
+		"prefix": "wp-func-styles",
+		"body": [
+			"// приклеем ф-ю на добавление стилей в хедер",
+			"add_action('wp_print_styles', 'add_styles'); ",
+			"// если ф-я уже есть в дочерней теме - нам не надо её определять",
+			"if (!function_exists('add_styles')) {",
+			"// добавление стилей",
+			"function add_styles() {",
+			"// если мы в админке - ничего не делаем",
+			"if(is_admin()) return false;",
+			"// бутстрап",
+			"wp_enqueue_style( 'bs', get_template_directory_uri().'/css/bootstrap.min.css' );",
+			"// основные стили шаблона",
+			"wp_enqueue_style( 'main', get_template_directory_uri().'/style.css' );",
+			"}",
+			"}",
+		],
+		"description": "приклеем ф-ю на добавление стилей в хедер"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"woo-remove-start-content": {
+		"prefix": "woo-remove-start-content",
+		"body": [
+			"<?php// временно ",
+			"// связаны сниппеты woo-start-content, woo-file-breadcrumb, woo-func-breadcrumb",
+			"// вызываем ХУК woocommerce_before_main_content",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-hooks.php",
+			"// к этому ХУКу связаны два функции ",
+			"// первая функция woocommerce_output_content_wrapper подключает файл из папки wp-content->plugins->woocommerce->template->global/wrapper-start.php",
+			"// и формирует wrapper ",
+			"// вторая функция woocommerce_breadcrumb формирует хлебные крошки",
+			"// который нах-ся wp-content->plugins->woocommerce->includes-> файл wc-template-functions.php",
+			"//  подключает файл из папки wp-content->plugins->woocommerce->template->global->breadcrumb.php",
+			"// т.к. функцию woocommerce_output_content_wrapper в теме не используется её отвяжим",
+			"// в файле для категорий товаров taxonomy-product_cat.php",
+			"<?php remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );?> "
+		],
+		"description": "функцию woocommerce_output_content_wrapper в теме не используется её отвяжим"
+	}
+}

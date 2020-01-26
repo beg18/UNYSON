@@ -1,0 +1,9 @@
+{
+	"wp-author": {
+		"prefix": "wp-author",
+		"body": [
+			"<?php the_author();>;"
+		],
+		"description": "Вывод автора"
+	}
+}

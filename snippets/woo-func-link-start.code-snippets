@@ -1,0 +1,17 @@
+{
+	"woo-func-link-start": {
+		"prefix": "woo-func-link-start",
+		"body": [
+			"// отвязываем фунцкию от этого ХУКа добавляем новую функцию, ",
+			"// чтобы к открывающей ссылке добавить классы из разметки если это не главная страница",
+			"if(!is_shop()) {",
+			"remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open');",
+			"add_action( 'woocommerce_before_shop_loop_item', '$1_loop_product_link_open', 10 )// ТАБ название темы;",
+			"}",
+			"function $1_loop_product_link_open() {// ТАБ название темы;",
+			"echo '<a class=\"cbp-vm-image\" href=\"'.get_the_permalink().'\">';",
+			"}",
+		],
+		"description": "отвязываем фунцкию от этого ХУКа добавляем новую функцию"
+	}
+}

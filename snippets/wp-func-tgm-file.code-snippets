@@ -1,0 +1,16 @@
+{
+	"wp-func-tgm-file": {
+		"prefix": "wp-func-tgm-file",
+		"body": [
+			"// http://tgmpluginactivation.com/; уроки https://wp-admin.com.ua/tag/tgm-plugin-activation/",
+			"// связан со сниппетом wp-func-tgm-plugins",
+			"// перед скaчванием TGM плагин Text domain: имя проекта например: law и отмечаем радио кнопки:",
+			"// I m going touse TGMPA in...Theme ;&& I indent to distribute... Some other...; кн.Generate",
+			"// архив сохраняем и распкуем в OSPanel/domains/wp2.loc/wp-content/themes/law/inc",
+			"// переименуем папку из архива в tgm файл example.php сохраняем как tgm.php и подключаем в functions.php отдельно",
+			"//в tgm файле меняем путь в require_once get_template_directory() . '/inc/tgm/class-tgm-plugin-activation.php';",
+			"require_once get_template_directory() . '/inc/tgm/tgm.php';",
+		],
+		"description": "файл example.php сохраняем как tgm.php и подключаем в functions.php отдельно"
+	}
+}

@@ -1,0 +1,21 @@
+{
+	"wp-reg-sidebar": {
+		"prefix": "wp-reg-sidebar",
+		"body": [
+			"function $1_widgets_init(){",
+			"register_sidebar( array(  // регистрируем правую колонку, этот кусок можно повторять для добавления новых областей для виджитов",
+			"'name' => 'Сайдбар справа',  // Название в админке",
+			"'id' => 'right-sidebar', // идентификатор для вызова в шаблонах ",
+			"'description' => 'Область для виджетов в сайдбаре справа',",
+			"'class' => 'test2',",
+			"'before_widget' => '<div id=\"%1s\" class=\"$1-widget $1-%2s\">', //разметка до вывода каждого виджета",
+			"'after_widget' => \"</div>\", // разметка после вывода каждого виджета",
+			"'before_title' => '<span class=\"$1-widgettitle\">', //  разметка до вывода заголовка виджета",
+            "'after_title' => \"</span>\", //  разметка после вывода заголовка виджета",
+			"));",
+			"}",
+			"add_action('widgets_init', '$1_widgets_init'); "
+		],
+		"description": "functions регистрируем сайдбар"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"wp-theme-options": {
+		"prefix": "wp-theme-options",
+		"body": [
+			"// параметры берем из файла theme-options.php",
+			"// который мы скопируем из папки UNYSON и вставим в тему",
+			"// параметр addresstext берём из файла theme-options.php",
+			"<?php // ТАБ доллар",
+			"$1options = get_option('sample_theme_options');",
+			"echo $1options['addresstext']; ?>",
+		],
+		"description": "вызов параметров из файла theme-options.php"
+	}
+}

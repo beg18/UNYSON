@@ -1,0 +1,9 @@
+{
+	"wp-publishedby": {
+		"prefix": "wp-publishedby",
+		"body": [
+			"<p>Опубликовано: <?php the_time(get_option('date_format').\" в \".get_option('time_format')); ?></p> "
+		],
+		"description": "Опубликовано: дата и время"
+	}
+}

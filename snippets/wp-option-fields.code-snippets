@@ -1,0 +1,9 @@
+{
+	"wp-option-fields": {
+		"prefix": "wp-option-fields",
+		"body": [
+			"<?php echo get_option('my_phone'); ?>// эту параметр берем из wp-func-fields значение  option_name ",
+		],
+		"description": "Вызываем новую настройку опцию"
+	}
+}

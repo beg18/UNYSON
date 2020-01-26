@@ -1,0 +1,14 @@
+{
+	"woo-link-close": {
+		"prefix": "woo-link-close",
+		"body": [
+			"// аналогичен сниппету wp-link",
+			"// с данным ХУКом связан функциями: ",
+			"// woocommerce_template_loop_product_link_close ",
+			"// woocommerce_template_loop_add_to_cart создаёт кнопку связанный с корзиной ",
+			"// также она подключает файл add_to_cart.php из папку loop",
+			"<?php do_action('woocommerce_after_shop_loop_item'); ?>"
+		],
+		"description": "закрывающий тег ссылки на другую страницу пермалинк"
+	}
+}

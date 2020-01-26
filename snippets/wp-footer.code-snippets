@@ -1,0 +1,10 @@
+{
+	
+	"wp-footer": {
+		"prefix": "wp-footer",
+		"body": [
+			"<?php get_footer(); ?>",
+		],
+		"description": "Подключение подвала сайта..."
+	}
+}
