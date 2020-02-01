@@ -2,6 +2,7 @@
 	"wp-func-cutomizer-option": {
 		"prefix": "wp-func-cutomizer-option",
 		"body": [
+			"<?php // временно первый ТАБ имя темы второй ТАБ доллар",
 			"// Настройки статистической сраницы с постоянным контентом front-page.php",
 			"// если тема генерирован сервером undercores, то эту функцию ставим в inc/customizer.php",
 			"// во внутрь функции $1_customize_register  ",

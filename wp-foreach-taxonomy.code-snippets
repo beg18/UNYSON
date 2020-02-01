@@ -1,0 +1,29 @@
+{
+	"wp-foreach-taxonomy": {
+		"prefix": "wp-foreach-taxonomy",
+		"body": [
+			"// создаем нов.тип записи например квартира сниппеты wp-func-newpostype || wp-reg-newpostype ",
+			"// создаем таксономии например города и комнат сниппеты",
+			"// wp-func-taxonomy  || wp-reg-taxonomy к новому типу записи например квартира ",
+			"<article class=\"postItem-full\">",
+			"<?php",
+			"$1cities = get_the_terms($1post->ID, 'city');",
+			"?>// ТАБ доллар чтобы узнать что в переменной таксономии $1cities можно узнать через сниппет wp-pre",
+			"// разрыв начало=========================================",
+			"<div>",
+			"<strong>Город:</strong>",
+			"<?php foreach($1cities as $1city){ ?>",
+			"<a href=\"<?php echo get_term_link((int)$1city->term_id) ?>\"> // ссылка на полный таксономии",
+			"<?php echo $1city->name ?>",
+			"</a>",
+			"// разрыв конец=========================================",
+			"<?php } ?>",
+			"</div>",
+			"<?php the_post_thumbnail('large') ?>",
+			"<h2><?php the_title() ?></h2>",
+			"<div><?php the_content() ?></div>",
+			"</article>"		
+		],
+		"description": "Вывод таксономии через цикл foreach"
+	}
+}

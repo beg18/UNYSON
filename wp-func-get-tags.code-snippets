@@ -2,8 +2,10 @@
 	"wp-func-get-tags": {
 		"prefix": "wp-func-get-tags",
 		"body": [
-			"function my_list_tags($1echo = true){ // название фунции ставим в разметку для вывода меток <?php $1_list_tags() ?>  ",
-			"$1tags = get_the_tags();",
+			"<?//временно  связан со сниппетом wp-get-tags || wp-add-get-tags",
+			"function $2_list_tags($1echo = true){ //второй ТАБ название фунции ",
+			"//ставим в разметку для вывода меток <?php $2_list_tags() ?> ",
+			"$1tags = get_the_tags();//первый ТАБ доллар",
 			"$1tag_str = null;",
 			"if($1tags){",
 			"$1tag_str = '<p>';// открывающий тэг в разметке размещены названия меток",
@@ -17,6 +19,6 @@
 			"else return $1tag_str;",
 			"}",
 		],
-		"description": " Получаем список меток"
+		"description": "Получаем список меток"
 	}
 }

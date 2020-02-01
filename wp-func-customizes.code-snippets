@@ -2,6 +2,7 @@
 	"wp-func-customizes": {
 		"prefix": "wp-func-customizes",
 		"body": [
+			"<?php // временно первый ТАБ имя темы второй ТАБ доллар",
 			"// Customizer добавляем в настройки эл-ты управления для цвета ссылок",
 			"// Customizer данная функция обязательно связана со сниппетом wp-func-customizeCSS",
 			"function $1_customize_register($2wp_customize){",

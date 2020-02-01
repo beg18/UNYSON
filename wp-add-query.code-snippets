@@ -2,8 +2,8 @@
 	"wp-add-query": {
 		"prefix": "wp-add-query",
 		"body": [
-			"<?php $1_query = new WP_Query( array( //название переменной через доллар ",
-			"'post_type'=> '$2',// сюда ввести название нового типа записи, также array('post', 'page')",
+			"<?php $1_query = new WP_Query( array( // первый ТАБ название переменной через доллар ",
+			"'post_type'=> '',// второй ТАБ сюда ввести название нового типа записи 'faq','flat', также array('post', 'page')",
 			"'posts_per_page' => 4, // количество записей",
 			"'orderby' => 'rand',//порядок выбора здесь случайный title, author, ID, name, date, parent, type",
 			"'order' => 'ASC'//ASC DESC порядок вывода",

@@ -7,6 +7,7 @@
 			"function $1_setup(){",
 			"add_theme_support('title-tag');// из header.php убираем title ",
 			"add_theme_support('post-thumbnails');",
+			"add_theme_support('post-formats', array('aside', 'quote', 'video', 'link' , 'audio', 'image');",
 			"add_image_size( '$1_my-thumb', 100, 100, true );// высоту показать равным или больше например: 9999",
 			"register_nav_menus( array(",
 			"'header_menu' => 'Menu in header',",
