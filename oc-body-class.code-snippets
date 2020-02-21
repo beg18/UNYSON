@@ -1,0 +1,9 @@
+{
+	"oc-body-class": {
+		"prefix": "oc-body-class",
+		"body": [
+			"<body class=\"<?php echo $1class; ?>\"> // ТАБ доллар",
+		],
+		"description": " добавляем класс к body"
+	}
+}

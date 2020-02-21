@@ -1,0 +1,9 @@
+{
+	"oc-column_left": {
+		"prefix": "oc-column_left",
+		"body": [
+			"<?php $1column_left; ?>// ТАБ доллар",
+		],
+		"description": "добавляем левый  сайдбар"
+	}
+}

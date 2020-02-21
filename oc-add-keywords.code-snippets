@@ -1,0 +1,11 @@
+{
+	"oc-add-keywords": {
+		"prefix": "oc-add-keywords",
+		"body": [
+			"<?php if ($1keywords) { ?>// ТАБ доллар",
+				"<meta name=\"keywords\" content=\"<?php echo $1keywords; ?>\" />",
+				"<?php } ?>",
+		],
+		"description": "проверка в meta name=\"keywords\""
+	}
+}

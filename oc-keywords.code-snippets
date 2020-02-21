@@ -1,0 +1,11 @@
+{
+	"oc-keywords": {
+		"prefix": "oc-keywords",
+		"body": [
+			"// чтобы настороить description-> Система-> Настойки->вкл.Общие: ",
+			"// Мета-тег Keywords : напр. ключевики  магазина Styletour",
+			"<meta name=\"keywords\" content=\"<?=$1keywords?>\">  // ТАБ доллар "
+		],
+		"description": " Мета-тег Keywords"
+	}
+}

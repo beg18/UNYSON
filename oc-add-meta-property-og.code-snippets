@@ -1,0 +1,13 @@
+{
+	"oc-add-meta-property-og": {
+		"prefix": "oc-add-meta-property-og",
+		"body": [
+			"<?php if ($1og_image) { ?>// ТАБ доллар",
+				"<meta property=\"og:image\" content=\"<?php echo $1og_image; ?>\" />",
+				"<?php } else { ?>",
+				"<meta property=\"og:image\" content=\"<?php echo $1logo; ?>\" />",
+				"<?php } ?>",
+		],
+		"description": "проверка meta property=\"og:"
+	}
+}

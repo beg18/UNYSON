@@ -1,0 +1,9 @@
+{
+	"oc-footer": {
+		"prefix": "oc-footer",
+		"body": [
+			"<?php $1footer; ?> // ТАБ доллар",
+		],
+		"description": "добавление подвала макета"
+	}
+}

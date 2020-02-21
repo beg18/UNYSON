@@ -1,0 +1,12 @@
+{
+	"oc-foreach-analytics-4": {
+		"prefix": "oc-foreach-analytics-4",
+		"body": [
+			"// чтобы найти массивы $1analytics и другие переменные мы ищем в поисках",
+			"<?php foreach ($1analytics as $1analytic) { ?>//var_dump($1styles); ТАБ доллар",
+			"<?php echo $1analytic; ?>",
+			"<?php } ?>",
+		],
+		"description": "Log output to console"
+	}
+}

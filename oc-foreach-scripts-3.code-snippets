@@ -1,0 +1,12 @@
+{
+	"oc-foreach-scripts-3": {
+		"prefix": "oc-foreach-scripts-3",
+		"body": [
+			"// чтобы найти массивы $1scripts и другие переменные мы ищем в поисках",
+			"<?php foreach ($1scripts as $1script) { ?>//var_dump($1scripts); ТАБ доллар",
+			"<script src=\"<?php echo $1script; ?>\" type=\"text/javascript\"></script>",
+			"<?php } ?>",
+		],
+		"description": "подключение скриптов  из ядра CMS"
+	}
+}

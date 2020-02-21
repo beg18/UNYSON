@@ -1,0 +1,9 @@
+{
+	"oc-base-url": {
+		"prefix": "oc-base-url",
+		"body": [
+			"<base href=\"<?=$1base?>\"> "// ТАБ доллар",
+		],
+		"description": " Подключение базового url"
+	}
+}

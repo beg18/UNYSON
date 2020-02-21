@@ -1,0 +1,20 @@
+{
+	"oc-add-class": {
+		"prefix": "oc-add-class",
+		"body": [
+			"// условия: в переменную  $1class зададим класс например col-md-9// ТАБ доллар",
+			"// если у страницы есть левый или правый сайдбар",
+			"// иначе если нет сайдбаров то класс например col-md-12",
+			"<div class=\"row\">",
+			"<?php $1class = $1column_left ? 'col-md-9' : 'col-md-12' ?>",
+			"<?=$1column_left?>",
+			"<div class=\"<?= $1class ?>\">",
+			"<div class=\"row\">",
+			"<?= $1content_bottom ?>",
+			"</div>",
+			"</div>",
+			"</div>",
+		],
+		"description": "добавляем класс к тегам по условиям"
+	}
+}

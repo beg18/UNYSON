@@ -1,0 +1,12 @@
+{
+	"oc-foreach-styles-1": {
+		"prefix": "oc-foreach-styles-1",
+		"body": [
+			"// чтобы найти массивы $1styles и другие переменные мы ищем в поисках",
+			"<?php foreach ($1styles as $1style) { ?>//var_dump($1styles); ТАБ доллар",
+			"<link href=\"<?php echo $1style['href']; ?>\" type=\"text/css\" rel=\"<?php echo $1style['rel']; ?>\" media=\"<?php echo $1style['media']; ?>\" />",
+			"<?php } ?>",
+		],
+		"description": " подключение стилей из ядра CMS "
+	}
+}

@@ -3,6 +3,7 @@
 		"prefix": "wp-date",
 		"body": [
 			"//https://wp-kama.ru/id_7433/formaty-daty-i-vremeni-v-wordpress.html",
+			"// <?php echo get_the_date('Y') ?> ||",
 			"<?php echo date('Y') ?>",
 		],
 		"description": " Год например в копирайте"

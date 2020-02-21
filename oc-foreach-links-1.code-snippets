@@ -1,0 +1,12 @@
+{
+	"oc-foreach-links-2": {
+		"prefix": "oc-foreach-links-2",
+		"body": [
+			"// чтобы найти массивы $1links и другие переменные мы ищем в поисках",
+			"<?php foreach ($1links as $1link) { ?> //var_dump($1links); ТАБ доллар",
+			"<link href=\"<?php echo $1link['href']; ?>\" rel=\"<?php echo $1link['rel']; ?>\" />",
+			"<?php } ?>",
+		],
+		"description": "подключаем фавиконки"
+	}
+}

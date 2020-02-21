@@ -1,0 +1,12 @@
+{
+	"oc-meta-property-og": {
+		"prefix": "oc-meta-property-og",
+		"body": [
+			"<meta property=\"og:title\" content=\"<?php echo $1title; ?>\" />// ТАБ доллар",
+			"<meta property=\"og:type\" content=\"website\" />",
+			"<meta property=\"og:url\" content=\"<?php echo $1og_url; ?>\" />",
+			"<meta property=\"og:site_name\" content=\"<?php echo $1name; ?>\" />"
+		],
+		"description": "meta property=\"og:"
+	}
+}

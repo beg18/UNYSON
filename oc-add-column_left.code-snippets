@@ -1,0 +1,23 @@
+{
+	"oc-add-column_left": {
+		"prefix": "oc-add-column_left",
+		"body": [
+			"// ТАБ доллар",
+			"<?php echo $1header; ?>",
+			"<div class=\"container\">",
+			"<div class=\"row\"><?php echo $1column_left; ?>",
+			"<?php if ($1column_left && $1column_right) { ?>",
+			"<?php $1class = 'col-sm-6'; ?>",
+			" <?php } elseif ($1column_left || $1column_right) { ?>",
+			"<?php $1class = 'col-sm-9'; ?>",
+			"<?php } else { ?>",
+			"<?php $1class = 'col-sm-12'; ?>",
+			"<?php } ?>",
+			"<div id=\"content\" class=\"<?php echo $1class; ?>\"><?php echo $1content_top; ?><?php echo $1content_bottom; ?></div>",
+			"<?php echo $1column_right; ?></div>",
+			"</div>",
+			"<?php echo $1footer; ?>",
+		],
+		"description": "структура главной страницы"
+	}
+}

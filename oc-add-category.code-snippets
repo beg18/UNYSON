@@ -1,0 +1,36 @@
+{
+	"oc-add-category": {
+		"prefix": "oc-add-category",
+		"body": [
+			"// в нашей теме по структуре мы создаем файл-модуль category.tpl",
+			"// сюда ставим разметку виджета-модуля категории узнаем что в переменной ",
+			"// узнаем что в переменной $1categories var_dump($1categories);// ТАБ доллар",
+			"// разметка может быть и другая нам надо переменные для примера",
+			"// добавляем класс cats к тегу ul, чтобы в дальнейшем мы смогли легко стилизовать",
+			"// напишем условия если id  переменной // ТАБ доллар",
+			"// $1category['category_id'] == $1category_id добавляем класс active",
+			"// также напишем условия  к дочерним подкатегориям если id  переменной ",
+			"// $1child['category_id'] == $1child_id добавляем класс active",
+			"<div class=\"col-xs-6 col-md-12\">",
+			"<div class=\"widget\">",
+			"<h3><?=$1heading_title?></h3>",
+			"<ul class=\"cats\">",
+			"<?php foreach($1categories as $1category): ?>",
+			"<li>",
+			"<a href=\"<?= $1category['href'] ?>\"<?php if($1category['category_id'] == $1category_id) echo ' class=\"active\"' ?>><?=$1category['name']?></a>",
+			"<?php if($1category['children']): ?>",
+			"<ul>",
+			"<?php foreach($1category['children'] as $1child): ?>",
+			"<li><a href=\"<?= $1child['href'] ?>\"<?php if($1child['category_id'] == $1child_id) echo ' class=\"active\"' ?>>- <?= $1child['name'] ?></a></li>",
+			"<?php endforeach; ?>",
+			"</ul>",
+			"<?php endif; ?>",
+			"</li>",
+			"<?php endforeach; ?>",
+			"</ul>",
+			"</div>",
+			"</div>",
+		],
+		"description": "модуль ктегорий"
+	}
+}

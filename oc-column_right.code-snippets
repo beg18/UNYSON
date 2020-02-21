@@ -1,0 +1,9 @@
+{
+	"oc-column_right": {
+		"prefix": "oc-column_right",
+		"body": [
+			"<?php $1column_right; ?>// ТАБ доллар",
+		],
+		"description": "добавляем правый сайдбар"
+	}
+}

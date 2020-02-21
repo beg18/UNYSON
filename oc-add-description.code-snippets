@@ -1,0 +1,11 @@
+{
+	"oc-add-description": {
+		"prefix": "oc-add-description",
+		"body": [
+			"<?php if ($1description) { ?>// ТАБ доллар",
+			"<meta name=\"description\" content=\"<?php echo $1description; ?>\" />",
+			"<?php } ?>",
+		],
+		"description": "проверка в meta name=\"description\""
+	}
+}

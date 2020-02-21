@@ -1,0 +1,11 @@
+{
+	"oc-description ": {
+		"prefix": "oc-description ",
+		"body": [
+			"// чтобы настороить description-> Система-> Настойки->вкл.Общие: ",
+			"// Мета-тег Description : напр. Описание  магазина Styletour",
+			"<meta name=\"description\" content=\"<?=$1description?>\">// ТАБ доллар "
+		],
+		"description": "Мета-тег Description"
+	}
+}

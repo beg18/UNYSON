@@ -1,0 +1,9 @@
+{
+	"oc-header": {
+		"prefix": "oc-header",
+		"body": [
+			"<?php $1header; ?> // ТАБ доллар",
+		],
+		"description": "добавление шапки макета"
+	}
+}
